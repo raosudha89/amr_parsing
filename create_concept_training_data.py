@@ -2,12 +2,15 @@ import sys
 import cPickle as pickle
 import networkx as nx
 
-def traverse_depth_first(concept_nx_graph, root=None):
+def traverse_depth_first(concept_nx_graph, parent=None):
 	node_list = []
-	if root == None:
-		root = nx.topological_sort(concept_nx_graph)[0]
-	node_list.append(concept_nx_graph.node[root]['instance'])
-	children = concept_nx_graph.successors(root)
+	if parent == None:
+		parent = nx.topological_sort(concept_nx_graph)[0]
+	node_list.append(concept_nx_graph.node[parent]['instance'])
+	children = []
+	for child in concept_nx_graph.successors(parent):
+		if concept_nx_graph.node[child]['parent'] == parent:
+			children.append(child)
 	if not children:
 		return node_list
 	ordered_children = [None]*len(children)
@@ -18,7 +21,7 @@ def traverse_depth_first(concept_nx_graph, root=None):
 	for child in children:
 		ordered_children[concept_nx_graph.node[child]['child_num'] - diff] = child
 	for child in ordered_children:
-		node_list.extend(traverse_depth_first(concept_nx_graph, root=child)) 
+		node_list.extend(traverse_depth_first(concept_nx_graph, parent=child)) 
 	return node_list		
 
 def create_training_data(sentence, span_concept):
@@ -47,7 +50,7 @@ def get_span_concept(alignment, root, amr_nx_graph, sentence):
 		for child_num in graph_fragment.split(".")[1:]:
 			children = amr_nx_graph.successors(parent)
 			for child in children:
-				if amr_nx_graph.node[child]['child_num'] == int(child_num):
+				if amr_nx_graph.node[child]['parent'] == parent and amr_nx_graph.node[child]['child_num'] == int(child_num):
 					parent, attr_dict = child, amr_nx_graph.node[child]
 		concept_nx_graph.add_node(parent, attr_dict)
 	#Get all edges between the nodes in graph_fragment and add those to concept_nx_graph
@@ -80,11 +83,13 @@ def main(argv):
 	#amr_nx_graphs: {id, [root, amr_nx_graph, sentence, alignment]}
 	amr_nx_graphs = pickle.load(open(amr_nx_graphs_pickled_file, "rb"))
 	training_dataset = get_training_dataset(amr_nx_graphs)
-	#for id, training_data in training_dataset.iteritems():
-	#	print id
-	#	for data in training_data:
-	#		print data
-	#	print
+	print_to_file = 1
+	if print_to_file:
+		for id, training_data in training_dataset.iteritems():
+			print id
+			for data in training_data:
+				print data
+			print
 	pickle.dump(training_dataset, open("concept_training_dataset.p", "wb"))
 
 if __name__ == "__main__":

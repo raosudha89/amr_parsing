@@ -26,7 +26,7 @@ def add_to_nx_graph(amr_graph_as_list, prev_level_root=None, prev_level_child_nu
 		if element == '/':
 			node = amr_graph_as_list[i - 1]
 			instance = amr_graph_as_list[i + 1]
-			amr_nx_graph.add_node(node, instance=instance, child_num=prev_level_child_num)
+			amr_nx_graph.add_node(node, instance=instance, child_num=prev_level_child_num, parent=prev_level_root)
 			add_edge(prev_level_root, node)
 			nodes.append(node)
 			current_root = node
@@ -41,10 +41,11 @@ def add_to_nx_graph(amr_graph_as_list, prev_level_root=None, prev_level_child_nu
 				pass
 			else:
 				if element not in nodes:
-					amr_nx_graph.add_node(element, instance=element, child_num=curr_level_child_num)
+					node = current_root + ":" + str(curr_level_child_num) + ":" + element
+					amr_nx_graph.add_node(node, instance=element, child_num=curr_level_child_num, parent=current_root)
 					curr_level_child_num +=1
-					add_edge(current_root, element)
-					nodes.append(element)
+					add_edge(current_root, node)
+					nodes.append(node)
 				else:
 					add_edge(current_root, element)
 	return current_root
@@ -54,7 +55,6 @@ def main(argv):
 		print "usage: amr_reader.py <amr_file>"
 		return
 	amr_aligned = open(argv[0])
-
 	ids = []
 	sentences = []
 	alignments = []
@@ -79,6 +79,7 @@ def main(argv):
 		line = amr_aligned.readline()
 
 	amr_nx_graphs = {}
+	print_to_file = 1
 	for i in range(len(amr_graphs)):
 		global amr_nx_graph
 		amr_nx_graph = nx.DiGraph()
@@ -89,12 +90,13 @@ def main(argv):
 		parens = pyparsing.nestedExpr('(', ')')
 		amr_graph_as_list = parens.parseString(amr_graphs[i]).asList()
 		root = add_to_nx_graph(amr_graph_as_list[0])
-		#print ids[i]
-		#print amr_graph_as_list[0]
-		#print root
-		#print amr_nx_graph.nodes(data=True)
-		#print amr_nx_graph.edges(data=True)
-		#print
+		if print_to_file:
+			print ids[i]
+			print amr_graph_as_list[0]
+			print root
+			print amr_nx_graph.nodes(data=True)
+			print amr_nx_graph.edges(data=True)
+			print
 		amr_nx_graphs[ids[i]] = [root, amr_nx_graph, sentences[i], alignments[i]]
 	pickle.dump(amr_nx_graphs, open("amr_nx_graphs.p", "wb"))
 
