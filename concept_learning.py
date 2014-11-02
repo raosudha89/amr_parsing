@@ -76,19 +76,20 @@ class Concept_Relation(pyvw.SearchTask):
 			k_best_concepts = getKbestConcepts(span)
 			#print "Concepts: ", k_best_concepts 
 			examples = [self.makeConceptExample(sentence, i, concept) for concept in k_best_concepts]
-			oracle = concept2label[span.concept]
+			#oracle = concept2label[span.concept]
+			oracle = [ v for v,concept in enumerate(k_best_concepts)  if concept == span.concept ]
 			pred = self.sch.predict(examples = examples,
 			                        my_tag = 0,
 			                        oracle = oracle)
 			#print concept2label[span.concept], pred
-			output.append(pred)
+			output.append( concept2label[k_best_concepts[pred]] )
 		#print output
 		return output
 
 def main(argv):
 	vw = pyvw.vw("--search 0 --csoaa_ldf m --quiet --search_task hook --ring_size 2048 --search_no_caching -q sc")
 	task = vw.init_search_task(Concept_Relation)
-	for p in range(2): task.learn([training_sentence].__iter__)
+	for p in range(2): task.learn([training_sentence])
 	print 'test time'
 	print task.predict(eraseAnnotations(training_sentence))
 	print "should have printed [2, 3, 1, 4, 5]"	
