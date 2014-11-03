@@ -79,7 +79,7 @@ def main(argv):
 		line = amr_aligned.readline()
 
 	amr_nx_graphs = {}
-	print_to_file = 1
+	print_to_file = 0
 	for i in range(len(amr_graphs)):
 		global amr_nx_graph
 		amr_nx_graph = nx.DiGraph()

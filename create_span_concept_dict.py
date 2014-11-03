@@ -25,7 +25,7 @@ for id, concept_training_data in concept_training_dataset.iteritems():
 for span, concepts in span_concept_dict.iteritems():
 	span_concept_dict[span] = OrderedDict(sorted(concepts.items(), key=lambda concepts: concepts[1], reverse=True)).items()
 
-print_to_file = 1
+print_to_file = 0
 if print_to_file:
 	for span, concepts in span_concept_dict.iteritems():
 		print span, concepts	
