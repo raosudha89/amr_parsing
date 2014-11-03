@@ -80,14 +80,12 @@ class Concept_Relation(pyvw.SearchTask):
 		output = []
 		for i in range(len(sentence)):
 			span = sentence[i]
-			examples = []
-			oracles = []
 			k_best_concepts = getKbestConcepts(sentence[i])
 			examples = [self.makeConceptExample(sentence, i, concept) for concept in k_best_concepts]
 			oracle = [ v for v,concept in enumerate(k_best_concepts)  if concept == span.concept ]
 			pred = self.sch.predict(examples = examples,
-				                    my_tag = 0,
-				                    oracle = oracle)
+			                        my_tag = 0,
+			                        oracle = oracle)
 			output.append( concept2label(k_best_concepts[pred]) )
 		return output
 
