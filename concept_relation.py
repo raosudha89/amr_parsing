@@ -59,16 +59,16 @@ class Concept_Relation(pyvw.SearchTask):
 	def makeConceptExample(self, sentence, i, concept):
 		length = 1
 		f = { 's': [ 'w=' + '_'.join([span.words for span in sentence[i:i+length]]),
-                     'p=' + '_'.join([span.pos for span in sentence[i:i+length]]) ] +
-                   [ "bow=" + span.words for span in sentence[i:i+length] ] +
-                   [ "bop=" + span.pos for span in sentence[i:i+length] ] +
-                   [ "w@-" + str(delta) + "=" + get_words(sentence,i-delta) for delta in [1,2] ] +
-                   [ "w@+" + str(delta) + "=" + get_words(sentence,i+length+delta-1) for delta in [1,2] ] +
-                   [ "p@-" + str(delta) + "=" + get_pos(sentence,i-delta) for delta in [1,2] ] +
-                   [ "p@+" + str(delta) + "=" + get_pos(sentence,i+length+delta-1) for delta in [1,2] ] +
-				   [ "boc=" + c for c in getKbestConcepts(sentence[i])],
-              'c': get_concept_features(concept)
-			}
+		             'p=' + '_'.join([span.pos for span in sentence[i:i+length]]) ] +
+		           [ "bow=" + span.words for span in sentence[i:i+length] ] +
+		           [ "bop=" + span.pos for span in sentence[i:i+length] ] +
+		           [ "w@-" + str(delta) + "=" + get_words(sentence,i-delta) for delta in [1,2] ] +
+		           [ "w@+" + str(delta) + "=" + get_words(sentence,i+length+delta-1) for delta in [1,2] ] +
+		           [ "p@-" + str(delta) + "=" + get_pos(sentence,i-delta) for delta in [1,2] ] +
+		           [ "p@+" + str(delta) + "=" + get_pos(sentence,i+length+delta-1) for delta in [1,2] ] +
+		           [ "boc=" + c for c in getKbestConcepts(sentence[i])],
+		      'c': get_concept_features(concept)
+		    }
 		#print f
 		ex = self.vw.example(f, labelType=self.vw.lCostSensitive)
 		label = concept2label(concept)
@@ -86,8 +86,8 @@ class Concept_Relation(pyvw.SearchTask):
 			examples = [self.makeConceptExample(sentence, i, concept) for concept in k_best_concepts]
 			oracle = [ v for v,concept in enumerate(k_best_concepts)  if concept == span.concept ]
 			pred = self.sch.predict(examples = examples,
-									my_tag = 0,
-									oracle = oracle)
+				                    my_tag = 0,
+				                    oracle = oracle)
 			output.append( concept2label(k_best_concepts[pred]) )
 		return output
 
