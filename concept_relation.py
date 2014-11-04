@@ -60,6 +60,7 @@ class Concept_Relation(pyvw.SearchTask):
 		pyvw.SearchTask.__init__(self, vw, sch, num_actions)
 		sch.set_options( sch.AUTO_HAMMING_LOSS | sch.IS_LDF | sch.AUTO_CONDITION_FEATURES )
 		self.span_concept_dict = pickle.load(open("span_concept_dict.p", "rb"))
+		print self.span_concept_dict
 
 	def makeConceptExample(self, sentence, i, concept):
 		length = 1
