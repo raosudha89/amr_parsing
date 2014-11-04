@@ -16,11 +16,15 @@ class Span:
 		self.pos = pos
 		self.concept = concept
 		self.parents = parents
-		
-def getKbestConcepts(span):
+	def __str__(self):
+		return self.words
+	def __repr__(self):
+		return self.words
+    
+def getKbestConcepts(span, span_concept_dict=None):
 	#Get the top k concepts aligned with span.words
 	K = 5
-	span_concept_dict = pickle.load(open("span_concept_dict.p", "rb"))
+	if span_concept_dict is None: span_concept_dict = pickle.load(open("span_concept_dict.p", "rb"))
 	if span_concept_dict.has_key(span.words):
 		return [ concept for (concept, count) in span_concept_dict[span.words]][:K] 
 	return ["NULL"]
@@ -55,10 +59,12 @@ class Concept_Relation(pyvw.SearchTask):
 	def __init__(self, vw, sch, num_actions):
 		pyvw.SearchTask.__init__(self, vw, sch, num_actions)
 		sch.set_options( sch.AUTO_HAMMING_LOSS | sch.IS_LDF | sch.AUTO_CONDITION_FEATURES )
+		self.span_concept_dict = pickle.load(open("span_concept_dict.p", "rb"))
 
 	def makeConceptExample(self, sentence, i, concept):
 		length = 1
-		f = { 's': [ 'w=' + '_'.join([span.words for span in sentence[i:i+length]]),
+		f = lambda: \
+            { 's': [ 'w=' + '_'.join([span.words for span in sentence[i:i+length]]),
 		             'p=' + '_'.join([span.pos for span in sentence[i:i+length]]) ] +
 		           [ "bow=" + span.words for span in sentence[i:i+length] ] +
 		           [ "bop=" + span.pos for span in sentence[i:i+length] ] +
@@ -66,11 +72,11 @@ class Concept_Relation(pyvw.SearchTask):
 		           [ "w@+" + str(delta) + "=" + get_words(sentence,i+length+delta-1) for delta in [1,2] ] +
 		           [ "p@-" + str(delta) + "=" + get_pos(sentence,i-delta) for delta in [1,2] ] +
 		           [ "p@+" + str(delta) + "=" + get_pos(sentence,i+length+delta-1) for delta in [1,2] ] +
-		           [ "boc=" + c for c in getKbestConcepts(sentence[i])],
+		           [ "boc=" + c for c in getKbestConcepts(sentence[i], self.span_concept_dict)],
 		      'c': get_concept_features(concept)
 		    }
 		#print f
-		ex = self.vw.example(f, labelType=self.vw.lCostSensitive)
+		ex = self.example(f, labelType=self.vw.lCostSensitive)
 		label = concept2label(concept)
 		ex.set_label_string(str(label) + ":0")
 		return ex
@@ -80,12 +86,13 @@ class Concept_Relation(pyvw.SearchTask):
 		output = []
 		for i in range(len(sentence)):
 			span = sentence[i]
-			k_best_concepts = getKbestConcepts(sentence[i])
-			examples = [self.makeConceptExample(sentence, i, concept) for concept in k_best_concepts]
+			k_best_concepts = getKbestConcepts(sentence[i], self.span_concept_dict)
+			examples = lambda: [self.makeConceptExample(sentence, i, concept) for concept in k_best_concepts]
 			oracle = [ v for v,concept in enumerate(k_best_concepts)  if concept == span.concept ]
 			pred = self.sch.predict(examples = examples,
-			                        my_tag = 0,
-			                        oracle = oracle)
+			                        my_tag = i+1,
+			                        oracle = oracle,
+                                    condition = [(i,'p'), (i-1,'q')])
 			output.append( concept2label(k_best_concepts[pred]) )
 		return output
 
@@ -102,17 +109,18 @@ def main(argv):
 		for [span, pos, concept] in concept_training_data:
 			training_sentence.append(Span(span, pos, concept))
 		training_sentences.append(training_sentence)
-	N = int(len(training_sentences) * 0.9)
-	#N = 10
-	vw = pyvw.vw("--search 0 --csoaa_ldf m --quiet --search_task hook --ring_size 2048 --search_no_caching -q sc")
+	#N = int(len(training_sentences) * 0.9)
+	N = 2
+	vw = pyvw.vw("--search 0 --csoaa_ldf m --quiet --search_task hook --ring_size 2048 -q sc")
 	task = vw.init_search_task(Concept_Relation)
 	print "Learning.."
 	start_time = time.time()
+	print training_sentences[:N]
 	for p in range(2):
 		task.learn(training_sentences[:N])
 	print "Time taken: " + str(time.time() - start_time)
-	#test_sentences = training_sentences[N:15]
-	test_sentences = training_sentences[N:]
+	test_sentences = training_sentences[N:N+1]
+	#test_sentences = training_sentences[N:]
 	start_time = time.time()
 	print "Testing.."
 	print len(test_sentences) 
@@ -124,4 +132,11 @@ def main(argv):
 
 if __name__ == "__main__":
 	main(sys.argv[1:])
+
+
+
+
+
+
+
 
