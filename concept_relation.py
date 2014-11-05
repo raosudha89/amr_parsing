@@ -17,7 +17,7 @@ class Span:
 		self.concept = concept
 		self.parents = parents
 	def __str__(self):
-		return self.words
+		return repr(self)
 	def __repr__(self):
 		return self.words
     
@@ -63,8 +63,7 @@ class Concept_Relation(pyvw.SearchTask):
 
 	def makeConceptExample(self, sentence, i, concept):
 		length = 1
-		f = lambda: \
-            { 's': [ 'w=' + '_'.join([span.words for span in sentence[i:i+length]]),
+		f = { 's': [ 'w=' + '_'.join([span.words for span in sentence[i:i+length]]),
 		             'p=' + '_'.join([span.pos for span in sentence[i:i+length]]) ] +
 		           [ "bow=" + span.words for span in sentence[i:i+length] ] +
 		           [ "bop=" + span.pos for span in sentence[i:i+length] ] +
@@ -87,8 +86,9 @@ class Concept_Relation(pyvw.SearchTask):
 		for i in range(len(sentence)):
 			span = sentence[i]
 			k_best_concepts = getKbestConcepts(sentence[i], self.span_concept_dict)
-			examples = lambda: [self.makeConceptExample(sentence, i, concept) for concept in k_best_concepts]
+			examples = [self.makeConceptExample(sentence, i, concept) for concept in k_best_concepts]
 			oracle = [ v for v,concept in enumerate(k_best_concepts)  if concept == span.concept ]
+			#print >>sys.stderr, len(examples)
 			pred = self.sch.predict(examples = examples,
 			                        my_tag = i+1,
 			                        oracle = oracle,
@@ -109,18 +109,18 @@ def main(argv):
 		for [span, pos, concept] in concept_training_data:
 			training_sentence.append(Span(span, pos, concept))
 		training_sentences.append(training_sentence)
-	#N = int(len(training_sentences) * 0.9)
-	N = 2
-	vw = pyvw.vw("--search 0 --csoaa_ldf m --quiet --search_task hook --ring_size 2048 -q sc")
+	N = int(len(training_sentences) * 0.9)
+	#N = 2
+	vw = pyvw.vw("--search 0 --csoaa_ldf m --quiet --search_task hook --ring_size 2048 -q sc --search_no_caching")
 	task = vw.init_search_task(Concept_Relation)
 	print "Learning.."
 	start_time = time.time()
-	print training_sentences[:N]
+	#print training_sentences[:N]
 	for p in range(2):
 		task.learn(training_sentences[:N])
 	print "Time taken: " + str(time.time() - start_time)
-	test_sentences = training_sentences[N:N+1]
-	#test_sentences = training_sentences[N:]
+	#test_sentences = training_sentences[N:N+1]
+	test_sentences = training_sentences[N:]
 	start_time = time.time()
 	print "Testing.."
 	print len(test_sentences) 
