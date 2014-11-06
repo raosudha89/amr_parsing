@@ -40,6 +40,12 @@ def concept2label(concept):
 		last_used_label += 1
 	return concept_labels[concept]  
 
+def label2concept(_label):
+	global concept_labels
+	for concept, label in concept_labels.iteritems():
+		if label == _label:
+			return concept
+
 def get_words(sentence, i): 
 	return "<s>" if i < 0 else "</s>" if i >= len(sentence) else sentence[i].words
 
@@ -104,8 +110,20 @@ class Concept_Relation(pyvw.SearchTask):
 			output.append( concept2label(k_best_concepts[pred-1]) )   #-1 because of shared
 		return output
 
-def get_true_concepts(sentence):
+def get_true_labels(sentence):
 	return [concept2label(span.concept) for span in sentence]
+
+def print_comparison(predicted, true):
+	for i in range(len(predicted)):
+		print label2concept(predicted[i]), label2concept(true[i])
+	print
+
+def get_accuracy(predicted, true):
+	accuracy = 0
+	for i in range(len(predicted)):
+		if predicted[i] == true[i]:
+			accuracy += 1
+	return accuracy*1.0/len(predicted)
 
 def main(argv):
 	#Format of concept_training_dataset
@@ -118,7 +136,7 @@ def main(argv):
 			training_sentence.append(Span(span, pos, concept))
 		training_sentences.append(training_sentence)
 	N = int(len(training_sentences) * 0.9)
-	N = 20
+	#N = 20
 	vw = pyvw.vw("--search 0 --csoaa_ldf m --quiet --search_task hook --ring_size 2048 -q sc")
 	task = vw.init_search_task(Concept_Relation)
 	print "Learning.."
@@ -129,14 +147,18 @@ def main(argv):
 		task.learn(training_sentences[:N])
 	print "Time taken: " + str(time.time() - start_time)
 	test_sentences = training_sentences[N:]
-	test_sentences = training_sentences[N:N+5]
+	#test_sentences = training_sentences[N:N+5]
 	start_time = time.time()
 	print "Testing.."
-	print len(test_sentences) 
+	print len(test_sentences)
+	accuracy = 0 
 	for test_sentence in test_sentences:
-		print task.predict(eraseAnnotations(test_sentence))
-		print "should have printed"
-		print get_true_concepts(test_sentence)
+		predicted = task.predict(eraseAnnotations(test_sentence))
+		true =  get_true_labels(test_sentence)
+		#print_comparison(predicted, true)
+		accuracy += get_accuracy(predicted, true)
+	accuracy = accuracy/len(test_sentences)
+	print accuracy	
 	print "Time taken: " + str(time.time() - start_time)
 
 if __name__ == "__main__":
