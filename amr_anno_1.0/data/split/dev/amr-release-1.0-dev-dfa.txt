@@ -1,0 +1,3386 @@
+# AMR release; corpus: dfa; section: dev; number of AMRs: 210 (generated on Mon Jan 27, 2014 at 20:44:07)
+
+# ::id DF-199-193571-649_0934.1 ::date 2013-08-23T03:37:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt When the Soviet Union collapsed in 1991, partisans of Ronald Reagan claimed he had "won" the cold war.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193571-649_0934_1.txt
+(c / claim-01
+      :ARG0 (p / partisan
+            :poss (p2 / person :name (n / name :op1 "Ronald" :op2 "Reagan")))
+      :ARG1 (w / win-01
+            :ARG0 p2
+            :ARG1 (w2 / war :name (n2 / name :op1 "Cold" :op2 "War")))
+      :time (c2 / collapse-01
+            :ARG1 (c3 / country :name (n3 / name :op1 "Soviet" :op2 "Union"))
+            :time (d / date-entity :year 1991)))
+
+# ::id DF-199-193571-649_0934.2 ::date 2013-08-23T05:36:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt Although a careful review of the facts will show it was not true, the claim was that the Soviet Union became overextended attempting to keep up with Ray-gun's defense spending.
+# ::save-date Mon Jan 27, 2014 ::file DF-199-193571-649_0934_2.txt
+(h / have-concession-91
+      :ARG1 (c / claim-01
+            :ARG1 (o2 / overextend-00
+                  :ARG1 (c2 / country :name (n / name :op1 "Soviet" :op2 "Union"))
+                  :ARG1-of (c3 / cause-01
+                        :ARG0 (a / attempt-01
+                              :ARG0 c2
+                              :ARG1 (k / keep-05
+                                    :ARG0 c2
+                                    :ARG1 (s / spend-01
+                                          :ARG0 (p / person :name (n2 / name :op1 "Reagan")
+                                                :ARG1-of (c5 / call-01
+                                                      :ARG2 (p2 / person :name (n3 / name :op1 "Ray" :op2 "gun"))))
+                                          :ARG1 (d / defend-01)))))))
+      :ARG2 (s2 / show-01
+            :ARG0 (r2 / review-01
+                  :ARG1 (f / fact)
+                  :mod (c4 / careful))
+            :ARG1 (t / true :polarity -
+                  :domain c)))
+
+# ::id DF-199-193571-649_0934.3 ::date 2013-08-23T06:37:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Pappy Bush, who was the president at the time, claimed that he had won the cold war since the collapse of the Soviet Union happened on his watch.
+# ::save-date Mon Jan 27, 2014 ::file DF-199-193571-649_0934_3.txt
+(c / claim-01
+      :ARG0 (p2 / person :name (n / name :op1 "Pappy" :op2 "Bush")
+            :ARG0-of (h2 / have-org-role-91
+                  :ARG2 (p3 / president)
+                  :time (t / then)))
+      :ARG1 (w / win-01
+            :ARG0 p2
+            :ARG1 (w2 / war :name (n2 / name :op1 "Cold" :op2 "War"))
+            :ARG1-of (c2 / cause-01
+                  :ARG0 (c3 / collapse-01
+                        :ARG1 (c4 / country :name (n3 / name :op1 "Soviet" :op2 "Union"))
+                        :time (w3 / watch-03
+                              :ARG0 p2)))))
+
+# ::id DF-199-193571-649_0934.4 ::date 2013-08-23T06:52:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt Regardless of how one views those claims, for many people -- capitalists especially -- heralded the "victory" of capitalism.
+# ::save-date Mon Jan 20, 2014 ::file DF-199-193571-649_0934_4.txt
+(h / herald-01
+      :ARG1 (w / win-01
+            :ARG0 (c / capitalism))
+      :beneficiary (p / person
+            :quant (m / many)
+            :example (c3 / capitalist
+                  :mod (e / especially)))
+      :concession (t / thing
+            :ARG2-of (v / view-02
+                  :ARG0 (o / one)
+                  :ARG1 (c2 / claim-01
+                        :mod (t2 / that)))))
+
+# ::id DF-199-193571-649_0934.5 ::date 2013-08-23T07:10:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt Globalism was hailed by its partisans as the natural consequence of their "victory," and the sensible way to bring the alleged blessings of a problematic freedom to the people of the world.
+# ::save-date Mon Jan 27, 2014 ::file DF-199-193571-649_0934_5.txt
+(h / hail-02
+      :ARG0 (p / partisan
+            :poss g)
+      :ARG1 (g / globalism)
+      :ARG2 (a / and
+            :op1 (c / consequence
+                  :mod (n / natural)
+                  :ARG1-of (c2 / cause-01
+                        :ARG0 (w / win-01
+                              :ARG0 p)))
+            :op2 (w2 / way
+                  :mod (s / sensible)
+                  :instrument-of (b / bring-01
+                        :ARG0 g
+                        :ARG1 (b2 / bless-01
+                              :ARG1 p3
+                              :ARG2 (f / free-41
+                                    :mod (p2 / problem))
+                              :ARG1-of (a2 / allege-01))
+                        :ARG2 (p3 / person
+                              :part-of (w3 / world))))))
+
+# ::id DF-199-193571-649_0934.6 ::date 2013-08-23T07:29:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt Always impatient of any restaint, capitalists used this so-called victory as justification for the opposition to, or calls for the roll-back of any regulatory restraint.
+# ::save-date Mon Jan 27, 2014 ::file DF-199-193571-649_0934_6.txt
+(u / use-01
+      :ARG0 (c / capitalist
+            :mod (i / impatient
+                  :time (a / always)
+                  :ARG1-of (c3 / cause-01
+                        :ARG0 (r / restrain-01
+                              :quant (a2 / any)))))
+      :ARG1 (w / win-01
+            :mod (t / this)
+            :ARG1-of (c2 / call-01
+                  :manner (s / so)))
+      :ARG2 (j / justify-01
+            :ARG0 c
+            :ARG1 (o2 / or
+                  :op1 (o / oppose-01
+                        :ARG0 c
+                        :ARG1 (r2 / restrain-01
+                              :ARG0-of (r3 / regulate-01)
+                              :quant (a3 / any)))
+                  :op2 (c4 / call-03
+                        :ARG0 c
+                        :ARG1 (r4 / roll-01
+                              :ARG1 r2
+                              :ARG2 (b / back))))))
+
+# ::id DF-199-193571-649_0934.7 ::date 2013-08-23T08:05:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt But not everyone has agreed with that view of the world and of economic systems.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193571-649_0934_7.txt
+(c / contrast-01
+      :ARG2 (a / agree-01
+            :ARG0 (e / everyone :polarity -)
+            :ARG1 (v / view-02
+                  :ARG1 (a2 / and
+                        :op1 (w / world)
+                        :op2 (s / system
+                              :mod (e2 / economy)))
+                  :mod (t / that))))
+
+# ::id DF-199-193571-649_0934.8 ::date 2013-08-23T08:21:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt Now, with the various "Occupy" movements, it is (or ought to be) obvious that a great many people are less than enchanted with capitalism and its expression in the idustrial democracies, as well as in the countries into which capitalists from the industrial democracies go to invest.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-193571-649_0934_8.txt
+(o / or
+      :op1 (o2 / obvious-41
+            :ARG1 (e / enchant-01
+                  :ARG0 (a / and
+                        :op1 (c / capitalism)
+                        :op2 (e2 / expression
+                              :poss c
+                              :location (a2 / and
+                                    :op1 (d / democracy
+                                          :mod (i / industry))
+                                    :op2 (c2 / country
+                                          :ARG4-of (g2 / go-01
+                                                :ARG1 (c3 / capitalist
+                                                      :source d)
+                                                :purpose (i2 / invest-01
+                                                      :ARG0 c3))))))
+                  :ARG1 (p / person
+                        :quant (m / many
+                              :mod (g / great)))
+                  :degree (l / less-than)))
+      :op2 (r / recommend-01
+            :ARG1 o2)
+      :ARG1-of (c4 / cause-01
+            :ARG0 (m2 / move-02
+                  :ARG1 (o4 / occupy-01)
+                  :mod (v / various)))
+      :time (n / now))
+
+# ::id DF-199-193571-649_0934.9 ::date 2013-08-23T08:22:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt What are your thoughts on capitalism and its activities?
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193571-649_0934_9.txt
+(t / think-01
+      :ARG0 (y / you)
+      :ARG1 (a / amr-unknown)
+      :ARG2 (a2 / and
+            :op1 (c / capitalism)
+            :op2 (a3 / activity
+                  :poss c)))
+
+# ::id DF-199-193571-649_0934.10 ::date 2013-08-23T08:24:49 ::annotator SDL-AMR-09 ::preferred
+# ::snt @Setanta, Unfettered capitalism has yielded an Oligarchy.
+# ::save-date Mon Jan 20, 2014 ::file DF-199-193571-649_0934_10.txt
+(s / say-01
+      :ARG1 (y / yield-01
+            :ARG0 (c / capitalism
+                  :ARG1-of (f / fetter-01 :polarity -))
+            :ARG1 (o / oligarchy))
+      :ARG2 (p / person :name (n / name :op1 "Setanta")))
+
+# ::id DF-199-193571-649_0934.11 ::date 2013-08-23T08:30:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt Governmental regulation is good for capitalisms evolution.
+# ::save-date Mon Sep 9, 2013 ::file DF-199-193571-649_0934_11.txt
+(g / good-42
+      :ARG1 (e / evolve-01
+            :ARG1 (c / capitalism))
+      :ARG2 (r / regulate-01
+            :ARG0 (g2 / government-organization
+                  :ARG0-of (g3 / govern-01))))
+
+# ::id DF-199-193571-649_0934.12 ::date 2013-08-23T08:35:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt Health and safety and environmental horrors need to be regulated otherwise industries will not EVER do whats right for humanity.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193571-649_0934_12.txt
+(h / have-condition-91
+      :ARG1 (d / do-02 :polarity -
+            :ARG0 (i / industry)
+            :ARG1 (t / thing
+                  :ARG1-of (r / right-42
+                        :ARG2 (h2 / humanity)))
+            :time (e / ever))
+      :ARG2 (n / need-01
+            :ARG0 (a / and
+                  :op1 (h3 / horror
+                        :mod (h4 / health))
+                  :op2 (h5 / horror
+                        :mod (s / safe-41))
+                  :op3 (h6 / horror
+                        :mod (e2 / environment)))
+            :ARG1 (r2 / regulate-01
+                  :ARG1 a)))
+
+# ::id DF-199-193571-649_0934.13 ::date 2013-08-23T08:49:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt @Setanta, I don't have a problem with capitalism -- i have a problem with unregulated capitalism.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193571-649_0934_13.txt
+(s / say-01
+      :ARG0 (i / i)
+      :ARG1 (c2 / contrast-01
+            :ARG1 (h / have-03 :polarity -
+                  :ARG0 i
+                  :ARG1 (p2 / problem
+                        :prep-with (c / capitalism)))
+            :ARG2 (h2 / have-03
+                  :ARG0 i
+                  :ARG1 (p3 / problem
+                        :prep-with (c3 / capitalism
+                              :ARG1-of (r / regulate-01 :polarity -)))))
+      :ARG2 (p / person :name (n / name :op1 "Setanta")))
+
+# ::id DF-199-193571-649_0934.14 ::date 2013-08-23T08:57:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt I agree with this completely.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193571-649_0934_14.txt
+(a / agree-01
+      :ARG0 (i / i)
+      :ARG1 (t / this)
+      :manner (c / complete))
+
+# ::id DF-199-193571-649_0934.15 ::date 2013-08-23T08:59:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt Capitalism thrives when everyone understands the rules, plays by the rules and enforces the rules.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193571-649_0934_15.txt
+(t / thrive-01
+      :ARG1 (c / capitalism)
+      :time (a / and
+            :op1 (u / understand-01
+                  :ARG0 (e / everyone)
+                  :ARG1 (r / rule))
+            :op2 (p / play-01
+                  :ARG0 e
+                  :prep-by r)
+            :op3 (e2 / enforce-01
+                  :ARG0 e
+                  :ARG1 r)))
+
+# ::id DF-199-193571-649_0934.16 ::date 2013-08-23T09:09:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt If everyone has to spend all their time trying to circumvent the rules, understand the rules or fighting against those not following the rules, that is where trouble really begins.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193571-649_0934_16.txt
+(o / obligate-01
+      :ARG2 (s / spend-02
+            :ARG0 (e / everyone)
+            :ARG1 (t / time
+                  :quant (a / all)
+                  :poss e)
+            :ARG2 (o2 / or
+                  :op1 (t2 / try-01
+                        :ARG0 e
+                        :ARG1 (c / circumvent-01
+                              :ARG0 e
+                              :ARG1 (r / rule)))
+                  :op2 (t3 / try-01
+                        :ARG0 e
+                        :ARG1 (u / understand-01
+                              :ARG0 e
+                              :ARG1 r))
+                  :op3 (f / fight-01
+                        :ARG0 e
+                        :ARG1 (p / person
+                              :ARG0-of (f2 / follow-02 :polarity -
+                                    :ARG1 r)))))
+      :source-of (b / begin-01
+            :ARG1 (t4 / trouble-01)
+            :mod (r2 / really)))
+
+# ::id DF-199-193571-649_0934.17 ::date 2013-08-23T10:31:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt That's the problem with "deregulation".
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193571-649_0934_17.txt
+(p / problem
+      :topic (d / deregulate-01)
+      :domain (t / that))
+
+# ::id DF-199-193571-649_0934.18 ::date 2013-08-23T10:33:29 ::annotator SDL-AMR-09 ::preferred
+# ::snt Removing rules doesn't help business be more competitive, it means that businesses must race to the bottom to counter new businesses that start there.
+# ::save-date Mon Sep 9, 2013 ::file DF-199-193571-649_0934_18.txt
+(r4 / remove-01
+      :ARG1 (r2 / rule)
+      :ARG0-of (h / help-01 :polarity -
+            :ARG1 (c / compete-01
+                  :ARG0 b
+                  :degree (m / more))
+            :ARG2 (b / business))
+      :ARG0-of (m2 / mean-01
+            :ARG1 (o / obligate-01
+                  :ARG2 (r3 / race-01
+                        :ARG0 b
+                        :ARG1 (b2 / bottom)
+                        :purpose (c2 / counter-01
+                              :ARG0 b
+                              :ARG1 (b3 / business
+                                    :mod (n / new)
+                                    :ARG1-of (s / start-01
+                                          :location b2)))))))
+
+# ::id DF-199-193571-649_0934.19 ::date 2013-08-23T10:44:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt It's like changing the rules to Monopoly half way through the game so that all the previous purchases are meaningless.
+# ::save-date Sat Jan 25, 2014 ::file DF-199-193571-649_0934_19.txt
+(r / resemble-01
+      :ARG1 (i / it)
+      :ARG2 (c / change-01
+            :ARG1 (r2 / rule
+                  :mod (g / game :name (n / name :op1 "Monopoly")))
+            :location (w / way
+                  :mod (h / half)
+                  :path (t / through
+                        :op1 (g2 / game))))
+      :purpose (m / mean-01 :polarity -
+            :ARG0 (p / purchase-01
+                  :quant (a / all)
+                  :time (p2 / previous))))
+
+# ::id DF-199-193571-649_0934.20 ::date 2013-08-23T11:36:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt That's not a benefit to capitalism despite what some would tell you.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193571-649_0934_20.txt
+(b / benefit-01 :polarity -
+      :ARG0 (t / that)
+      :ARG1 (c / capitalism)
+      :concession (t2 / thing
+            :ARG1-of (t3 / tell-01
+                  :ARG0 (s / some)
+                  :ARG2 (y / you))))
+
+# ::id DF-199-193600-660_5903.1 ::date 2013-08-23T11:41:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt Out of all of the examples I saw, the only one I would agree with is the bomb toting Arab.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-193600-660_5903_1.txt
+(a2 / agree-01
+      :ARG0 (i / i)
+      :ARG1 (e3 / exemplify-01
+            :ARG1 (p / person
+                  :mod (e2 / ethnic-group :name (n / name :op1 "Arab"))
+                  :ARG0-of (t2 / tote-01
+                        :ARG1 (b / bomb)))
+            :ARG1-of (i2 / include-91
+                  :ARG2 (t / thing
+                        :ARG0-of (e / exemplify-01)
+                        :quant (a / all)
+                        :ARG1-of (s / see-01))))
+      :mod (o / only))
+
+# ::id DF-199-193600-660_5903.2 ::date 2013-08-23T11:41:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt That is extremely rude, though I can see the humor in it.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_2.txt
+(h / have-concession-91
+      :ARG1 (r / rude-41
+            :ARG1 (t / that)
+            :degree (e / extreme))
+      :ARG2 (p / possible
+            :domain (s / see-01
+                  :ARG0 (i / i)
+                  :ARG2 (h2 / humor)
+                  :location t)))
+
+# ::id DF-199-193600-660_5903.3 ::date 2013-08-23T11:45:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt In a college, that kind of costume should not have a place.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_3.txt
+(r / recommend-01
+      :ARG1 (h / have-03 :polarity -
+            :ARG0 (t2 / thing
+                  :ARG2-of (c / costume-01
+                        :mod (k / kind
+                              :mod (t / that))))
+            :ARG1 (p / place)
+            :location (c2 / college)))
+
+# ::id DF-199-193600-660_5903.4 ::date 2013-08-23T11:50:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt But these kids are listing Geisha costumes, sombreros + donkeys, and a few other costumes that they deem 'racially insensitive'
+# ::save-date Mon Sep 9, 2013 ::file DF-199-193600-660_5903_4.txt
+(c / contrast-01
+      :ARG2 (l / list-01
+            :ARG0 (k / kid
+                  :mod (t / this))
+            :ARG1 (a / and
+                  :op1 (c2 / costume-01
+                        :ARG2 (g / geisha))
+                  :op2 (a2 / and
+                        :op1 (s / sombrero)
+                        :op2 (d / donkey))
+                  :op3 (t2 / thing
+                        :ARG2-of (c3 / costume-01
+                              :ARG1-of (s2 / sensitive-41 :polarity -
+                                    :ARG2 (r / race)
+                                    :ARG1-of (d2 / deem-01
+                                          :ARG0 k)))
+                        :mod (o / other)
+                        :quant (f / few)))))
+
+# ::id DF-199-193600-660_5903.5 ::date 2013-08-23T12:01:41 ::annotator SDL-AMR-09 ::preferred
+# ::snt Racially insensitive?
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_5.txt
+(s / sensitive-41 :polarity - :mode interrogative
+      :ARG2 (r / race))
+
+# ::id DF-199-193600-660_5903.6 ::date 2013-08-19 ::annotator SDL-AMR-09 ::preferred
+# ::snt Have they not been to Mexico?
+# ::save-date Mon Jan 20, 2014 ::file DF-199-193600-660_5903_6.txt
+(b / be-located-at-91 :mode interrogative :polarity -
+      :ARG1 (t2 / they)
+      :ARG2 (c / country :name (n2 / name :op1 "Mexico")))
+
+# ::id DF-199-193600-660_5903.7 ::date 2013-08-23T12:17:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt That is a huge part of their dress when you get farther away from the cities.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_7.txt
+(h / have-part-91
+      :ARG1 (d / dress-01
+            :ARG1 (t2 / they))
+      :ARG2 (t / that)
+      :mod (h2 / huge)
+      :time (g / get-05
+            :ARG1 (y / you)
+            :ARG2 (a / away
+                  :mod (f / far
+                        :degree (m / more)))
+            :source (c / city)))
+
+# ::id DF-199-193600-660_5903.8 ::date 2013-08-23T12:18:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt How is that being insulting?
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_8.txt
+(i / insult-01
+      :ARG0 (t / that)
+      :manner (a / amr-unknown))
+
+# ::id DF-199-193600-660_5903.9 ::date 2013-08-23T12:23:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt It is not showing someone doing something derogatory, it is using the clothes of a society for a costume.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_9.txt
+(c / contrast-01
+      :ARG1 (s / show-01 :polarity -
+            :ARG0 (i / it)
+            :ARG1 (s2 / someone
+                  :ARG0-of (d / do-02
+                        :ARG1 (s3 / something
+                              :mod (d2 / derogatory)))))
+      :ARG2 (u / use-01
+            :ARG0 i
+            :ARG1 (t / thing
+                  :poss (s4 / society)
+                  :ARG2-of (c2 / clothe-01))
+            :ARG2 (t2 / thing
+                  :ARG2-of (c3 / costume-01))))
+
+# ::id DF-199-193600-660_5903.10 ::date 2013-08-23T12:32:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt A Geisha is insensitive too.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_10.txt
+(s / sensitive-41 :polarity -
+      :ARG1 (g / geisha)
+      :mod (t / too))
+
+# ::id DF-199-193600-660_5903.11 ::date 2013-08-23T12:33:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt Again, ( my opinion only) this is taking it way over board.
+# ::save-date Mon Sep 9, 2013 ::file DF-199-193600-660_5903_11.txt
+(o2 / opine-01
+      :ARG0 (i2 / i)
+      :ARG1 (t / take-01
+            :ARG0 (t2 / this)
+            :ARG1 (i / it)
+            :destination (o / over
+                  :op1 (b / board)
+                  :degree (w / way)))
+      :mod (o3 / only)
+      :mod (a / again))
+
+# ::id DF-199-193600-660_5903.12 ::date 2013-08-23T12:44:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt Sometimes it seems people look for reasons to be offended.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_12.txt
+(s / seem-01
+      :ARG1 (l / look-01
+            :ARG0 (p / person)
+            :ARG1 (r / reason)
+            :ARG2 (o / offend-01
+                  :ARG1 p))
+      :time (s2 / sometimes))
+
+# ::id DF-199-193600-660_5903.13 ::date 2013-08-23T12:49:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt It is about perspective frankly.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_13.txt
+(i / it
+      :topic (p / perspective)
+      :manner (f / frank))
+
+# ::id DF-199-193600-660_5903.14 ::date 2013-08-23T12:52:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt There will ALWAYS be someone who sees something and wants to think the worst of it.
+# ::save-date Mon Sep 9, 2013 ::file DF-199-193600-660_5903_14.txt
+(a2 / and
+      :op1 (s2 / see-01
+            :ARG0 (s / someone)
+            :ARG1 (s3 / something))
+      :op2 (w / want-01
+            :ARG0 s
+            :ARG1 (t / think-01
+                  :ARG0 s
+                  :ARG1 (b / bad
+                        :degree (m / most))
+                  :ARG2 s2))
+      :time (a / always))
+
+# ::id DF-199-193600-660_5903.15 ::date 2013-08-23T12:56:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt Dressing in a costume or NOT dressing in one will not change that.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_15.txt
+(c / change-01 :polarity -
+      :ARG0 (o / or
+            :op1 (d / dress-01
+                  :ARG2 (t / thing
+                        :ARG2-of (c2 / costume-01)))
+            :op2 (d2 / dress-01 :polarity -
+                  :ARG2 t))
+      :ARG1 (t2 / that))
+
+# ::id DF-199-193600-660_5903.16 ::date 2013-08-23T13:00:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt And why is it that only those races/cultures are the spotlight of being insensitive?
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_16.txt
+(a / and
+      :op2 (a2 / amr-unknown
+            :ARG0-of (c2 / cause-01
+                  :ARG1 (s3 / sensitive-41
+                        :ARG1 (s2 / slash :polarity -
+                              :op1 (r / race
+                                    :mod (t / that)
+                                    :mod (o / only))
+                              :op2 (c / culture
+                                    :mod t
+                                    :mod o))
+                        :ARG1-of (s / spotlight-01)))))
+
+# ::id DF-199-193600-660_5903.17 ::date 2013-08-23T13:00:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt Is it not JUST as rude to wear torn over alls, stained shirt, black out your teeth and be a white hillbilly?
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_17.txt
+(e / equal-01 :polarity - :mode interrogative
+      :ARG1 (r / rude-41
+            :ARG1 (a / and
+                  :op1 (w / wear-01
+                        :ARG1 (a2 / and
+                              :op1 (o / overalls
+                                    :ARG1-of (t / tear-01))
+                              :op2 (s / shirt
+                                    :ARG1-of (s2 / stain-01))))
+                  :op2 (b / blacken-01
+                        :ARG0 (y / you)
+                        :ARG1 (t2 / tooth
+                              :part-of y))
+                  :op3 (h / hillbilly
+                        :mod (w2 / white))))
+      :mod (j / just))
+
+# ::id DF-199-193600-660_5903.18 ::date 2013-08-23T13:00:41 ::annotator SDL-AMR-09 ::preferred
+# ::snt What about the woman who wears shorts, high heels and too much make up to be a hooker?
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_18.txt
+(a3 / amr-unknown
+      :topic (w / woman
+            :ARG0-of (w2 / wear-01
+                  :ARG1 (a2 / and
+                        :op1 (s / shorts)
+                        :op2 (h / heel
+                              :mod (h2 / high))
+                        :op3 (m / makeup
+                              :quant (m2 / much
+                                    :degree (t2 / too))))
+                  :purpose (h3 / hooker))))
+
+# ::id DF-199-193600-660_5903.19 ::date 2013-08-23T13:10:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt There has to be a stop to this forever drive to find something insensitive.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_19.txt
+(o / obligate-01
+      :ARG2 (s / stop-01
+            :ARG1 (d / drive-02
+                  :ARG2 (f / find-01
+                        :ARG1 (s2 / something
+                              :ARG1-of (s3 / sensitive-41 :polarity -)))
+                  :extent (f2 / forever)
+                  :mod (t / this))))
+
+# ::id DF-199-193600-660_5903.20 ::date 2013-08-23T13:16:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt And if someone wants to look for reasons they are being held back for what ever reason they have in their heads, they will always find justification no matter what.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_20.txt
+(a / and
+      :op2 (f / find-01
+            :ARG0 (t / they)
+            :ARG1 (t2 / thing
+                  :ARG0-of (j / justify-01))
+            :time (a2 / always)
+            :condition (w / want-01
+                  :ARG0 (s / someone)
+                  :ARG1 (l / look-01
+                        :ARG1 (t3 / thing
+                              :ARG0-of (c / cause-01
+                                    :ARG1 (h / hold-07
+                                          :ARG1 (t4 / they)
+                                          :ARG1-of (c2 / cause-01
+                                                :ARG0 (h2 / have-03
+                                                      :ARG0 t4
+                                                      :ARG1 (r / reason
+                                                            :mod (w2 / whatever))
+                                                      :location (h3 / head
+                                                            :part-of t4))))))))
+            :manner (m / matter-01 :polarity -
+                  :ARG1 (t5 / thing))))
+
+# ::id DF-199-193600-660_5903.21 ::date 2013-08-23T13:16:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt But why are we as a so called free society really jumping on board this super PC behavior?
+# ::save-date Mon Sep 9, 2013 ::file DF-199-193600-660_5903_21.txt
+(c / contrast-01
+      :ARG2 (j / jump-03
+            :ARG0 (w / we
+                  :ARG1-of (c2 / call-01
+                        :ARG2 (s / society
+                              :ARG1-of (f / free-41))))
+            :destination (b / board-01
+                  :ARG1 (b2 / behave-01
+                        :ARG1 (p / PC
+                              :mod (s2 / super))
+                        :mod (t / this)))
+            :ARG1-of (c3 / cause-01
+                  :ARG0 (a / amr-unknown))
+            :mod (r / really)))
+
+# ::id DF-199-193600-660_5903.22 ::date 2013-08-23T13:17:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt Why is it now ok to find the smallest thing to be offended about and throw it out as the new discrimination?
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_22.txt
+(a / amr-unknown
+      :ARG0-of (c / cause-01
+            :ARG1 (o / okay-01
+                  :ARG1 (a2 / and
+                        :op1 (f / find-01
+                              :ARG1 (t / thing
+                                    :mod (s / small
+                                          :degree (m / most))
+                                    :ARG0-of (o2 / offend-01)))
+                        :op2 (t2 / throw-04
+                              :ARG1 (d / discriminate-02
+                                    :ARG1 f
+                                    :mod (n / new))))
+                  :time (n2 / now))))
+
+# ::id DF-199-193600-660_5903.23 ::date 2013-08-23T14:44:21 ::annotator SDL-AMR-09 ::preferred
+# ::snt And why are these rules only applied to two or three races?
+# ::save-date Mon Sep 9, 2013 ::file DF-199-193600-660_5903_23.txt
+(a3 / and
+      :op2 (a / apply-02
+            :ARG1 (r / rule
+                  :mod (t / this))
+            :ARG2 (r2 / race
+                  :quant (o / or :op1 2 :op2 3))
+            :mod (o2 / only)
+            :ARG1-of (c / cause-01
+                  :ARG0 (a2 / amr-unknown))))
+
+# ::id DF-199-193600-660_5903.24 ::date 2013-08-23T14:19:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt Americans, white, black, green, blue, short, tall, fat..
+# ::save-date Mon Sep 9, 2013 ::file DF-199-193600-660_5903_24.txt
+(a / and
+      :op1 (p / person
+            :mod (c / country :name (n / name :op1 "America")))
+      :op2 (p2 / person
+            :mod (w / white))
+      :op3 (p3 / person
+            :mod (b / black))
+      :op4 (p4 / person
+            :mod (g / green))
+      :op5 (p5 / person
+            :mod (b2 / blue))
+      :op6 (p6 / person
+            :ARG1-of (s / short-41))
+      :op7 (p7 / person
+            :mod (t / tall))
+      :op8 (p8 / person
+            :mod (f / fat)))
+
+# ::id DF-199-193600-660_5903.25 ::date 2013-08-25T05:01:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt what have you, are ALL being made fun of in some way when it comes to costumes and halloween but only those 3 races get the red light?
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_25.txt
+(m / multi-sentence
+      :snt1 (h / have-03
+            :ARG0 (y / you)
+            :ARG1 (a / amr-unknown))
+      :snt2 (m2 / make-01 :mode interrogative
+            :ARG1 (f2 / fun)
+            :ARG2 (a2 / all)
+            :manner (w / way
+                  :mod (s / some))
+            :time (c / come-12
+                  :ARG1 (a3 / and
+                        :op1 (t / thing
+                              :ARG2-of (c2 / costume-01))
+                        :op2 (f / festival :name (n / name :op1 "Halloween"))))
+            :ARG1-of (c3 / contrast-01
+                  :ARG2 (g / get-01 :mode interrogative
+                        :ARG0 (r / race :quant 3
+                              :mod (t2 / that)
+                              :mod (o / only))
+                        :ARG1 (l / light
+                              :mod (r2 / red))))))
+
+# ::id DF-199-193600-660_5903.26 ::date 2013-08-23T13:17:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt Isnt THAT racist?
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_26.txt
+(r / racist :polarity - :mode interrogative
+      :domain (t / that))
+
+# ::id DF-199-193600-660_5903.27 ::date 2013-08-23T13:19:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt These students are bleeding idealism and haven't been tempered enough with time and cultural patina to realize that one should be able to laugh at oneself and one's cultural obsessions and that these costumes aren't the evil mechanisms of racism they are betraying them to be.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_27.txt
+(a / and
+      :op1 (b / bleed-01
+            :ARG0 (p / person
+                  :ARG0-of (s / study-01))
+            :mod (i / idealism))
+      :op2 (t / temper-01
+            :ARG1 p
+            :mod (e / enough)
+            :duration (a2 / and
+                  :op1 (t2 / time)
+                  :op2 (p2 / patina
+                        :mod (c / culture)))
+            :purpose (r / realize-01
+                  :ARG0 p
+                  :ARG1 (a3 / and
+                        :op1 (r2 / recommend-01
+                              :ARG1 (p3 / possible
+                                    :domain (l / laugh-01
+                                          :ARG0 (o / one)
+                                          :ARG2 (a4 / and
+                                                :op1 o
+                                                :op2 (t3 / thing
+                                                      :ARG1-of (o2 / obsess-01
+                                                            :ARG0 o)
+                                                      :mod c)))))
+                        :op2 (m / mechanism :polarity -
+                              :mod (e2 / evil)
+                              :poss (r3 / racism)
+                              :domain (t4 / thing
+                                    :ARG2-of (c2 / costume-01
+                                          :ARG1-of (b2 / betray-01
+                                                :ARG0 p))
+                                    :mod (t5 / this)))))))
+
+# ::id DF-199-193600-660_5903.28 ::date 2013-08-23T13:20:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt This is an absolutely ridiculous thread.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_28.txt
+(r / ridicule-01
+      :ARG1 (t / thread
+            :mod (t2 / this))
+      :degree (a / absolute))
+
+# ::id DF-199-193600-660_5903.29 ::date 2013-08-23T13:24:44 ::annotator SDL-AMR-09 ::preferred
+# ::snt I mean if racist costumes were actually being banned, you all might have a point.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_29.txt
+(m / mean-01
+      :ARG0 (i / i)
+      :ARG1 (b / ban-01
+            :ARG1 (t / thing
+                  :ARG2-of (c / costume-01)
+                  :mod (r / racism))
+            :mod (a / actual)
+            :ARG2-of (h / have-condition-91
+                  :ARG1 (p / possible
+                        :domain (h2 / have-03
+                              :ARG0 (y / you
+                                    :quant (a2 / all))
+                              :ARG1 (p2 / point))))))
+
+# ::id DF-199-193600-660_5903.30 ::date 2013-08-23T13:32:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt I am as uptight about the plight of white people in the US as anyone is.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_30.txt
+(u / uptight
+      :topic (p / plight
+            :poss (p2 / person
+                  :mod (w / white)
+                  :location (c / country :name (n / name :op1 "US"))))
+      :domain (i / i)
+      :ARG1-of (e / equal-01
+            :ARG2 (u2 / uptight
+                  :topic p
+                  :domain (a / anyone))))
+
+# ::id DF-199-193600-660_5903.31 ::date 2013-08-23T13:45:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt But did anyone else read the article?
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_31.txt
+(c / contrast-01
+      :ARG2 (r / read-01 :mode interrogative
+            :ARG0 (a / anyone
+                  :mod (e / else))
+            :ARG1 (a2 / article)))
+
+# ::id DF-199-193600-660_5903.32 ::date 2013-08-23T13:48:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt No one is banning Halloween costumes..
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_32.txt
+(b / ban-01
+      :ARG0 (n / no-one)
+      :ARG1 (t / thing
+            :ARG2-of (c / costume-01)
+            :mod (f / festival :name (n2 / name :op1 "Halloween"))))
+
+# ::id DF-199-193600-660_5903.33 ::date 2013-08-23T13:50:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt No one is even talking about banning Halloween costumes.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_33.txt
+(t / talk-01
+      :ARG0 (n / no-one)
+      :ARG1 (b / ban-01
+            :ARG1 (t2 / thing
+                  :ARG2-of (c / costume-01
+                        :mod (f / festival :name (n2 / name :op1 "Halloween")))))
+      :mod (e / even))
+
+# ::id DF-199-193600-660_5903.34 ::date 2013-08-23T13:53:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt In fact no one in this story wants to ban anything, except for the people here who apparently want to ban posters.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_34.txt
+(w / want-01
+      :ARG0 (n / no-one
+            :location (s / story
+                  :mod (t / this)))
+      :ARG1 (b / ban-01
+            :ARG0 n
+            :ARG1 (a / anything))
+      :ARG0-of (e / except-00
+            :ARG1 (p / person
+                  :location (h / here)
+                  :ARG0-of (w2 / want-01
+                        :ARG1 (b2 / ban-01
+                              :ARG0 p
+                              :ARG1 (t2 / thing
+                                    :ARG2-of (p2 / poster-01)))
+                        :manner (a2 / apparent))))
+      :mod (i / in-fact))
+
+# ::id DF-199-193600-660_5903.35 ::date 2013-08-23T13:53:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt These students have a simple goal.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_35.txt
+(h / have-03
+      :ARG0 (p / person
+            :ARG0-of (s / study-01)
+            :mod (t / this))
+      :ARG1 (g / goal
+            :mod (s2 / simple)))
+
+# ::id DF-199-193600-660_5903.36 ::date 2013-08-23T13:55:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt They say "... if we can change a few people or make a few people think, then that's awesome".
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_36.txt
+(s / say-01
+      :ARG0 (t / they)
+      :ARG1 (o / or
+            :op1 (p / possible
+                  :domain (c / change-01
+                        :ARG0 (w / we)
+                        :ARG1 (p2 / person
+                              :quant (f / few))))
+            :op2 (p3 / possible
+                  :domain (m / make-02
+                        :ARG0 w
+                        :ARG1 (t2 / think-01
+                              :ARG0 p2)))
+            :ARG2-of (h / have-condition-91
+                  :ARG1 (a / awesome
+                        :domain o))))
+
+# ::id DF-199-193600-660_5903.37 ::date 2013-08-23T14:25:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt They aren't banning anything or stopping anybody from doing anything.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_37.txt
+(o / or
+      :op1 (b / ban-01 :polarity -
+            :ARG0 (t / they)
+            :ARG1 (a / anything))
+      :op2 (s / stop-03 :polarity -
+            :ARG0 t
+            :ARG1 (a2 / anybody)
+            :ARG2 (d / do-02
+                  :ARG0 a2
+                  :ARG1 (a3 / anything))))
+
+# ::id DF-199-193600-660_5903.38 ::date 2013-08-23T14:05:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt This story is about students expressing free speech.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_38.txt
+(s / story
+      :mod (t / this)
+      :topic (e / express-01
+            :ARG0 (p / person
+                  :ARG0-of (s2 / study-01))
+            :ARG1 (s3 / speech
+                  :ARG1-of (f / free-41))))
+
+# ::id DF-199-193600-660_5903.39 ::date 2013-08-23T14:01:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt They are making posters expressing their opinion.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_39.txt
+(m / make-01
+      :ARG0 (t / they)
+      :ARG1 (t2 / thing
+            :ARG2-of (p / poster-01)
+            :ARG0-of (e / express-01
+                  :ARG1 (t3 / thing
+                        :ARG1-of (o / opine-01
+                              :ARG0 t)))))
+
+# ::id DF-199-193600-660_5903.40 ::date 2013-08-25T06:14:37 ::annotator SDL-AMR-09 ::preferred
+# ::snt Of course if you want to wear a costume that others find offensive it is free speech.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_40.txt
+(w / want-01
+      :ARG0 (y / you)
+      :ARG1 (w2 / wear-01
+            :ARG0 y
+            :ARG1 (t / thing
+                  :ARG2-of (c / costume-01)
+                  :ARG0-of (o / offend-01)
+                  :ARG1-of (f / find-02
+                        :ARG0 (p / person
+                              :mod (o2 / other)))))
+      :ARG2-of (h / have-condition-91
+            :ARG1 (s / speech
+                  :ARG1-of (f2 / free-41)))
+      :mod (o3 / of-course))
+
+# ::id DF-199-193600-660_5903.41 ::date 2013-08-25T06:39:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt But me complaining about your costume being offensive is also free speech.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_41.txt
+(c / contrast-01
+      :ARG2 (s / speech
+            :ARG1-of (f / free-41)
+            :domain (c2 / complain-01
+                  :ARG0 (i / i)
+                  :ARG1 (o / offend-01
+                        :ARG0 (t / thing
+                              :ARG2-of (c3 / costume-01
+                                    :ARG1 (y / you))
+                              :poss y)))
+            :mod (a / also)))
+
+# ::id DF-199-193600-660_5903.42 ::date 2013-08-23T14:23:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt Neither should be banned.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_42.txt
+(r / recommend-01
+      :ARG1 (b / ban-01
+            :ARG1 (n / neither)))
+
+# ::id DF-199-193600-660_5903.43 ::date 2013-08-23T14:30:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt And that is the way it works.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_43.txt
+(a / and
+      :op1 (t / that
+            :mod (w / way
+                  :manner-of (w2 / work-09
+                        :ARG0 (i / it)))))
+
+# ::id DF-199-193600-660_5903.44 ::date 2013-08-25T06:42:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt Whether your costume involves black face and a noose, or whether it is a grilled sandwich where I think the cheese is a little too drippy is irrelevant.
+# ::save-date Mon Sep 9, 2013 ::file DF-199-193600-660_5903_44.txt
+(r / relevant-41 :polarity -
+      :ARG1 (o / or
+            :op1 (i / involve-01
+                  :ARG1 (a / and
+                        :op1 (f / face
+                              :mod (b / black))
+                        :op2 (n / noose))
+                  :ARG2 (t / thing
+                        :ARG2-of (c / costume-01
+                              :ARG1 (y / you))))
+            :op2 (c2 / costume-01
+                  :ARG1 y
+                  :ARG2 (s / sandwich-01
+                        :ARG1-of (g / grill-01)
+                        :mod (c3 / cheese
+                              :ARG1-of (d / drip-02
+                                    :degree (t2 / too
+                                          :mod (l / little)))
+                              :ARG1-of (t3 / think-01
+                                    :ARG0 (i2 / i)))))))
+
+# ::id DF-199-193600-660_5903.45 ::date 2013-08-25T06:59:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt Free speech is free speech and expressing free speech is actually opposite of the "banning" that is being alleged.
+# ::save-date Sun Aug 25, 2013 ::file DF-199-193600-660_5903_45.txt
+(a / and
+      :op1 (s / speech
+            :ARG1-of (f / free-41)
+            :domain s)
+      :op2 (o / opposite-41
+            :ARG1 (e / express-01
+                  :ARG1 s)
+            :ARG2 (b / ban-01
+                  :ARG1-of (a2 / allege-01))
+            :mod (a3 / actual)))
+
+# ::id DF-199-193600-660_5903.46 ::date 2013-08-23T13:56:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt You all have turned this story on it's end.
+# ::save-date Fri Aug 23, 2013 ::file DF-199-193600-660_5903_46.txt
+(t / turn-01
+      :ARG0 (y / you
+            :quant (a / all))
+      :ARG1 (s / story
+            :mod (t2 / this))
+      :time (e / end-01
+            :ARG1 s))
+
+# ::id DF-199-193694-586_5859.1 ::date 2013-08-29T03:16:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt SO dear Massachusetters, does she have any chance in dethroning the sitting Republican Senator, Scott Brown?
+# ::save-date Wed Sep 25, 2013 ::file DF-199-193694-586_5859_1.txt
+(s / say-01
+      :ARG1 (i / infer-01
+            :ARG1 (h / have-03 :mode interrogative
+                  :ARG0 (s3 / she)
+                  :ARG1 (c / chance
+                        :topic (d2 / dethrone-01
+                              :ARG0 s3
+                              :ARG1 (p2 / person :name (n2 / name :op1 "Scott" :op2 "Brown")
+                                    :ARG0-of (h2 / have-org-role-91
+                                          :ARG2 (s4 / senator
+                                                :ARG1-of (s5 / sit-01)))
+                                    :ARG0-of (h3 / have-org-role-91
+                                          :ARG1 (p3 / political-party :name (n3 / name :op1 "Republican" :op2 "Party")))))
+                        :mod (a / any))))
+      :ARG2 (p / person
+            :mod (s2 / state :name (n / name :op1 "Massachusetts"))
+            :mod (d / dear)))
+
+# ::id DF-199-193694-586_5859.2 ::date 2013-08-29T07:36:37 ::annotator SDL-AMR-09 ::preferred
+# ::snt Why does Scott Brown need to be dethroned? I kinda like him...
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_2.txt
+(m / multi-sentence
+  :snt2 (l / like-01
+          :ARG0 (i / i)
+          :ARG1 (h / he)
+          :mod (k / kinda))
+  :snt1 (c / cause-01
+          :ARG0 (a / amr-unknown)
+          :ARG1 (n2 / need-01
+                  :ARG1 (d / dethrone-01
+                          :ARG1 (p / person
+                                  :name (n / name
+                                          :op1 "Scott"
+                                          :op2 "Brown"))))))
+
+# ::id DF-199-193694-586_5859.3 ::date 2013-08-29T07:41:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt Could Elizabeth Warren beat Scott Brown?
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_3.txt
+(p / possible
+  :mode interrogative
+  :domain (b / beat-03
+            :ARG0 (p2 / person
+                    :name (n / name
+                            :op1 "Elizabeth"
+                            :op2 "Warren"))
+            :ARG1 (p3 / person
+                    :name (n2 / name
+                            :op1 "Scott"
+                            :op2 "Brown"))))
+
+# ::id DF-199-193694-586_5859.4 ::date 2013-08-29T07:44:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt i'm not sure what either of them look like, but the most brutal fight i ever saw was a girl fight, lots of kicking, scratching, and some amazing punches (the loser had to stay home from school for almost a week until swelling went down around her eyes)
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_4.txt
+(h2 / have-concession-91
+  :ARG1 (f2 / fight-01
+          :mod (b / brutal
+                 :degree (m / most))
+          :ARG1-of (s / see-01
+                     :ARG0 i
+                     :time (e3 / ever))
+          :domain (f / fight-01
+                    :ARG0 (g / girl)
+                    :ARG0-of (m2 / mean-01
+                               :ARG1 (m3 / multi-sentence
+                                       :snt1 (a2 / and
+                                               :op1 (k2 / kick-01
+                                                      :quant (l2 / lot))
+                                               :op2 (s2 / scratch-02)
+                                               :op3 (p / punch-01
+                                                      :ARG0-of (a3 / amaze-01)
+                                                      :quant (s6 / some)))
+                                       :snt2 (o / obligate-01
+                                               :ARG1 (p2 / person
+                                                       :ARG0-of (l3 / lose-02))
+                                               :ARG2 (s3 / stay-01
+                                                       :ARG1 p2
+                                                       :location (h / home)
+                                                       :source (s4 / school)
+                                                       :duration (a4 / almost
+                                                                   :op1 (t4 / temporal-quantity
+                                                                          :quant 1
+                                                                          :unit (w2 / week)))
+                                                       :duration (u / until
+                                                                   :op1 (g2 / go-00
+                                                                          :ARG1 (s5 / swell-01
+                                                                                  :ARG1 (a5 / around
+                                                                                          :op1 (e / eyes
+                                                                                                 :poss g)))))))))))
+  :ARG2 (k / know-01
+          :ARG0 (i / i)
+          :ARG1 (t2 / thing
+                  :ARG2-of (l / look-01
+                             :ARG0 (p3 / person
+                                     :mod (e2 / either)
+                                     :ARG1-of (i2 / include-91
+                                                :ARG2 (t / they)))))
+          :polarity -))
+
+# ::id DF-199-193694-586_5859.5 ::date 2013-08-29T07:48:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt so i'm gonna say yes
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_5.txt
+(c / cause-01
+  :ARG1 (s / say-01
+          :ARG0 (i / i)
+          :ARG1 (y / yes)))
+
+# ::id DF-199-193694-586_5859.6 ::date 2013-08-29T07:49:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm thinking in terms of the Democratic Party getting one more Senate seat.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_6.txt
+(t / think-01
+  :ARG0 (i / i)
+  :ARG1 (g2 / get-01
+          :ARG0 (p / political-party
+                  :name (n / name
+                          :op1 "Democratic"
+                          :op2 "Party"))
+          :ARG1 (s / seat
+                  :mod (g3 / government-organization
+                         :name (n2 / name
+                                 :op1 "Senate"))
+                  :quant 1
+                  :mod (m / more))))
+
+# ::id DF-199-193694-586_5859.7 ::date 2013-08-29T07:50:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt In Massachusetts, it would seem a lot easier task then in other Senate races.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_7.txt
+(s / seem-01
+  :ARG1 (t / task
+          :mod (e / easy
+                 :degree (m / more
+                           :quant (l / lot))
+                 :compared-to (r / race-02
+                                :ARG2 (g / government-organization
+                                        :name (n2 / name
+                                                :op1 "Senate"))
+                                :mod (o / other)))
+          :domain (i / it)
+          :location (s2 / state
+                      :name (n / name
+                              :op1 "Massachusetts"))))
+
+# ::id DF-199-193694-586_5859.8 ::date 2013-08-29T07:51:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm thinking the best thing to do is keep the few moderate Republicans we have right where they are.
+# ::save-date Mon Jan 20, 2014 ::file DF-199-193694-586_5859_8.txt
+(t / think-01
+      :ARG0 (i / i)
+      :ARG1 (t3 / thing
+            :mod (g / good
+                  :degree (m2 / most))
+            :domain (k / keep-04
+                  :ARG1 (p / person
+                        :quant (f / few)
+                        :ARG0-of (h / have-org-role-91
+                              :ARG1 (p2 / political-party :name (n / name :op1 "Republican" :op2 "Party")))
+                        :mod (m / moderate)
+                        :ARG1-of (h2 / have-03
+                              :ARG0 (w / we)))
+                  :ARG2 (l / location
+                        :location-of p
+                        :mod (r / right)))))
+
+# ::id DF-199-193694-586_5859.9 ::date 2013-08-29T07:52:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt He may vote along party lines for most things but he's reasonable when it comes to representing a liberal-leaning constituency.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_9.txt
+(h2 / have-concession-91
+      :ARG1 (r / reasonable
+            :domain h
+            :topic (c2 / come-12
+                  :ARG1 (r2 / represent-01
+                        :ARG0 h
+                        :ARG1 (c3 / constituency
+                              :ARG1-of (l2 / lean-01
+                                    :ARG2 (l3 / liberal))))))
+      :ARG2 (p3 / possible
+            :domain (v / vote-01
+                  :ARG0 (h / he)
+                  :ARG1 (t / thing
+                        :quant (m / most))
+                  :manner (a / along
+                        :op1 (l / line
+                              :mod (p2 / party))))))
+
+# ::id DF-199-193694-586_5859.10 ::date 2013-08-29T07:52:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt Don't know, but it sounds like a real bellweather contest, doesn't it?
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_10.txt
+(h / have-concession-91
+  :ARG1 (s / sound-01
+          :ARG1 (i / it)
+          :ARG2 (c / contest-00
+                  :ARG0 (b / bellweather)
+                  :mod (r / real))
+          :mode interrogative)
+  :ARG2 (k / know-01
+          :polarity -))
+
+# ::id DF-199-193694-586_5859.11 ::date 2013-08-29T07:53:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt It would have made for some really great off year contest.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_11.txt
+(m / make-00
+  :ARG0 (i / it)
+  :ARG1 (c / contest-00
+          :mod (g / great
+                 :degree (r / really))
+          :mod (s / some)
+          :mod (o / off-year)))
+
+# ::id DF-199-193694-586_5859.12 ::date 2013-08-29T07:53:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt Care to explain why you think he is an idiot?
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_12.txt
+(c / care-01
+  :ARG0 y
+  :ARG1 (e / explain-01
+          :ARG0 (y / you)
+          :ARG1 (t2 / thing
+                  :ARG0-of (c2 / cause-01
+                             :ARG1 (t / think-01
+                                     :ARG0 y
+                                     :ARG1 (i / idiot
+                                             :domain (h / he))))))
+  :mode interrogative)
+
+# ::id DF-199-193694-586_5859.13 ::date 2013-08-29T07:54:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt He did beat Martha Coakley rather convincingly.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_13.txt
+(b / beat-02
+  :ARG0 (h / he)
+  :ARG1 (p / person
+          :name (n / name
+                  :op1 "Martha"
+                  :op2 "Coakley"))
+  :manner (c / convince-01
+            :degree (r / rather)))
+
+# ::id DF-199-193694-586_5859.14 ::date 2013-08-29T07:57:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt He served as a State Senator for several years.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_14.txt
+(s2 / serve-01
+  :ARG0 (h2 / he)
+  :ARG1 (s3 / senator
+          :mod (s4 / state))
+  :duration (s5 / several
+              :op1 (t2 / temporal-quantity
+                     :quant 1
+                     :unit (y2 / year))))
+
+# ::id DF-199-193694-586_5859.15 ::date 2013-08-29T08:01:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt He even voted for several Dem bills.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_15.txt
+(v / vote-01
+  :ARG0 (h / he)
+  :ARG1 (b / bill
+          :quant (s / several)
+          :mod (p / political-party
+                 :name (n2 / name
+                         :op1 "Democratic"
+                         :op2 "Party")))
+  :mod (e / even))
+
+# ::id DF-199-193694-586_5859.16 ::date 2013-08-29T08:07:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt Coakley was a bad candidate who ran a terrible campaign - I'll hunt around for a great article I read a year ago outlining the tremendous mistakes she made.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_16.txt
+(m / multi-sentence
+  :snt1 (c / candidate
+          :mod (b / bad)
+          :domain (p / person
+                    :name (n / name
+                            :op1 "Coakley"))
+          :ARG0-of (r / run-01
+                     :ARG1 (c2 / campaign
+                             :mod (t2 / terrible))))
+  :snt2 (h / hunt-01
+          :ARG0 (i / i)
+          :ARG1 (a2 / article
+                  :mod (g / great)
+                  :ARG1-of (r2 / read-01
+                             :ARG0 i
+                             :time (b2 / before
+                                   :op1 (n2 / now)
+                                   :quant (t3 / temporal-quantity
+                                            :quant 1
+                                            :unit (y2 / year))))
+                  :ARG0-of (o / outline-01
+                             :ARG1 (m2 / mistake
+                                     :mod (t4 / tremendous)
+                                     :ARG1-of (m3 / make-01
+                                                :ARG0 c))))
+          :location (a4 / around)))
+
+# ::id DF-199-193694-586_5859.17 ::date 2013-08-29T08:08:25 ::annotator SDL-AMR-09 ::preferred
+# ::snt As for Brown, he has a difficult time answering questions about policy in a cogent fashion.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_17.txt
+(d / difficult
+  :domain (a / answer-01
+            :ARG0 (p / person
+                    :name (n / name
+                            :op1 "Brown"))
+            :ARG1 (q / question-01
+                    :ARG1 (p2 / policy))
+            :manner (c2 / cogent)))
+
+# ::id DF-199-193694-586_5859.18 ::date 2013-08-29T08:08:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt I have seen him on several occasions give answers which show that he has no real understanding of the underlying issue at all, and several which are really just embarrassing.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193694-586_5859_18.txt
+(s / see-01
+  :ARG0 (i / i)
+  :ARG2 (a4 / answer-01
+          :ARG0 (h / he)
+          :ARG0-of (s3 / show-01
+                     :ARG1 (u / understand-01
+                             :ARG0 h
+                             :ARG1 (i2 / issue
+                                     :ARG0-of (u2 / underlie-01))
+                             :polarity -
+                             :mod (r / real)
+                             :mod (a2 / at-all)))
+          :ARG2-of (i3 / include-91
+                     :ARG1 (a3 / answer-01
+                             :quant (s4 / several)
+                             :ARG0-of (e / embarrass-01
+                                        :mod (j / just)
+                                        :mod (r2 / real)))))
+  :frequency (o / occasion
+               :quant (s2 / several)))
+
+# ::id DF-199-193696-586_5756.1 ::date 2013-08-29T08:09:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt I haven't really been active in (or even really cared about) politics until recently and I'm really just looking for other peoples opinions on this.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_1.txt
+(a / and
+  :op1 (o3 / or
+         :op1 (a2 / active
+                :polarity -
+                :domain (i / i)
+                :topic (p / politics))
+         :op2 (c / care-01
+                :ARG0 i
+                :ARG1 p
+                :mod (e / even))
+         :mod (r2 / real)
+         :time (u / until
+                 :op1 (r / recent)))
+  :op2 (l / look-01
+         :ARG0 i
+         :ARG1 (t2 / thing
+                 :ARG1-of (o / opine-01
+                            :ARG0 (p2 / person
+                                    :mod (o2 / other))
+                            :topic (t / this)))
+         :mod (j / just)))
+
+# ::id DF-199-193696-586_5756.2 ::date 2013-08-29T11:00:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Well, just telling you who I'll vote for probably won't inform you much though right?
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_2.txt
+(h / have-concession-91
+      :ARG1 (p2 / probable :mode interrogative
+            :domain (i / inform-01 :polarity -
+                  :ARG0 (t / tell-01
+                        :ARG0 (i3 / i)
+                        :ARG1 (p / person
+                              :ARG1-of (v / vote-01
+                                    :ARG0 i3))
+                        :ARG2 y
+                        :mod (j / just))
+                  :ARG1 (y / you)
+                  :quant (m / much))))
+
+# ::id DF-199-193696-586_5756.3 ::date 2013-08-29T11:01:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt What issues are important to you?
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_3.txt
+(i / important
+  :domain (i2 / issues
+            :mod (a / amr-unknown))
+  :beneficiary (y / you))
+
+# ::id DF-199-193696-586_5756.4 ::date 2013-08-29T11:14:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt Obama because I think he has done a good job in most areas; some areas he let me down, plus there is no way I would vote for a republican today.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_4.txt
+(m / multi-sentence
+  :snt1 (p / person
+          :name (n / name
+                  :op1 "Obama")
+          :ARG1-of (c / cause-01
+                     :ARG0 (t / think-01
+                             :ARG0 (i / i)
+                             :ARG1 (d / do-02
+                                     :ARG0 p
+                                     :ARG1 (j / job
+                                             :mod (g / good))
+                                     :ARG2 (a / area
+                                             :quant (m2 / most))))))
+  :snt2 (a2 / and
+          :op1 (l / let-04
+                 :ARG0 (h / he)
+                 :ARG1 (i2 / i)
+                 :topic (a3 / area
+                          :quant (s / some)))
+          :op2 (v / vote-01
+                 :ARG0 i
+                 :ARG1 (p3 / person
+                         :ARG0-of (h2 / have-org-role-91
+                                    :ARG1 (p2 / political-party
+                                            :name (n2 / name
+                                                    :op1 "Republican"
+                                                    :op2 "Party"))))
+                 :time (t2 / today)
+                 :manner (w / way
+                           :polarity -))))
+
+# ::id DF-199-193696-586_5756.5 ::date 2013-08-29T14:16:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt (I have a few times in the past, mostly local)
+# ::save-date Mon Jan 20, 2014 ::file DF-199-193696-586_5756_5.txt
+(d / do-02
+      :ARG0 (i / i)
+      :location (l / local
+            :mod (m2 / most))
+      :frequency (f / few)
+      :time (p / past))
+
+# ::id DF-199-193696-586_5756.6 ::date 2013-08-29T14:18:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt Anyone who is not a Republican.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-193696-586_5756_6.txt
+(a / anyone
+      :ARG0-of (h / have-org-role-91 :polarity -
+            :ARG1 (p / political-party :name (n / name :op1 "Republican" :op2 "Party"))))
+
+# ::id DF-199-193696-586_5756.7 ::date 2013-08-29T14:21:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt I think the majority of them are the reason this country has become constipated concerning everything that is important.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_7.txt
+(t / think-01
+  :ARG0 (i / i)
+  :ARG1 (c3 / cause-01
+          :ARG0 (p / person
+                  :quant (m / majority)
+                  :ARG1-of (i2 / include-91
+                             :ARG2 (t3 / they)))
+          :ARG1 (b / become-01
+                  :ARG1 (c / country
+                          :mod (t2 / this))
+                  :ARG2 (c2 / constipate-00
+                          :ARG1 c
+                          :ARG0-of (c4 / concern-02
+                                     :ARG1 (e / everything
+                                             :mod (i4 / important)))))))
+
+# ::id DF-199-193696-586_5756.8 ::date 2013-08-29T14:27:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt They are willing to throw America under the bus in order to make Obama look bad.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_8.txt
+(w / will-02
+      :ARG0 (t / they)
+      :ARG1 (t2 / throw-01
+            :ARG0 t
+            :ARG1 (c / country :name (n / name :op1 "America"))
+            :ARG2 (u / under
+                  :op1 (b / bus))
+            :purpose (m / make-02
+                  :ARG0 t
+                  :ARG1 (l / look-02
+                        :ARG0 (p2 / person :name (n2 / name :op1 "Obama"))
+                        :ARG1 (b2 / bad)))))
+
+# ::id DF-199-193696-586_5756.9 ::date 2013-08-29T14:30:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt OK, "and why" does add a lot, you're right.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_9.txt
+(m / multi-sentence
+  :snt1 (o / ok)
+  :snt2 (a / add-02
+          :ARG0 (a2 / and
+                  :op1 (t / thing
+                         :ARG0-of (c / cause-01)))
+          :ARG1 (l / lot))
+  :snt3 (r / right-41
+          :ARG1 (y / you)))
+
+# ::id DF-199-193696-586_5756.10 ::date 2013-08-29T14:35:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm voting for Obama because I think he has done a good job in difficult circumstances, and can do much more with another term, and because I really worry about what any of the possible Republican nominees would do as president if one of them won.
+# ::save-date Wed Sep 18, 2013 ::file DF-199-193696-586_5756_10.txt
+(v / vote-01
+      :ARG0 (i / i)
+      :ARG1 (p / person :name (n / name :op1 "Obama"))
+      :ARG1-of (c / cause-01
+            :ARG0 (a / and
+                  :op1 (t / think-01
+                        :ARG0 i
+                        :ARG1 (d / do-02
+                              :ARG0 p
+                              :ARG1 (j / job
+                                    :mod (g / good))
+                              :time (c2 / circumstance
+                                    :mod (d2 / difficult))))
+                  :op2 (p2 / possible
+                        :domain (d3 / do-02
+                              :ARG0 p
+                              :ARG1 (m / more
+                                    :mod (m2 / much))
+                              :instrument (t2 / term
+                                    :mod (a2 / another))))
+                  :op3 (w / worry-02
+                        :ARG0 i
+                        :ARG1 (t3 / thing
+                              :ARG1-of (d4 / do-02
+                                    :ARG0 (p6 / person
+                                          :ARG1-of (n6 / nominate-01)
+                                          :mod (a3 / any)
+                                          :mod (p4 / possible)
+                                          :ARG0-of (h / have-org-role-91
+                                                :ARG1 (p3 / political-party :name (n4 / name :op1 "Republican" :op2 "Party"))))
+                                    :prep-as (p5 / person
+                                          :ARG0-of (h2 / have-org-role-91
+                                                :ARG2 (p8 / president)))
+                                    :condition (w2 / win-01
+                                          :ARG0 (p7 / person :quant 1
+                                                :ARG1-of (i3 / include-91
+                                                      :ARG2 p6)))))
+                        :mod (r / real)))))
+
+# ::id DF-199-193696-586_5756.11 ::date 2013-08-29T14:37:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt I also wouldn't vote for just about any republican (especially Rick Perry) but I have heard some good things about Ron Paul, he's about the only republican that I'm actually interested in learning more about.
+# ::save-date Mon Sep 30, 2013 ::file DF-199-193696-586_5756_11.txt
+(m4 / multi-sentence
+      :snt1 (h2 / have-concession-91
+            :ARG1 (m3 / multi-sentence
+                  :snt1 (h / hear-01
+                        :ARG0 i
+                        :ARG1 (t / thing
+                              :mod (g / good)
+                              :topic (p3 / person :name (n3 / name :op1 "Ron" :op2 "Paul"))
+                              :quant (s / some))))
+            :ARG2 (v / vote-01 :polarity -
+                  :ARG0 (i / i)
+                  :ARG1 (p / person
+                        :mod (a / any)
+                        :mod (j / just)
+                        :ARG0-of (m / mean-01
+                              :ARG1 (p2 / person :name (n2 / name :op1 "Rick" :op2 "Perry")
+                                    :mod (e / especially)))
+                        :ARG0-of (h3 / have-org-role-91
+                              :ARG1 (p5 / political-party :name (n / name :op1 "Republican" :op2 "Party"))))
+                  :mod (a2 / also)))
+      :snt2 (p4 / person
+            :mod (o / only)
+            :domain (h4 / he)
+            :ARG0-of (h5 / have-org-role-91
+                  :ARG1 p5)
+            :ARG1-of (l / learn-01
+                  :ARG0 (i3 / i)
+                  :mod (m2 / more)
+                  :ARG2-of (i2 / interest-01
+                        :ARG1 i3
+                        :mod (a3 / actual)))))
+
+# ::id DF-199-193696-586_5756.12 ::date 2013-08-29T14:41:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt My own opinion of Ron Paul is that I'm happy that he's in the race, and especially in debates.
+# ::save-date Wed Sep 25, 2013 ::file DF-199-193696-586_5756_12.txt
+(o / opine-01
+      :ARG0 (i / i)
+      :ARG1 (c / content-01
+            :ARG0 (a / and
+                  :op1 (r / race-02
+                        :ARG0 (p / person :name (n / name :op1 "Ron" :op2 "Paul")))
+                  :op2 (d / debate-01
+                        :ARG0 p
+                        :mod (e / especially)))
+            :ARG1 i)
+      :topic p)
+
+# ::id DF-199-193696-586_5756.13 ::date 2013-08-29T14:45:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt I like how he's anti-war and anti-bullshit in general.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_13.txt
+(l / like-01
+  :ARG0 (i / i)
+  :ARG1 (t / thing
+          :manner-of (a / and
+                       :op1 (o / oppose-01
+                              :ARG0 (h / he)
+                              :ARG1 (w / war))
+                       :op2 (o2 / oppose-01
+                              :ARG0 h
+                              :ARG1 (b / bullshit)
+                              :mod (g / general)))))
+
+# ::id DF-199-193696-586_5756.14 ::date 2013-08-29T14:48:05 ::annotator SDL-AMR-09 ::preferred
+# ::snt I would absolutely not want him to be president, though.
+# ::save-date Wed Sep 18, 2013 ::file DF-199-193696-586_5756_14.txt
+(h / have-concession-91
+      :ARG1 (w / want-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (p / person
+                  :domain (h2 / he)
+                  :ARG0-of (h3 / have-org-role-91
+                        :ARG2 (p2 / president)))
+            :degree (a / absolute)))
+
+# ::id DF-199-193696-586_5756.15 ::date 2013-08-29T14:56:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt Andrew Sullivan has a lot of posts on him, that might be a good place to start if you're interested in learning more.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_15.txt
+(h / have-03
+  :ARG0 (p / person
+          :name (n / name
+                  :op1 "Andrew"
+                  :op2 "Sullivan"))
+  :ARG1 (p2 / post
+          :quant (l / lot)
+          :topic (h2 / he)
+          :mod (p4 / place
+                 :mod (g / good)
+                 :location-of (s / start-01
+                                :ARG0 (y / you))
+                 :mod (p3 / possible)
+                 :condition (i / interest-01
+                              :ARG1 y
+                              :ARG2 (l2 / learn-01
+                                      :ARG0 y
+                                      :mod (m / more))))))
+
+# ::id DF-199-193696-586_5756.16 ::date 2013-08-29T15:07:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt Here's his un-endorsement of Ron Paul (he endorsed him, then had second thoughts):
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5756_16.txt
+(m2 / multi-sentence
+  :snt1 (u / un-endorse-00
+          :ARG0 (h / he)
+          :ARG1 (p / person
+                  :name (n / name
+                          :op1 "Ron"
+                          :op2 "Paul")))
+  :snt2 (a2 / and
+          :op1 (e2 / endorse-01
+                 :ARG0 (h2 / he)
+                 :ARG1 (h3 / he))
+          :op2 (t / think-01
+                 :ord (o / ordinal-entity
+                        :value 2)
+                 :time (t2 / then))))
+
+# ::id DF-199-193696-586_5767.1 ::date 2013-08-29T15:13:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt I read a fascinating piece in the WSJ today.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_1.txt
+(r / read-01
+  :ARG0 (i / i)
+  :ARG1 (p / piece
+          :ARG0-of (f / fascinate-01
+                     :ARG1 i))
+  :medium (n2 / newspaper
+            :name (n / name
+                    :op1 "WSJ"))
+  :time (t / today))
+
+# ::id DF-199-193696-586_5767.2 ::date 2013-08-29T15:17:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt The author spoke about how Obama's approval ratings are at a dismal low.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_2.txt
+(s / speak-01
+      :ARG0 (p / person
+            :ARG0-of (a / author-01))
+      :ARG1 (t / thing
+            :manner-of (r2 / rate-01
+                  :ARG1 (a2 / approve-01
+                        :ARG1 (p3 / person :name (n / name :op1 "Obama")))
+                  :ARG2 (l / low
+                        :mod (d / dismal)))))
+
+# ::id DF-199-193696-586_5767.3 ::date 2013-08-29T15:24:05 ::annotator SDL-AMR-09 ::preferred
+# ::snt He apparently appears to be unable to pull Congress together to accomplish much, and in the author's opinion, it would only get worse if he got elected to a second term.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_3.txt
+(a / and
+  :op1 (a2 / appear-02
+         :ARG1 (p / possible
+                 :polarity -
+                 :domain (p2 / pull-01
+                           :ARG0 (h / he)
+                           :ARG1 (g / government-organization
+                                   :name (n / name
+                                           :op1 "Congress"))
+                           :ARG2 (t2 / together)
+                           :purpose (a4 / accomplish-01
+                                      :ARG0 h
+                                      :ARG1 (m / much)))))
+  :op2 (o / opine-01
+         :ARG0 (p3 / person
+                 :ARG0-of (a5 / author-01))
+         :ARG1 (g2 / get-03
+                 :ARG1 p
+                 :ARG2 (b / bad
+                         :degree (m2 / more))
+                 :condition (e / elect-01
+                              :ARG1 h
+                              :ARG2 (t3 / term
+                                      :ord (o2 / ordinal-entity
+                                             :value 2)))
+                 :mod (o3 / only))))
+
+# ::id DF-199-193696-586_5767.4 ::date 2013-08-30T15:05:57 ::annotator SDL-AMR-09 ::preferred
+# ::snt He would like Obama to bow out for a 2nd term, and have Hillary Clinton run for president.
+# ::save-date Wed Sep 18, 2013 ::file DF-199-193696-586_5767_4.txt
+(l / like-02
+      :ARG0 (h / he)
+      :ARG1 (a2 / and
+            :op1 (b / bow-06
+                  :ARG0 (p / person :name (n / name :op1 "Obama"))
+                  :ARG1 (t / term
+                        :ord (o / ordinal-entity :value 2)))
+            :op2 (r2 / run-02
+                  :ARG0 (p2 / person :name (n2 / name :op1 "Hillary" :op2 "Clinton"))
+                  :ARG1 (h2 / have-org-role-91
+                        :ARG2 (p3 / president)))))
+
+# ::id DF-199-193696-586_5767.5 ::date 2013-08-29T15:24:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt He believes that Hillary has the best chance of bringing the country together.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_5.txt
+(b / believe-01
+  :ARG0 (h / he)
+  :ARG1 (h2 / have-03
+          :ARG0 (p / person
+                  :name (n / name
+                          :op1 "Hillary"))
+          :ARG1 (c / chance
+                  :mod (g / good
+                         :degree (m / most))
+                  :topic (b2 / bring-01
+                           :ARG0 p
+                           :ARG1 (c2 / country)
+                           :ARG3 (t / together)))))
+
+# ::id DF-199-193696-586_5767.6 ::date 2013-08-29T15:28:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt I don't know how she feels about running, but, IMO, I think that it is a great idea.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_6.txt
+(h / have-concession-91
+  :ARG1 (a / and
+          :op1 (o / opine-01
+                 :ARG0 (i / i)
+                 :ARG1 (i2 / idea
+                         :mod (g / great)
+                         :domain (i3 / it)))
+          :op2 (t2 / think-01
+                 :ARG0 i
+                 :ARG1 i2))
+  :ARG2 (k / know-01
+          :ARG0 i
+          :ARG1 (t / thing
+                  :ARG1-of (f / feel-01
+                             :ARG0 (s / she)
+                             :ARG2 (r / run-02)))
+          :polarity -))
+
+# ::id DF-199-193696-586_5767.7 ::date 2013-08-29T15:28:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt She certainly has the smarts, the experience, and the approval of the majority of citizens.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_7.txt
+(a3 / and
+  :op1 (h / have-03
+         :ARG0 (s / she)
+         :ARG1 (a / and
+                 :op1 (s2 / smarts)
+                 :op2 (e / experience)))
+  :op2 (a2 / approve-01
+         :ARG0 (c3 / citizen
+                 :ARG1-of (i / include-91
+                            :ARG2 (c / citizen))
+                 :quant (m / majority))
+         :ARG1 s)
+  :mod (c2 / certain))
+
+# ::id DF-199-193696-586_5767.8 ::date 2013-08-29T15:33:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt I think that the people on the Republican side of the fence, are a poor bunch.
+# ::save-date Thu Sep 19, 2013 ::file DF-199-193696-586_5767_8.txt
+(t / think-01
+      :ARG0 (i / i)
+      :ARG1 (b / bunch
+            :mod (p / poor)
+            :domain (p2 / person
+                  :ARG1-of (b2 / be-located-at-91
+                        :ARG2 (s2 / side
+                              :mod (p3 / political-party :name (n / name :op1 "Republican" :op2 "Party"))
+                              :part-of (f / fence))))))
+
+# ::id DF-199-193696-586_5767.9 ::date 2013-08-29T15:38:49 ::annotator SDL-AMR-09 ::preferred
+# ::snt There is not a one in the bunch who would capture the imagination of the American people.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_9.txt
+(i2 / include-91
+  :ARG1 (o / one
+          :ARG0-of (c / capture-01
+                     :ARG1 (i / imagination
+                             :poss (p / person
+                                     :mod (c2 / country
+                                            :name (n / name
+                                                    :op1 "America"))))))
+  :ARG2 (b / bunch)
+  :polarity -)
+
+# ::id DF-199-193696-586_5767.10 ::date 2013-08-29T15:39:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt The voters who will decide this election, IMO are the moderates and the independents. THEY certainly will not vote for any of the anti-gay, pro-life bible bangers.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_10.txt
+(m / multi-sentence
+      :snt1 (o2 / opine-01
+            :ARG0 (i / i)
+            :ARG1 (p3 / person
+                  :ARG0-of (v / vote-01)
+                  :ARG0-of (d / decide-01
+                        :ARG1 (e2 / elect-01
+                              :mod (t3 / this)))
+                  :domain (a / and
+                        :op1 (p / person
+                              :mod (m2 / moderate))
+                        :op2 (p2 / person
+                              :ARG0-of (d2 / depend-01 :polarity -)))))
+      :snt2 (v2 / vote-01 :polarity -
+            :ARG0 (t / they)
+            :ARG1 (p4 / person
+                  :ARG0-of (b / bang-02
+                        :ARG1 (b3 / book :name (n / name :op1 "Bible")))
+                  :mod (a3 / any)
+                  :ARG0-of (f / favor-01
+                        :ARG1 (l / life))
+                  :ARG0-of (o / oppose-01
+                        :ARG1 (g / gay)))
+            :manner (c / certain)))
+
+# ::id DF-199-193696-586_5767.11 ::date 2013-08-29T15:40:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt What do you think?
+# ::save-date Thu Aug 29, 2013 ::file DF-199-193696-586_5767_11.txt
+(t / think-01
+      :ARG0 (y / you)
+      :ARG1 (a / amr-unknown))
+
+# ::id DF-199-193696-586_5767.12 ::date 2013-08-29T15:41:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt Should Obama step down for the good of the country?
+# ::save-date Thu Aug 29, 2013 ::file DF-199-193696-586_5767_12.txt
+(r / recommend-01 :mode interrogative
+      :ARG1 (s / step-04
+            :ARG0 (p / person :name (n / name :op1 "Obama"))
+            :purpose (g / good
+                  :poss (c / country))))
+
+# ::id DF-199-193696-586_5767.13 ::date 2013-08-29T15:43:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt Should Hillary run?
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_13.txt
+(r / recommend-01
+  :ARG1 (r2 / run-02
+          :ARG0 (p / person
+                  :name (n / name
+                          :op1 "Hillary")))
+  :mode interrogative)
+
+# ::id DF-199-193696-586_5767.14 ::date 2013-08-29T15:53:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt Hillary's time has come, and gone...
+# ::save-date Thu Aug 29, 2013 ::file DF-199-193696-586_5767_14.txt
+(a / and
+      :op1 (c / come-01
+            :ARG1 (t / time
+                  :poss (p / person :name (n / name :op1 "Hillary"))))
+      :op2 (g / go-01
+            :ARG1 t))
+
+# ::id DF-199-193696-586_5767.15 ::date 2013-08-29T15:58:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt She would make her self no friend of the Democratic party by dividing them and losing the black vote...
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_15.txt
+(m / make-02
+  :ARG0 (s / she)
+  :ARG1 (f / friend
+          :polarity -
+          :poss (p / political-party
+                  :name (n / name
+                          :op1 "Democratic"
+                          :op2 "Party"))
+          :domain s)
+  :instrument (a / and
+                :op1 (d / divide-02
+                       :ARG0 s
+                       :ARG1 p)
+                :op2 (l / lose-02
+                       :ARG0 s
+                       :ARG1 (v / vote-01
+                               :ARG0 (p2 / person
+                                       :mod (b / black))))))
+
+# ::id DF-199-193696-586_5767.16 ::date 2013-08-30T07:07:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt No one is going to vote for her that did not vote for Mr. Obama, and a whole lot less Obama voters will vote for her...
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_16.txt
+(a / and
+  :op1 (v / vote-01
+         :ARG0 (n2 / no-one
+                 :ARG0-of (v2 / vote-01
+                            :ARG1 (p / person
+                                    :name (n / name
+                                            :op1 "Mr."
+                                            :op2 "Obama"))
+                            :polarity -))
+         :ARG1 (s / she))
+  :op2 (v3 / vote-01
+         :ARG0 (p2 / person
+                 :ARG0-of (v4 / vote-01
+                            :ARG1 p)
+                 :quant (l / less
+                          :mod (l2 / lot
+                                 :mod (w / whole))))
+         :ARG1 s))
+
+# ::id DF-199-193696-586_5767.17 ::date 2013-08-30T07:11:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt Don't worry though..
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_17.txt
+(h / have-concession-91
+      :ARG1 (w / worry-01 :polarity - :mode imperative
+            :ARG0 (y / you)))
+
+# ::id DF-199-193696-586_5767.18 ::date 2013-08-30T07:12:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt She has enough sense to not try to run against a sitting president from her own party...
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_18.txt
+(h / have-03
+  :ARG0 (s2 / she)
+  :ARG1 (s4 / sense
+          :quant (e / enough
+                   :ARG0-of (c / cause-01
+                              :ARG1 (t / try-01
+                                      :ARG0 s2
+                                      :ARG1 (r / run-02
+                                              :ARG0 s2
+                                              :ARG2 (p3 / person
+                                                      :ARG0-of (h2 / have-org-role-91
+                                                                 :ARG2 (p / president
+                                                                         :ARG1-of (s3 / sit-01)))
+                                                      :ARG0-of (h3 / have-org-role-91
+                                                                 :ARG1 (p4 / party
+                                                                         :ARG1-of (h4 / have-org-role-91
+                                                                                    :ARG0 s2)))))
+                                      :polarity -)))))
+
+# ::id DF-199-193696-586_5767.19 ::date 2013-08-30T07:16:41 ::annotator SDL-AMR-09 ::preferred
+# ::snt Best case scenario: Obama gets reelected and the country continues to slide backwards even if the Democrats gain a greater foothold of the US Senate and increase their collective mass in the US Congress.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_19.txt
+(s2 / scenario
+      :topic (c5 / case
+            :mod (g5 / good
+                  :degree (m3 / most)))
+      :domain (a / and
+            :op1 (r / reelect-01
+                  :ARG1 (p / person :name (n / name :op1 "Obama")))
+            :op2 (c / continue-01
+                  :ARG1 (s / slide-01
+                        :ARG1 (c2 / country)
+                        :direction (b / backwards))
+                  :concession (e / even-if
+                        :op1 (a2 / and
+                              :op1 (g / gain-02
+                                    :ARG0 (p3 / person
+                                          :ARG0-of (h / have-org-role-91
+                                                :ARG1 (p2 / political-party :name (n2 / name :op1 "Democratic" :op2 "Party"))))
+                                    :ARG1 (f / foothold
+                                          :mod (g2 / great
+                                                :degree (m / more))
+                                          :poss (g3 / government-organization :name (n3 / name :op1 "Senate")
+                                                :mod (c3 / country :name (n4 / name :op1 "US")))))
+                              :op2 (i / increase-01
+                                    :ARG0 p3
+                                    :ARG1 (m2 / mass
+                                          :mod (c4 / collective)
+                                          :poss p3
+                                          :location (g4 / government-organization :name (n5 / name :op1 "Congress")
+                                                :mod c3))))))))
+
+# ::id DF-199-193696-586_5767.20 ::date 2013-08-30T08:07:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt Worst case scenario: George W. Bush II (any Republican candidate other then Huntsman, Romney, or Ron Paul) will take the election.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_20.txt
+(s / scenario
+  :topic (c2 / case
+           :mod (b / bad
+                  :degree (m2 / most)))
+  :domain (e / elect-01
+            :ARG1 (p / person
+                    :name (n / name
+                            :op1 "George"
+                            :op2 "W."
+                            :op3 "Bush"
+                            :op4 "II")
+                    :ARG0-of (m / mean-01
+                               :ARG1 (c / candidate
+                                       :mod (a / any)
+                                       :ARG0-of (h / have-org-role-91
+                                                  :ARG1 (p2 / political-party
+                                                          :name (n2 / name
+                                                                  :op1 "Republican"
+                                                                  :op2 "Party")))))
+                    :ARG0-of (m3 / mean-01
+                               :ARG1 (o2 / or
+                                       :op1 (p3 / person
+                                              :name (n3 / name
+                                                      :op1 "Huntsman"))
+                                       :op2 (p4 / person
+                                              :name (n4 / name
+                                                      :op1 "Romney"))
+                                       :op3 (p5 / person
+                                              :name (n5 / name
+                                                      :op1 "Ron"
+                                                      :op2 "Paul")))
+                               :polarity -))))
+
+# ::id DF-199-193696-586_5767.21 ::date 2013-08-30T08:08:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt Then that means the Republicans would likely further gain in Congress and even the Senate perhaps.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_21.txt
+(i / infer-01
+  :ARG1 (m / mean-01
+          :ARG0 (t / that)
+          :ARG1 (l / likely
+                  :domain (a2 / and
+                            :op1 (g / gain-02
+                                   :ARG0 (p3 / person
+                                           :ARG0-of (h / have-org-role-91
+                                                      :ARG1 (p / political-party
+                                                              :name (n2 / name
+                                                                      :op1 "Republican"
+                                                                      :op2 "Party"))))
+                                   :degree (f / further)
+                                   :instrument (g2 / government-organization
+                                                 :name (n / name
+                                                         :op1 "Congress")))
+                            :op2 (g4 / gain-02
+                                   :ARG0 p3
+                                   :degree f
+                                   :instrument (g3 / government-organization
+                                                 :name (n3 / name
+                                                         :op1 "Senate"))
+                                   :mod (e / even)
+                                   :mod (p2 / perhaps))))))
+
+# ::id DF-199-193696-586_5767.22 ::date 2013-08-31T14:56:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt Then the country slides right back into the deepest of recessions.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_22.txt
+(s / slide-01
+  :ARG1 (c / country)
+  :direction (b / back
+               :mod (r2 / right))
+  :direction (r / recession
+               :mod (d / deep
+                      :degree (m / most)))
+  :time (t / then))
+
+# ::id DF-199-193696-586_5767.23 ::date 2013-08-30T08:08:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt I suspect you are wrong on the voting inclinations of the moderates, and especially the ones you call tea baggers.
+# ::save-date Wed Sep 25, 2013 ::file DF-199-193696-586_5767_23.txt
+(s / suspect-01
+      :ARG0 (i / i)
+      :ARG1 (w / wrong-41
+            :ARG1 (y / you)
+            :ARG2 (a / and
+                  :op1 (i2 / incline-01
+                        :ARG0 (p / person
+                              :mod (m2 / moderate))
+                        :ARG1 (v / vote-01
+                              :ARG0 p))
+                  :op2 (i3 / incline-01
+                        :ARG0 (o / one
+                              :ARG1-of (c / call-01
+                                    :ARG0 y
+                                    :ARG2 (p2 / person
+                                          :ARG0-of (b / bag-01
+                                                :ARG1 (t / tea))))
+                              :mod (e / especially))
+                        :ARG1 (v2 / vote-01
+                              :ARG0 o)))))
+
+# ::id DF-199-193696-586_5767.24 ::date 2013-08-30T11:57:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt Actually, I think you are wrong on the moderate/independent voter turnout, too, but I could be wrong.
+# ::save-date Thu Sep 19, 2013 ::file DF-199-193696-586_5767_24.txt
+(h / have-concession-91
+      :ARG1 (t / think-01
+            :ARG0 (i / i)
+            :ARG1 (w / wrong-41
+                  :ARG1 (y / you)
+                  :ARG2 (t2 / turn-17
+                        :mod (t3 / too)
+                        :topic (s2 / slash
+                              :op1 (p2 / person
+                                    :mod (m2 / moderate))
+                              :op2 (p3 / person
+                                    :ARG0-of (d / depend-01 :polarity -))
+                              :ARG0-of (v / vote-01))))
+            :mod (a / actual))
+      :ARG2 (p / possible
+            :domain (w2 / wrong-41
+                  :ARG1 i)))
+
+# ::id DF-199-193696-586_5767.25 ::date 2013-08-30T12:24:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm expecting a fairly good anti Obama turnout amongst that group.
+# ::save-date Mon Sep 30, 2013 ::file DF-199-193696-586_5767_25.txt
+(e / expect-01
+      :ARG0 (i / i)
+      :ARG1 (t / turn-17
+            :ARG1 (o / oppose-01
+                  :ARG0 (p2 / person
+                        :ARG0-of (h / have-org-role-91
+                              :ARG1 (g2 / group
+                                    :mod (t2 / that))))
+                  :ARG1 (p / person :name (n / name :op1 "Obama")))
+            :mod (g / good
+                  :degree (f / fair))))
+
+# ::id DF-199-193696-586_5767.26 ::date 2013-08-30T12:32:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt I could accept Hillary.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_26.txt
+(p2 / possible
+  :domain (a / accept-01
+            :ARG0 (i / i)
+            :ARG1 (p / person
+                    :name (n / name
+                            :op1 "Hillary"))))
+
+# ::id DF-199-193696-586_5767.27 ::date 2013-08-30T12:42:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt Like Phoenix, I'm not greatly impressed by the Republican field.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_27.txt
+(i2 / impress-01
+  :ARG0 (f / field
+          :mod (p2 / political-party
+                 :name (n2 / name
+                         :op1 "Republican"
+                         :op2 "Party")))
+  :ARG1 (i / i)
+  :polarity -
+  :degree (g / great)
+  :ARG1-of (r / resemble-01
+             :ARG2 (i3 / impress-01
+                     :ARG0 f
+                     :ARG1 (p / person
+                             :name (n / name
+                                     :op1 "Phoenix"))
+                     :polarity -
+                     :degree g)))
+
+# ::id DF-199-193696-586_5767.28 ::date 2013-08-30T12:54:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt Not crazy about the presumed Democratic candidate either.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_28.txt
+(c / crazy
+  :topic (c2 / candidate
+           :ARG1-of (p / presume-01)
+           :ARG0-of (h / have-org-role-91
+                      :ARG1 (p2 / political-party
+                              :name (n / name
+                                      :op1 "Democratic"
+                                      :op2 "Party"))))
+  :polarity -
+  :mod (e / either))
+
+# ::id DF-199-193696-586_5767.29 ::date 2013-08-30T13:08:05 ::annotator SDL-AMR-09 ::preferred
+# ::snt On the other hand, Obama stepping aside seems even less likely than Cain giving up.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_29.txt
+(c / contrast-01
+  :ARG2 (s / seem-01
+          :ARG1 (l / likely
+                  :compared-to (g / give-07
+                                 :ARG0 (p2 / person
+                                         :name (n2 / name
+                                                 :op1 "Cain")))
+                  :degree (l2 / less
+                            :mod (e / even))
+                  :domain (s2 / step-05
+                            :ARG0 (p / person
+                                    :name (n / name
+                                            :op1 "Obama"))))))
+
+# ::id DF-199-193696-586_5767.30 ::date 2013-08-30T13:25:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt I guess that in summary, I'm not optimistic about the future of the country for the next five years.
+# ::save-date Mon Sep 16, 2013 ::file DF-199-193696-586_5767_30.txt
+(g / guess-01
+  :ARG0 (i / i)
+  :ARG1 (o / optimistic
+          :polarity -
+          :domain i
+          :topic (f / future
+                   :poss (c / country)
+                   :duration (t2 / temporal-quantity
+                               :quant 5
+                               :unit (y2 / year
+                                       :mod (n / next))))
+          :ARG1-of (s / summarize-01)))
+
+# ::id DF-199-194088-677_0261.1 ::date 2013-08-28T04:44:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt Kudos to NY!. They realize that it's not about just voting the party line, it's about voting for what's right.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194088-677_0261_1.txt
+(m / multi-sentence
+      :snt1 (k / kudos :mode expressive
+            :beneficiary (s / state :name (n / name :op1 "NY")))
+      :snt2 (r / realize-01
+            :ARG0 (t / they)
+            :ARG1 (c / contrast-01
+                  :ARG1 (i / it
+                        :topic (v / vote-01 :polarity -
+                              :ARG1 (l / line
+                                    :mod (p / party))
+                              :mod (j / just)))
+                  :ARG2 (i2 / it
+                        :topic (v2 / vote-01
+                              :ARG1 (t2 / thing
+                                    :ARG1-of (r2 / right-42)))))))
+
+# ::id DF-199-194088-677_0261.2 ::date 2013-08-28T08:45:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt @jcboy, Did they actually vote for gay marriage yet?
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194088-677_0261_2.txt
+(s / say-01
+      :ARG1 (v / vote-01 :mode interrogative
+            :ARG0 (t / they)
+            :ARG1 (m / marry-01
+                  :ARG1 (g / gay))
+            :mod (a / actual)
+            :time (y / yet))
+      :ARG2 (p / person :name (n / name :op1 "jcboy")))
+
+# ::id DF-199-194088-677_0261.3 ::date 2013-08-28T08:56:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'm getting a mixed message with the NY Times
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194088-677_0261_3.txt
+(g / get-01
+      :ARG0 (i / i)
+      :ARG1 (t / thing
+            :ARG1-of (m / message-01)
+            :ARG1-of (m2 / mix-01))
+      :ARG2 (p / publication :name (n / name :op1 "NY" :op2 "Times")))
+
+# ::id DF-199-194088-677_0261.4 ::date 2013-08-28T09:16:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt @tsarstepan, They sure did!
+# ::save-date Fri Aug 30, 2013 ::file DF-199-194088-677_0261_4.txt
+(s / say-01
+      :ARG1 (d / do-02 :mode expressive
+            :ARG0 (t / they)
+            :mod (s2 / sure))
+      :ARG2 (p / person :name (n / name :op1 "tsarstepan")))
+
+# ::id DF-199-194088-677_0261.5 ::date 2013-08-28T09:23:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt Hopefully, other states will realize gay marriage hurts nobody.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-194088-677_0261_5.txt
+(r / realize-01
+      :ARG0 (s / state
+            :mod (o / other))
+      :ARG1 (h / hurt-01
+            :ARG0 (m / marry-01
+                  :ARG1 (g / gay))
+            :ARG1 (n / nobody))
+      :ARG1-of (h2 / hope-01))
+
+# ::id DF-199-194088-677_0261.6 ::date 2013-08-28T09:29:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt Look at Massachusetts. They have had it since 2004.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194088-677_0261_6.txt
+(m / multi-sentence
+      :snt1 (l / look-01 :mode imperative
+            :ARG0 (y / you)
+            :ARG1 (s / state :name (n / name :op1 "Massachusetts")))
+      :snt2 (h / have-03
+            :ARG0 (t / they)
+            :ARG1 (i / it)
+            :time (s2 / since
+                  :op1 (d / date-entity :year 2004))))
+
+# ::id DF-199-194088-677_0261.7 ::date 2013-08-28T09:33:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt Have you heard of their society falling apart? Of course not.
+# ::save-date Mon Jan 20, 2014 ::file DF-199-194088-677_0261_7.txt
+(m / multi-sentence
+      :snt1 (h / hear-01 :mode interrogative
+            :ARG0 (y / you)
+            :ARG1 (f / fall-09
+                  :ARG1 (s / society
+                        :poss (t / they))))
+      :snt2 (h2 / have-polarity-91
+            :ARG2 -
+            :mod (o / of-course)))
+
+# ::id DF-199-194088-677_0261.8 ::date 2013-08-28T09:39:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt I think with NY, then CA, it will rapidly spread across the country.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194088-677_0261_8.txt
+(t / think-01
+      :ARG0 (i / i)
+      :ARG1 (s / spread-02
+            :ARG1 (i2 / it)
+            :location (a / across
+                  :op1 (c / country))
+            :accompanier (a2 / and
+                  :op1 (s2 / state :name (n / name :op1 "NY"))
+                  :op2 (s3 / state :name (n2 / name :op1 "CA")
+                        :time (t2 / then)))
+            :manner (r / rapid)))
+
+# ::id DF-199-194088-677_0261.9 ::date 2013-08-28T09:48:25 ::annotator SDL-AMR-09 ::preferred
+# ::snt You can't stop this train!
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194088-677_0261_9.txt
+(p / possible :polarity - :mode expressive
+      :domain (s / stop-01
+            :ARG0 (y / you)
+            :ARG1 (t / train
+                  :mod (t2 / this))))
+
+# ::id DF-199-194088-677_0261.10 ::date 2013-08-28T09:51:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt @jcboy, I hope that the US Congress addresses this issue soon and just makes the whole state by state journey moot by making same sex marriage a national law.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-194088-677_0261_10.txt
+(s / say-01
+      :ARG1 (h / hope-01
+            :ARG0 (i / i)
+            :ARG1 (a / and
+                  :op1 (a2 / address-02
+                        :ARG0 (g / government-organization :name (n2 / name :op1 "Congress"))
+                        :ARG1 (i2 / issue
+                              :mod (t / this))
+                        :time (s2 / soon))
+                  :op2 (m / moot-01
+                        :ARG0 g
+                        :ARG1 (j / journey-01
+                              :mod (s3 / state
+                                    :prep-by (s4 / state))
+                              :mod (w / whole))
+                        :instrument (m2 / make-01
+                              :ARG0 g
+                              :ARG1 (l / law
+                                    :mod (n3 / nation))
+                              :ARG2 (m3 / marry-01
+                                    :ARG1 (p2 / person
+                                          :mod (s5 / sex
+                                                :ARG1-of (s6 / same-41)))))
+                        :mod (j2 / just))))
+      :ARG2 (p / person :name (n / name :op1 "jcboy")))
+
+# ::id DF-199-194088-677_0261.11 ::date 2013-08-28T10:45:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt @jcboy, You are correct.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194088-677_0261_11.txt
+(s / say-01
+      :ARG1 (c / correct
+            :domain (y / you))
+      :ARG2 (p / person :name (n / name :op1 "jcboy")))
+
+# ::id DF-199-194088-677_0261.12 ::date 2013-08-28T10:47:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt Whether one's home state will recognize a same sex marriage from out of state is another matter.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-194088-677_0261_12.txt
+(m / matter
+      :mod (a / another)
+      :domain (r / recognize-01
+            :ARG0 (s / state
+                  :mod (h / home)
+                  :poss (o / one))
+            :ARG1 (m2 / marry-01
+                  :ARG1 (p / person
+                        :mod (s2 / sex
+                              :ARG1-of (s3 / same-41)))
+                  :location (s4 / state
+                        :mod (o2 / out)))))
+
+# ::id DF-199-194088-677_0261.13 ::date 2013-08-28T11:03:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt When I studied the Domestic Relations Law of NY, I thought it was a damned INDIGNITY for a government to give permission to citizens to marry.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194088-677_0261_13.txt
+(t / think-01
+      :ARG0 (i / i)
+      :ARG1 (d / dignity :polarity -
+            :ARG1-of (d2 / damn-01)
+            :domain (p / permit-01
+                  :ARG0 (g / government-organization
+                        :ARG0-of (g2 / govern-01))
+                  :ARG1 (m / marry-01
+                        :ARG1 c)
+                  :ARG2 (c / citizen)))
+      :time (s / study-01
+            :ARG0 i
+            :ARG1 (l / law :name (n / name :op1 "Domestic" :op2 "Relations" :op3 "Law")
+                  :poss (s2 / state :name (n2 / name :op1 "NY")))))
+
+# ::id DF-199-194088-677_0261.14 ::date 2013-08-28T11:04:35 ::annotator SDL-AMR-09 ::preferred
+# ::snt The citizens created the damned government, their child. David
+# ::save-date Mon Jan 20, 2014 ::file DF-199-194088-677_0261_14.txt
+(s / say-01
+      :ARG0 (p / person :name (n / name :op1 "David"))
+      :ARG1 (c / create-01
+            :ARG0 (c3 / citizen)
+            :ARG1 (g / government-organization
+                  :ARG0-of (g2 / govern-01)
+                  :ARG1-of (d / damn-01)
+                  :ARG0-of (m / mean-01
+                        :ARG1 (c2 / child
+                              :poss c3)))))
+
+# ::id DF-199-194088-677_0426.1 ::date 2013-08-28T11:10:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt Did you guys hear about that plane crash that crashed into a helicopter?
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194088-677_0426_1.txt
+(h / hear-01 :mode interrogative
+      :ARG0 (g / guy
+            :mod (y / you))
+      :ARG1 (c / crash-01
+            :ARG1 (p / plane)
+            :ARG1-of (c2 / crash-01
+                  :location (h2 / helicopter))))
+
+# ::id DF-199-194088-677_0426.2 ::date 2013-08-28T11:18:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt I have no idea how that happened.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194088-677_0426_2.txt
+(h / have-03 :polarity -
+      :ARG0 (i / i)
+      :ARG1 (i2 / idea
+            :topic (t2 / thing
+                  :manner-of (h2 / happen-01
+                        :ARG1 (t / that)))))
+
+# ::id DF-199-194088-677_0426.3 ::date 2013-08-28T11:22:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt What do you think?
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194088-677_0426_3.txt
+(t / think-01
+      :ARG0 (y / you)
+      :ARG1 (a / amr-unknown))
+
+# ::id DF-199-194088-677_0426.4 ::date 2013-08-28T11:23:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt That is a congested airway, and when you fly under 1000 feet you have no aid from air traffic controllers.
+# ::save-date Wed Sep 18, 2013 ::file DF-199-194088-677_0426_4.txt
+(a / and
+      :op1 (c / congest-01
+            :ARG1 (a2 / airway)
+            :domain (t / that))
+      :op2 (a3 / aid-01 :polarity -
+            :ARG0 (p / person
+                  :ARG0-of (c2 / control-01
+                        :ARG1 (t2 / traffic
+                              :mod (a4 / air))))
+            :ARG2 (y / you)
+            :time (f / fly-01
+                  :ARG1 y
+                  :quant (u / under
+                        :op1 (d / distance-quantity :quant 1000
+                              :unit (f2 / foot))))))
+
+# ::id DF-199-194088-677_0426.5 ::date 2013-08-28T11:37:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt Accidents happen, but this particular area may need additional regulation (such as a minimum altitude requirement for the tourist helicopters).
+# ::save-date Mon Jan 27, 2014 ::file DF-199-194088-677_0426_5.txt
+(c / contrast-01
+      :ARG1 (a / accident)
+      :ARG2 (p / possible
+            :domain (n / need-01
+                  :ARG0 (a2 / area
+                        :mod (t / this)
+                        :mod (p2 / particular))
+                  :ARG1 (r / regulate-01
+                        :mod (a3 / additional)
+                        :example (r2 / require-01
+                              :ARG1 (a4 / altitude
+                                    :mod (m / minimum))
+                              :ARG2 (h2 / helicopter
+                                    :mod (p3 / person
+                                          :ARG0-of (t2 / tour-01))))))))
+
+# ::id DF-199-194190-649_6415.1 ::date 2013-08-28T11:37:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt My husband, our kids, and myself were spending a day out by the oceanside with another couple and their kids, our long-time friends.
+# ::save-date Tue Sep 17, 2013 ::file DF-199-194190-649_6415_1.txt
+(s / spend-02
+      :ARG0 (a / and
+            :op1 (h / husband
+                  :poss (i / i))
+            :op2 (k / kid
+                  :poss (a2 / and
+                        :op1 h
+                        :op2 i))
+            :op3 i)
+      :ARG1 (t / temporal-quantity :quant 1
+            :unit (d / day))
+      :location (o / out)
+      :location (o2 / oceanside)
+      :accompanier (a3 / and
+            :op1 (c / couple
+                  :mod (a4 / another))
+            :op2 (k2 / kid
+                  :poss c)
+            :mod (f / friend
+                  :duration (l / long)
+                  :poss a)))
+
+# ::id DF-199-194190-649_6415.2 ::date 2013-08-28T11:37:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt At some point we came across a huge fallen tree, and our friend L. climbed on it and started walking up.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-194190-649_6415_2.txt
+(a / and
+      :op1 (c / come-21
+            :ARG0 (w / we)
+            :ARG1 (t / tree
+                  :ARG1-of (f / fall-01)
+                  :mod (h / huge))
+            :time (p / point
+                  :mod (s / some)))
+      :op2 (c2 / climb-01
+            :ARG0 (f3 / friend :name (n / name :op1 "L.")
+                  :poss w)
+            :ARG1 t)
+      :op3 (s2 / start-01
+            :ARG0 f3
+            :ARG1 (w2 / walk-01
+                  :ARG0 f3
+                  :ARG1 (u / up))))
+
+# ::id DF-199-194190-649_6415.3 ::date 2013-08-28T11:44:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt Our 11 year-old son followed him, but L. suddenly realized they won't be able to get down that easily.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_3.txt
+(c / contrast-01
+      :ARG1 (f / follow-01
+            :ARG1 (s / son
+                  :poss (w / we)
+                  :age (t / temporal-quantity :quant 11
+                        :unit (y / year)))
+            :ARG2 (p2 / person :name (n / name :op1 "L.")))
+      :ARG2 (r / realize-01
+            :ARG0 p2
+            :ARG1 (c2 / capable-41 :polarity -
+                  :ARG1 (a / and
+                        :op1 s
+                        :op2 p2)
+                  :ARG2 (g / get-05
+                        :ARG1 a
+                        :ARG2 (d / down)
+                        :manner (e / easy
+                              :mod (t2 / that))))
+            :manner (s2 / sudden)))
+
+# ::id DF-199-194190-649_6415.4 ::date 2013-08-28T11:57:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt He turned back and asked our son to get away and down to give him room to get down, too.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194190-649_6415_4.txt
+(a / and
+      :op1 (t / turn-01
+            :ARG1 (h / he)
+            :direction (b / back))
+      :op1 (a2 / ask-01
+            :ARG0 h
+            :ARG1 (g / get-05
+                  :ARG1 s
+                  :ARG2 (a3 / and
+                        :op1 (a4 / away)
+                        :op2 (d / down))
+                  :purpose (g2 / give-01
+                        :ARG0 s
+                        :ARG1 (r / room)
+                        :ARG2 h
+                        :purpose (g3 / get-05
+                              :ARG1 h
+                              :ARG2 d
+                              :mod (t2 / too))))
+            :ARG2 (s / son
+                  :poss (w / we))))
+
+# ::id DF-199-194190-649_6415.5 ::date 2013-08-28T12:07:44 ::annotator SDL-AMR-09 ::preferred
+# ::snt Our son stopped but didn't get out of his way at once.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194190-649_6415_5.txt
+(h / have-concession-91
+      :ARG1 (s / stop-01
+            :ARG0 (s2 / son
+                  :poss (w / we)))
+      :ARG2 (g / get-05 :polarity -
+            :ARG1 s2
+            :ARG2 (o / out
+                  :op1 (w2 / way
+                        :poss (h2 / he)))
+            :time (a / at-once)))
+
+# ::id DF-199-194190-649_6415.6 ::date 2013-08-28T12:15:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt He was having fun, and we had to tell him 2 more times, and then he obeyed.
+# ::save-date Thu Sep 19, 2013 ::file DF-199-194190-649_6415_6.txt
+(a / and
+      :op1 (h / have-03
+            :ARG0 (h2 / he)
+            :ARG1 (f / fun))
+      :op2 (o / obligate-01
+            :ARG2 (t / tell-01
+                  :ARG0 (w / we)
+                  :ARG2 h2
+                  :frequency (r / rate-entity-91
+                        :ARG1 (x / 2
+                              :mod (m / more)))))
+      :op3 (o2 / obey-01
+            :ARG0 h2
+            :time (t3 / then)))
+
+# ::id DF-199-194190-649_6415.7 ::date 2013-08-28T12:23:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt After that L. got back down, and he suddenly grabbed our son from behind and threw him on the ground with all his might, yelling at him.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_7.txt
+(a / and
+      :op1 (g / get-05
+            :ARG1 (p / person :name (n / name :op1 "L."))
+            :ARG2 (d / down
+                  :mod (b / back))
+            :time (a2 / after
+                  :op1 (t / that)))
+      :op2 (g2 / grab-01
+            :ARG0 p
+            :ARG1 (s / son
+                  :poss (w / we))
+            :manner (s2 / sudden)
+            :manner (f / from
+                  :op1 (b2 / behind)))
+      :op3 (a4 / and
+            :op1 (t2 / throw-01
+                  :ARG0 p
+                  :ARG1 s
+                  :ARG2 (g3 / ground)
+                  :manner (m / might
+                        :poss p
+                        :quant (a3 / all)))
+            :op2 (y / yell-01
+                  :ARG0 p
+                  :ARG2 s)))
+
+# ::id DF-199-194190-649_6415.8 ::date 2013-08-28T12:23:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt We were stupefied.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194190-649_6415_8.txt
+(s / stupefy-01
+      :ARG1 (w / we))
+
+# ::id DF-199-194190-649_6415.9 ::date 2013-08-28T12:24:35 ::annotator SDL-AMR-09 ::preferred
+# ::snt A 215lbs 38 year old man could have easily injured him.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_9.txt
+(p / possible
+      :domain (i / injure-01
+            :ARG0 (m / man
+                  :age (t / temporal-quantity :quant 38
+                        :unit (y / year))
+                  :mod (m2 / mass-quantity :quant 215
+                        :unit (p2 / pound)))
+            :ARG1 (h / he)
+            :manner (e / easy)))
+
+# ::id DF-199-194190-649_6415.10 ::date 2013-08-28T12:24:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt Fortunately he got up unscathed albeit very frightened.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_10.txt
+(h3 / have-concession-91
+      :ARG1 (g / get-05
+            :ARG1 (h / he)
+            :ARG2 (u / up)
+            :mod (s / scathe-00 :polarity -
+                  :ARG1 h)
+            :mod (f2 / fortunate-41))
+      :ARG2 (f / frighten-01
+            :ARG1 h
+            :degree (v / very)))
+
+# ::id DF-199-194190-649_6415.11 ::date 2013-08-28T12:25:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt We are in deep shock, we never hit our children.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194190-649_6415_11.txt
+(c / cause-01
+      :ARG0 (h / hit-01 :polarity -
+            :ARG0 (w / we)
+            :ARG1 (c2 / child
+                  :poss w)
+            :time (e / ever))
+      :ARG1 (s / shock-01
+            :ARG1 w
+            :mod (d / deep)))
+
+# ::id DF-199-194190-649_6415.12 ::date 2013-08-28T12:31:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt Does anybody know if there are legal ways to teach the man a lesson - but not monetary?
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_12.txt
+(k / know-01 :mode interrogative
+      :ARG0 (a / anybody)
+      :ARG1 (w / way
+            :mod (l / law)
+            :instrument-of (t / teach-01
+                  :ARG1 (l2 / lesson
+                        :mod (m2 / money :polarity -))
+                  :ARG2 (m / man))))
+
+# ::id DF-199-194190-649_6415.13 ::date 2013-08-28T12:31:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt Is there any point in filing a police report?
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_13.txt
+(t / thing :mode interrogative
+      :ARG4-of (f / file-01
+            :ARG1 (r / report-01
+                  :ARG2 (p / police)))
+      :mod (a / any))
+
+# ::id DF-199-194190-649_6415.14 ::date 2013-08-28T12:31:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt Personally, if someone is my friend, I am going to deal with the situation on a person to person level.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_14.txt
+(d / deal-01
+      :ARG0 (i / i)
+      :ARG1 (s / situation)
+      :manner (l / level
+            :mod (p / person
+                  :prep-to (p2 / person)))
+      :condition (f / friend
+            :domain (s2 / someone)
+            :poss i)
+      :mod (p3 / personal))
+
+# ::id DF-199-194190-649_6415.15 ::date 2013-08-29T03:40:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt Why can't you make it sure that you were really upset and that you don't want them hitting your kids ever again.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_15.txt
+(p / possible :polarity -
+      :domain (e / ensure-01
+            :ARG0 (y / you)
+            :ARG1 (a / and
+                  :op1 (u / upset-01
+                        :ARG1 y
+                        :mod (r / really))
+                  :op2 (w / want-01 :polarity -
+                        :ARG0 y
+                        :ARG1 (h / hit-01
+                              :ARG0 (t / they)
+                              :ARG1 (k / kid
+                                    :poss y)
+                              :time (e2 / ever)
+                              :mod (a2 / again)))))
+      :ARG1-of (c / cause-01
+            :ARG0 (a3 / amr-unknown)))
+
+# ::id DF-199-194190-649_6415.16 ::date 2013-08-28T12:31:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt Legally, there are two remedies.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194190-649_6415_16.txt
+(t / thing :quant 2
+      :ARG2-of (r / remedy-01)
+      :mod (l / legal))
+
+# ::id DF-199-194190-649_6415.17 ::date 2013-08-28T12:47:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt There is monetary damages, and there is jail time.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194190-649_6415_17.txt
+(a / and
+      :op1 (d / damage-01
+            :mod (m / money))
+      :op2 (t / time
+            :mod (j / jail)))
+
+# ::id DF-199-194190-649_6415.18 ::date 2013-08-29T03:50:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt I suppose you could add probation (but that is just a replacement for jail time).
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_18.txt
+(s / suppose-01
+      :ARG0 (i / i)
+      :ARG1 (p / possible
+            :domain (a / add-02
+                  :ARG0 (y / you)
+                  :ARG1 (p2 / probation
+                        :ARG1-of (c / contrast-01
+                              :ARG2 (r / replace-01
+                                    :ARG1 p2
+                                    :ARG2 (t / time
+                                          :mod (j / jail))
+                                    :mod (j2 / just)))))))
+
+# ::id DF-199-194190-649_6415.19 ::date 2013-08-29T03:58:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt If you go the legal route, that pretty much ends the friendship no matter what happens.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_19.txt
+(g / go-01
+      :ARG1 (y / you)
+      :path (r / route
+            :mod (l / law))
+      :condition-of (e / end-01
+            :ARG0 g
+            :ARG1 (f / friendship)
+            :mod (p / pretty-much)
+            :mod (t / thing
+                  :ARG1-of (h / happen-01
+                        :ARG1-of (m / matter-01 :polarity -)))))
+
+# ::id DF-199-194190-649_6415.20 ::date 2013-08-29T04:16:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt If I was angry enough to start down this path I wouldn't worry about where it ended up.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-194190-649_6415_20.txt
+(w / worry-02 :polarity -
+      :ARG0 (i / i)
+      :ARG1 (t / thing
+            :location-of (e / end-03
+                  :ARG1 (i2 / it)))
+      :condition (a / anger-01
+            :ARG1 i
+            :mod (e2 / enough)
+            :ARG0-of (c / cause-01
+                  :ARG1 (s / start-06
+                        :ARG0 i
+                        :ARG1 (p / path
+                              :mod (t2 / this))
+                        :direction (d / down)))))
+
+# ::id DF-199-194190-649_6415.21 ::date 2013-08-29T04:33:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt I would probably express my feelings on the situation and make it clear that it was not to happen again.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-194190-649_6415_21.txt
+(a / and
+      :op1 (e / express-01
+            :ARG0 (i / i)
+            :ARG1 (t / thing
+                  :ARG1-of (f / feel-01
+                        :ARG0 i
+                        :ARG2 (s / situation)))
+            :mod (p / probable))
+      :op2 (m / make-02
+            :ARG0 i
+            :ARG1 (c / clear
+                  :domain (o / obligate-01
+                        :ARG2 (h / happen-01 :polarity -
+                              :ARG1 (i2 / it)
+                              :mod (a2 / again))))
+            :mod p))
+
+# ::id DF-199-194190-649_6415.22 ::date 2013-08-28T12:50:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt Your son was assaulted.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194190-649_6415_22.txt
+(a / assault-01
+      :ARG1 (s / son
+            :poss (y / you)))
+
+# ::id DF-199-194190-649_6415.23 ::date 2013-08-29T01:34:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt That is what the behaviour of your ex-friend would be named legally.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_23.txt
+(t / thing
+      :ARG2-of (n / name-01
+            :ARG1 (b / behave-01
+                  :ARG0 (f / friend
+                        :mod (e / ex)
+                        :poss (y / you)))
+            :manner (l / legal))
+      :domain (t2 / that))
+
+# ::id DF-199-194190-649_6415.24 ::date 2013-08-29T05:02:37 ::annotator SDL-AMR-09 ::preferred
+# ::snt He didn't hurt your child physically, so it was the lesser form of assault (assault causing physical harm is seen as more serious.)
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_24.txt
+(m2 / multi-sentence
+      :snt1 (h / hurt-01 :polarity -
+            :ARG0 (h2 / he)
+            :ARG1 (c / child
+                  :poss (y / you))
+            :manner (p / physical)
+            :ARG0-of (c2 / cause-01
+                  :ARG1 (a / assault-01
+                        :mod (f / form
+                              :mod (l / less
+                                    :degree (m / more))))))
+      :snt2 (s / see-01
+            :ARG1 (a2 / assault-01
+                  :ARG0-of (c3 / cause-01
+                        :ARG1 (h3 / harm-01
+                              :ARG1 (p2 / physical))))
+            :ARG2 (s2 / serious
+                  :degree (m3 / more))))
+
+# ::id DF-199-194190-649_6415.25 ::date 2013-08-29T05:38:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt You certainly could file a police report....
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_25.txt
+(p / possible
+      :domain (f / file-01
+            :ARG0 (y / you)
+            :ARG1 (r / report-01
+                  :ARG2 (p2 / police)))
+      :mod (c / certain))
+
+# ::id DF-199-194190-649_6415.26 ::date 2013-08-29T05:44:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt I don't know the law where you are, here, it is quite likely that police would go around and question the man, making it clear that (if your description is accurate) he had committed an offence, but you could decide against filing charges.
+# ::save-date Mon Jan 20, 2014 ::file DF-199-194190-649_6415_26.txt
+(c / contrast-01
+      :ARG1 (k / know-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (l / law
+                  :location (t / thing
+                        :location-of (y / you))))
+      :ARG2 (l2 / likely
+            :domain (a / and
+                  :op1 (g / go-01
+                        :ARG1 (p / police)
+                        :location (a2 / around))
+                  :op2 (q2 / question-01
+                        :ARG0 p
+                        :ARG2 (m / man))
+                  :op3 (m2 / make-02
+                        :ARG0 p
+                        :ARG1 (c2 / clear
+                              :domain (c3 / commit-02
+                                    :ARG0 m
+                                    :ARG1 (o2 / offence)
+                                    :condition (a3 / accurate
+                                          :domain (t3 / thing
+                                                :ARG2-of (d / describe-01
+                                                      :ARG0 y)))))))
+            :degree (q / quite)
+            :ARG2-of (h / have-concession-91
+                  :ARG1 (p2 / possible
+                        :domain (d2 / decide-01
+                              :ARG0 y
+                              :ARG1 (f / file-01 :polarity -
+                                    :ARG0 y
+                                    :ARG1 (c4 / charge-05)))))
+            :location (h2 / here)))
+
+# ::id DF-199-194190-649_6415.27 ::date 2013-08-29T06:37:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt Again, depending on where you live, you could likely notyify child protection authorities.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_27.txt
+(l / likely
+      :domain (n / notify-01
+            :ARG0 (y / you)
+            :ARG1 (a / authority
+                  :ARG0-of (p / protect-01
+                        :ARG1 (c / child))))
+      :mod (p2 / possible)
+      :ARG0-of (d / depend-01
+            :ARG1 (t / thing
+                  :location-of (l2 / live-01
+                        :ARG0 y)))
+      :mod (a2 / again))
+
+# ::id DF-199-194190-649_6415.28 ::date 2013-08-29T06:47:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt here, being extra-familial, and given that you have already decided not to expose your child to hm again, they would simply hand it to police.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-194190-649_6415_28.txt
+(h / hand-01
+      :ARG0 (t / they)
+      :ARG1 (i / it)
+      :ARG2 (p / police)
+      :mod (s / simple)
+      :ARG1-of (c / cause-01
+            :ARG0 (a / and
+                  :op1 (f / familial
+                        :degree (e / extra)
+                        :domain i)
+                  :op2 (d / decide-01
+                        :ARG0 (y / you)
+                        :ARG1 (e2 / expose-01 :polarity -
+                              :ARG0 y
+                              :ARG1 (c2 / child
+                                    :poss y)
+                              :ARG2 (h2 / he)
+                              :mod (a2 / again))
+                        :time (a3 / already))))
+      :location (h3 / here))
+
+# ::id DF-199-194190-649_6415.29 ::date 2013-08-29T07:03:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt If you release a legal genie from the bottle, though, you lose control of what the genie does.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-194190-649_6415_29.txt
+(h / have-concession-91
+      :ARG1 (r / release-01
+            :ARG0 (y / you)
+            :ARG1 (g / genie
+                  :mod (l / law))
+            :ARG2 (b / bottle)
+            :condition-of (l2 / lose-02
+                  :ARG0 y
+                  :ARG1 (c / control-01
+                        :ARG0 y
+                        :ARG1 (t / thing
+                              :ARG1-of (d / do-02
+                                    :ARG0 (g2 / genie)))))))
+
+# ::id DF-199-194190-649_6415.30 ::date 2013-08-29T07:11:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt For instance, you and your son would need to make a formal statement.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_30.txt
+(e / exemplify-01
+      :ARG0 (n / need-01
+            :ARG0 (a / and
+                  :op1 (y / you)
+                  :op2 (s / son
+                        :poss y))
+            :ARG1 (s2 / state-01
+                  :ARG0 a
+                  :mod (f / formal))))
+
+# ::id DF-199-194190-649_6415.31 ::date 2013-08-29T07:17:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt It might be that police act even if you don't want them to.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_31.txt
+(p / possible
+      :domain (a / act-02
+            :ARG0 (p2 / police)
+            :concession (e / even-if
+                  :op1 (w / want-01 :polarity -
+                        :ARG0 (y / you)
+                        :ARG1 a))))
+
+# ::id DF-199-194190-649_6415.32 ::date 2013-08-29T07:20:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt It might go to court.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_32.txt
+(p / possible
+      :domain (g / go-01
+            :ARG1 (i / it)
+            :ARG4 (c / court)))
+
+# ::id DF-199-194190-649_6415.33 ::date 2013-08-29T07:23:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'd personally not choose to do it tthat way...though you could certainly chat to local police without naming names and see if there is such a thing as a stern chat, or a formal caution to be had in your area.
+# ::save-date Mon Jan 20, 2014 ::file DF-199-194190-649_6415_33.txt
+(c / choose-01 :polarity -
+      :ARG0 (i / i)
+      :ARG1 (d / do-02
+            :ARG1 (i2 / it)
+            :manner (w / way
+                  :mod (t / that)))
+      :mod (p / personal)
+      :ARG1-of (h / have-concession-91
+            :ARG2 (a / and
+                  :op1 (p2 / possible
+                        :domain (c2 / chat-01
+                              :ARG0 (y / you)
+                              :ARG2 (p3 / police
+                                    :mod (l / local))
+                              :manner (n / name-01 :polarity -
+                                    :ARG0 y
+                                    :ARG1 (n2 / name)))
+                        :mod (c3 / certain))
+                  :op2 (s / see-01
+                        :ARG0 y
+                        :ARG1 (o / or :mode interrogative
+                              :op1 (t2 / thing
+                                    :example (c4 / chat-01
+                                          :mod (s2 / stern))
+                                    :mod (s3 / such))
+                              :op2 (h2 / have-03
+                                    :ARG1 (c5 / caution
+                                          :mod (f / formal))
+                                    :location (a2 / area
+                                          :poss y)))))))
+
+# ::id DF-199-194190-649_6415.34 ::date 2013-08-29T07:50:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'd hope that a stern talk from you and the loss of the friendship would be a big message to him.
+# ::save-date Fri Sep 13, 2013 ::file DF-199-194190-649_6415_34.txt
+(h / hope-01
+      :ARG0 (i / i)
+      :ARG1 (t2 / thing
+            :ARG1-of (m / message-01
+                  :ARG2 (h2 / he))
+            :mod (b / big)
+            :domain (a / and
+                  :op1 (t / talk-01
+                        :ARG0 (y / you)
+                        :mod (s / stern))
+                  :op2 (l / lose-02
+                        :ARG1 (f / friendship)))))
+
+# ::id DF-199-194190-649_6415.35 ::date 2013-08-29T07:59:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt However, my concern would be how he treats his own kids.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_35.txt
+(h / have-concession-91
+      :ARG1 (c / concern-01
+            :ARG0 (t / thing
+                  :ARG2-of (t2 / treat-01
+                        :ARG0 (h2 / he)
+                        :ARG1 (k / kid
+                              :poss h2)))
+            :ARG1 (i / i)))
+
+# ::id DF-199-194190-649_6415.36 ::date 2013-08-29T08:05:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt That was one hell of an over-reaction.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_36.txt
+(r / react-01
+      :mod (o / over)
+      :mod (o2 / one)
+      :mod (h / hell)
+      :domain (t / that))
+
+# ::id DF-199-194190-649_6415.37 ::date 2013-08-29T08:12:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt If you have evidence that he assaults his own kids, I'd be considering a chold protection notification.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_37.txt
+(c / consider-01
+      :ARG0 (i / i)
+      :ARG1 (n / notification
+            :ARG3-of (p / protect-01
+                  :ARG1 (c2 / child)))
+      :condition (h / have-03
+            :ARG0 (y / you)
+            :ARG1 (t / thing
+                  :ARG0-of (e / evidence-01
+                        :ARG1 (a / assault-01
+                              :ARG0 (h2 / he)
+                              :ARG1 (k / kid
+                                    :poss h2))))))
+
+# ::id DF-199-194190-649_6415.38 ::date 2013-08-28T12:45:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt is your kid ok?
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194190-649_6415_38.txt
+(o / okay :mode interrogative
+      :domain (k / kid
+            :poss (y / you)))
+
+# ::id DF-199-194190-649_6415.39 ::date 2013-08-28T12:46:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt That would have been scary.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194190-649_6415_39.txt
+(s / scary
+      :domain (t / that))
+
+# ::id DF-199-194190-649_6415.40 ::date 2013-08-29T08:24:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt Is he having nightmares or anything?
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_40.txt
+(h / have-03 :mode interrogative
+      :ARG0 (h2 / he)
+      :ARG1 (o / or
+            :op1 (n / nightmare)
+            :op2 (a / anything)))
+
+# ::id DF-199-194190-649_6415.41 ::date 2013-08-29T08:26:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt I'd also be having a chat with him about his behaviour.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_41.txt
+(c / chat-01
+      :ARG0 (i / i)
+      :ARG1 (b / behave-01
+            :ARG0 h)
+      :ARG2 (h / he)
+      :mod (a / also))
+
+# ::id DF-199-194190-649_6415.42 ::date 2013-08-29T08:33:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt It didn't warrant such a reaction, but he was thoughtless.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194190-649_6415_42.txt
+(c / contrast-01
+      :ARG1 (w / warrant-01 :polarity -
+            :ARG0 (i / it)
+            :ARG1 (t / thing
+                  :ARG2-of (r / react-01)
+                  :mod (s / such)))
+      :ARG2 (t2 / thought :polarity -
+            :domain (h / he)))
+
+# ::id DF-199-194190-649_6415.43 ::date 2013-08-29T08:39:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt If it was really unusual behaviour from your friend, I am a bit worried about him, too, frankly.
+# ::save-date Wed Sep 11, 2013 ::file DF-199-194190-649_6415_43.txt
+(h / have-condition-91
+      :ARG1 (w / worry-02
+            :ARG0 (i / i)
+            :ARG1 f
+            :mod (t / too)
+            :manner (f2 / frank)
+            :degree (b2 / bit))
+      :ARG2 (b / behave-01
+            :ARG0 (f / friend
+                  :poss (y / you))
+            :ARG1 (u / usual :polarity -
+                  :mod (r / really))))
+
+# ::id DF-199-194209-587_2515.1 ::date 2013-08-29T08:49:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt I am a 25 year old woman, and I have been in a 2 year relationship with a 37 year old married man.
+# ::save-date Fri Sep 13, 2013 ::file DF-199-194209-587_2515_1.txt
+(a / and
+      :op1 (w / woman
+            :age (t2 / temporal-quantity :quant 25
+                  :unit (y2 / year))
+            :domain (i / i))
+      :op2 (b / be-located-at-91
+            :ARG1 i
+            :ARG2 (r / relationship
+                  :duration (t3 / temporal-quantity :quant 2
+                        :unit (y3 / year))
+                  :prep-with (m / man
+                        :ARG1-of (m2 / marry-01)
+                        :age (t4 / temporal-quantity :quant 37
+                              :unit (y4 / year))))))
+
+# ::id DF-199-194209-587_2515.2 ::date 2013-08-29T08:55:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt He has 2 kids one, from his marriage and one from a previous relationship.
+# ::save-date Thu Sep 19, 2013 ::file DF-199-194209-587_2515_2.txt
+(h / have-03
+      :ARG0 (h2 / he)
+      :ARG1 (k / kid :quant 2
+            :ARG2-of (i / include-91
+                  :ARG1 (a / and
+                        :op1 (k2 / kid :quant 1
+                              :source (m / marry-01
+                                    :ARG1 h2))
+                        :op2 (k3 / kid :quant 1
+                              :source (r / relationship
+                                    :time (p / previous)))))))
+
+# ::id DF-199-194209-587_2515.3 ::date 2013-08-29T09:10:05 ::annotator SDL-AMR-09 ::preferred
+# ::snt He has been planning to get a divorce since the first day we met,
+# ::save-date Wed Sep 18, 2013 ::file DF-199-194209-587_2515_3.txt
+(p / plan-01
+      :ARG0 (h / he)
+      :ARG1 (d / divorce-01
+            :ARG0 h)
+      :time (s / since
+            :op1 (d2 / day
+                  :ord (o / ordinal-entity :value 1)
+                  :time-of (m / meet-02
+                        :ARG0 (w / we)))))
+
+# ::id DF-199-194209-587_2515.4 ::date 2013-08-29T09:17:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt things are so heated between us, I don't know what to do.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194209-587_2515_4.txt
+(a / and
+      :op1 (h / heat-01
+            :ARG1 (t / thing)
+            :location (b / between
+                  :op1 (w / we))
+            :degree (s / so))
+      :op2 (k / know-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (t2 / thing
+                  :ARG1-of (d / do-02))))
+
+# ::id DF-199-194209-587_2515.5 ::date 2013-08-29T09:23:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt He is planning on moving out of the house by the end of the year, he and his wife do not see eye to eye.
+# ::save-date Fri Sep 13, 2013 ::file DF-199-194209-587_2515_5.txt
+(p / plan-01
+      :ARG0 (h / he)
+      :ARG1 (m / move-01
+            :ARG1 h
+            :ARG2 (o / out
+                  :op1 (h2 / house))
+            :time (b / by
+                  :op1 (e / end
+                        :op1 (y / year))))
+      :ARG1-of (c / cause-01
+            :ARG0 (s / see-01 :polarity -
+                  :ARG0 (a / and
+                        :op1 h
+                        :op2 (w / wife
+                              :poss (h3 / he)))
+                  :ARG1 (e2 / eye
+                        :prep-to (e3 / eye)))))
+
+# ::id DF-199-194209-587_2515.6 ::date 2013-08-29T09:56:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt He was having sex chats with a lady he met on facebook from Sweden,
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194209-587_2515_6.txt
+(c / chat-01
+      :ARG0 (h / he)
+      :ARG1 (s / sex)
+      :ARG2 (l / lady
+            :ARG1-of (m / meet-02
+                  :ARG0 h
+                  :medium (p / product :name (n2 / name :op1 "Facebook")))
+            :source (c2 / country :name (n / name :op1 "Sweden"))))
+
+# ::id DF-199-194209-587_2515.7 ::date 2013-08-29T10:01:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt when I found out it affected me really badly.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194209-587_2515_7.txt
+(a / affect-01
+      :ARG0 (i / it)
+      :ARG1 (i2 / i)
+      :manner (b / bad
+            :mod (r / really))
+      :time (f / find-03
+            :ARG0 i))
+
+# ::id DF-199-194209-587_2515.8 ::date 2013-08-29T10:07:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt I felt and still feel betrayed and I can't trust him.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194209-587_2515_8.txt
+(a / and
+      :op1 (f / feel-01
+            :ARG0 (i / i)
+            :ARG1 (b / betray-01
+                  :ARG1 i))
+      :op2 (f2 / feel-01
+            :ARG0 i
+            :ARG1 b
+            :mod (s / still))
+      :op3 (p / possible :polarity -
+            :domain (t / trust-02
+                  :ARG0 i
+                  :ARG1 (h / he))))
+
+# ::id DF-199-194209-587_2515.9 ::date 2013-08-29T10:13:05 ::annotator SDL-AMR-09 ::preferred
+# ::snt How do I let go?
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194209-587_2515_9.txt
+(l / let-01
+      :ARG0 (i / i)
+      :ARG1 (g / go-01)
+      :manner (a / amr-unknown))
+
+# ::id DF-199-194209-587_2515.10 ::date 2013-08-29T10:15:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt @JEJE, You just walk away.
+# ::save-date Mon Jan 20, 2014 ::file DF-199-194209-587_2515_10.txt
+(s / say-01
+      :ARG1 (w / walk-01
+            :ARG0 (y / you)
+            :direction (a / away)
+            :mod (j / just))
+      :ARG2 (p / person :name (n / name :op1 "JEJE")))
+
+# ::id DF-199-194209-587_2515.11 ::date 2013-08-29T10:18:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Do you really think so little of yourself that you believe this is the best you can do?
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194209-587_2515_11.txt
+(t / think-01 :mode interrogative
+      :ARG0 (y / you)
+      :ARG1 (l / little
+            :degree (s / so))
+      :ARG2 y
+      :ARG0-of (c / cause-01
+            :ARG1 (b / believe-01
+                  :ARG0 y
+                  :ARG1 (g / good
+                        :degree (m / most)
+                        :ARG1-of (d / do-02
+                              :mod (p / possible))
+                        :domain (t2 / this))))
+      :mod (r / really))
+
+# ::id DF-199-194209-587_2515.12 ::date 2013-08-29T10:25:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt A married man who if he really was in love with you would just go ahead and file for divorce now, or at least move out of his house now.
+# ::save-date Fri Sep 13, 2013 ::file DF-199-194209-587_2515_12.txt
+(m / man
+      :ARG1-of (m2 / marry-01)
+      :ARG0-of (l / love-01
+            :ARG1 (y / you)
+            :mod (r / really)
+            :ARG2-of (h2 / have-condition-91
+                  :ARG1 (a3 / and
+                        :op1 (g / go-01
+                              :ARG2 (a / ahead)
+                              :mod (j / just))
+                        :op2 (o2 / or
+                              :op1 (f / file-01
+                                    :ARG4 (d / divorce-01)
+                                    :time (n / now))
+                              :op2 (m3 / move-01
+                                    :ARG2 (o / out
+                                          :op1 (h / house
+                                                :poss m))
+                                    :time n
+                                    :mod (a2 / at-least)))))))
+
+# ::id DF-199-194209-587_2515.13 ::date 2013-08-29T10:27:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt A man who while having a relationship with you is involved in sex chats online with others.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194209-587_2515_13.txt
+(m / man
+      :ARG1-of (i / involve-01
+            :ARG2 (c / chat-01
+                  :ARG0 m
+                  :ARG1 (s / sex)
+                  :ARG2 (o / other)
+                  :medium (o2 / online))
+            :time (h / have-03
+                  :ARG0 m
+                  :ARG1 (r / relationship
+                        :prep-with (y / you)))))
+
+# ::id DF-199-194209-587_2515.14 ::date 2013-08-29T14:35:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt Personally, when you mess with a married man you deserve exactly what you get.
+# ::save-date Thu Aug 29, 2013 ::file DF-199-194209-587_2515_14.txt
+(d / deserve-01
+      :ARG0 (y / you)
+      :ARG1 (t / thing
+            :ARG1-of (g / get-01
+                  :ARG0 y))
+      :mod (e / exact)
+      :time (m / mess-01
+            :ARG0 y
+            :ARG1 (m2 / man
+                  :ARG1-of (m3 / marry-01)))
+      :mod (p / personal))
+
+# ::id DF-199-194209-587_2515.15 ::date 2013-08-28T12:34:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt I have little or no pity for you.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194209-587_2515_15.txt
+(o / or
+      :op1 (p / pity-01
+            :ARG0 (i / i)
+            :ARG1 (y / you)
+            :mod (l / little))
+      :op2 (p2 / pity-01 :polarity -
+            :ARG0 i
+            :ARG1 y))
+
+# ::id DF-199-194209-587_2515.16 ::date 2013-08-28T12:38:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt But, you can do yourself a world of good by just walking away from him.
+# ::save-date Wed Aug 28, 2013 ::file DF-199-194209-587_2515_16.txt
+(c / contrast-01
+      :ARG2 (p / possible
+            :domain (d / do-02
+                  :ARG0 (y / you)
+                  :ARG1 (w / world
+                        :consist-of (g / good))
+                  :ARG2 y
+                  :ARG3 (w2 / walk-01
+                        :ARG0 y
+                        :direction (a / away)
+                        :source (h / he)
+                        :mod (j / just)))))
+
+# ::id DF-199-194209-587_2515.17 ::date 2013-08-29T10:58:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt Then why don't you think about looking for someone who is not attached.
+# ::save-date Fri Sep 13, 2013 ::file DF-199-194209-587_2515_17.txt
+(a3 / amr-unknown
+      :ARG0-of (c / cause-01
+            :ARG1 (t / think-01 :polarity -
+                  :ARG0 (y / you)
+                  :ARG1 (l / look-01
+                        :ARG0 y
+                        :ARG1 (s / someone
+                              :ARG1-of (a2 / attach-01 :polarity -)))))
+      :mod (t2 / then))
+
+# ::id DF-199-194209-587_2515.18 ::date 2013-08-29T14:03:25 ::annotator SDL-AMR-09 ::preferred
+# ::snt Your odds of finding happiness are a bit better going that route in my opinion.
+# ::save-date Fri Sep 13, 2013 ::file DF-199-194209-587_2515_18.txt
+(o / opine-01
+      :ARG0 (i / i)
+      :ARG1 (g / good
+            :degree (m / more
+                  :degree (b / bit))
+            :domain (o2 / odd
+                  :poss (y / you)
+                  :topic (f / find-01
+                        :ARG0 y
+                        :ARG1 (h / happiness)))
+            :ARG1-of (h2 / have-condition-91
+                  :ARG2 (g2 / go-01
+                        :ARG1 o2
+                        :path (r / route
+                              :mod (t / that))))))
+

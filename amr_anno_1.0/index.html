@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+
+
+<html>
+
+<head>
+
+  <title>Abstract Meaning Representation (AMR) Annotation Release 1.0</title>
+  <meta http-equiv="Content-type" content="text/html/css;charset=UTF-8">
+  <meta name="description" content="Documentation for Abstract Meaning Representation (AMR) Annotation Release 1.0">
+  <meta name="keywords" content="Linguistic Data Consortium">
+  <meta name="keywords" content="LDC">
+  <meta name="keywords" content="Documentation">
+  <meta name="keywords" content="Abstract Meaning Representation (AMR) Annotation  Release 1.0">
+  <style type="text/css">
+  		body{
+  			background-color: #ffffff;
+  			color: #000000;
+  		}
+  		a:link{color : #990000;}
+  		a:visited{color:#990000;}
+  		a:active {color:#990000;}
+  		h1{
+			text-align:center;
+			color:#990000; 			
+  		}
+  		h3.subtitle{
+			text-align:center;
+			color:#990000;
+		}
+  		ul{
+  			line-height:130%;
+  		}
+  		p.cited{
+  			padding-left:2em;
+  			text-indent:-2em;
+  		}
+  		p.footer{
+  			font-size:0.85em;
+  		}
+  		
+  </style>
+</head>
+
+<body>
+
+    
+<h1>Abstract Meaning Representation (AMR) Annotation Release 1.0</h1>
+<h3 class="subtitle">LDC2014T12</h3>
+
+<h3>Introduction</h3>
+
+<p>Abstract Meaning Representation (AMR) Annotation Release 1.0, Linguistic Data 
+  Consortium (LDC) Catalog Number LDC2014T12 and ISBN 1-58563-677-0, was developed 
+  by LDC, <a href="http://www.sdl.com/products/automated-translation/">SDL/Language 
+  Weaver, Inc.</a>, the University of Colorado's <a href="http://clear.colorado.edu/start/index.html">Computational 
+  Language and Educational Research</a> group and the <a href="http://www.isi.edu/home">Information 
+  Sciences Institute</a> at the University of Southern California. It contains 
+  a sembank (semantic treebank) of over 13,000 English natural language sentences 
+  from newswire, weblogs and web discussion forums. </p>
+<p>AMR captures “who is doing what to whom” in a sentence. Each sentence is paired 
+  with a graph that represents its whole-sentence meaning in a tree-structure.   
+  AMR utilizes PropBank frames, non-core semantic roles, within-sentence coreference, 
+  named entity annotation, modality, negation, questions, quantities, and so on 
+  to represent the semantic structure of a sentence largely independent of its 
+  syntax.</p>
+
+<h3>Data</h3>
+<p>The source data includes discussion forums collected for the DARPA BOLT program, 
+  Wall Street Journal and translated Xinhua news texts, various newswire data 
+  from NIST OpenMT evaluations and weblog data used in the DARPA GALE program. 
+  The following table summarizes the number of training, dev, and test AMRs for 
+  each dataset in the release. Totals are also provided by partition and dataset: </p>
+
+<table border ="1" cellpadding="2">
+<tr>
+<td>Dataset</td><td>Training</td><td>Dev</td><td>Test</td><td>Totals</td>
+</tr>
+<tr><td>BOLT DF MT</td><td>1061</td><td>133</td><td>133</td><td>1327</td>
+</tr>  
+<tr><td>Weblog and WSJ</td><td>0</td><td>100</td><td>100</td><td>200</td>
+</tr>
+<tr><td>BOLT DF English</td><td>1703</td><td>210</td><td>229</td><td>2142</td>
+</tr>
+<tr><td>2009 Open MT</td><td>204</td><td>0</td><td>0</td><td>204</td>
+</tr>
+<tr><td>Proxy reports</td><td>6603</td><td>826</td><td>823</td><td>8252</td>
+</tr>  
+<tr><td>Xinhua MT</td><td>741</td><td>99</td><td>86</td><td>926</td>
+</tr>  
+<tr><td>Totals</td><td>10312</td><td>1368</td><td>1371</td><td>13051</td>
+</tr></table>
+
+<p>For those interested in a utilizing a standard/community partition for AMR 
+  research (for instance in development of semantic parsers), data in the "split" 
+  directory contains 13,051 AMRs divided roughly 80/10/10 into training/dev/test 
+  partitions, with most smaller datasets assigned to one of the splits as a whole. 
+  Note that splits observe document boundaries. The "unsplit" directory contains 
+  the same 13,051 AMRs with no train/dev/test partition.</p>
+
+<h3>Directory Structure</h3>
+<ul>
+  <li><a href="data/">data/</a> - Contains AMR data divided in a standard partition 
+    for AMR research and as one set.</li>
+<li><a href="docs/">docs/</a> - Contains additional documentation, guidelines and a file table.</li>
+</ul>
+
+<h3>Updates</h3>   
+
+    <p>
+		Additional information, updates, bug fixes may be available in the LDC
+   	catalog entry for this corpus at <a
+    	href="http://www.ldc.upenn.edu/Catalog/CatalogEntry.jsp?catalogId=LDC2014T12">LDC2014T12</a>.
+    </p>
+
+	<h3>Acknowledgements</h3>
+	
+<p>	From University of Colorado
+</p>
+<p>We gratefully acknowledge the support of the National Science
+Foundation Grant NSF: 0910992 IIS:RI: Large: Collaborative Research:
+Richer Representations for Machine Translation and the support of
+Darpa BOLT - HR0011-11-C-0145 and DEFT - FA-8750-13-2-0045 via a
+subcontract from LDC. Any opinions, findings, and conclusions or
+recommendations expressed in this material are those of the authors
+and do not necessarily reflect the views of the National Science
+Foundation, DARPA or the US government.</p>
+
+<p>  From Information Sciences Institute (ISI)
+</p>
+<p>Thanks to NSF (IIS-0908532) for funding the initial design of AMR, and
+to DARPA MRP (FA-8750-09-C-0179) for supporting a group to construct
+consensus annotations and the AMR Editor. The initial AMR bank was
+built under DARPA DEFT FA-8750-13-2-0045 (PI: Stephanie Strassel;
+co-PIs: Kevin Knight, Daniel Marcu, and Martha Palmer) and DARPA BOLT
+HR0011-12-C-0014 (PI: Kevin Knight).</p>
+
+<p>  From Linguistic Data Consortium (LDC)
+</p>
+<p>This material is based on research sponsored by Air Force Research
+Laboratory and Defense Advance Research Projects Agency under
+agreement number FA8750-13-2-0045. The U.S. Government is authorized
+to reproduce and distribute reprints for Governmental purposes
+notwithstanding any copyright notation thereon. The views and
+conclusions contained herein are those of the authors and should not
+be interpreted as necessarily representing the official policies or
+endorsements, either expressed or implied, of Air Force Research
+Laboratory and Defense Advanced Research Projects Agency or the
+U.S. Government.</p>
+
+<p>We gratefully acknowledge the support of Defense Advanced Research
+Projects Agency (DARPA) Machine Reading Program under Air Force
+Research Laboratory (AFRL) prime contract no. FA8750-09-C-0184
+Subcontract 4400165821. Any opinions, findings, and conclusion or
+recommendations expressed in this material are those of the author(s)
+and do not necessarily reflect the view of the DARPA, AFRL, or the US
+government.</p>
+
+<p>  From Language Weaver (SDL)
+</p>
+<p>This work was partially sponsored by DARPA contract HR0011-11-C-0150
+to LanguageWeaver Inc. Any opinions, findings, and conclusion or
+recommendations expressed in this material are those of the author(s)
+and do not necessarily reflect the view of the DARPA or the US
+government.</p>
+
+    <h3>Content Copyright</h3>
+	
+<p>Portions © 2007 Agence France Presse, Al-Ahram, Al Hayat, Al-Quds Al-Arabi, 
+  Asharq Al-Awsat, An Nahar, Assabah, China Military Online, Chinanews.com, Guangming 
+  Daily, © 1987-1989 Dow Jones &amp; Company, Inc., © 1994-1998, 2007 Xinhua News 
+  Agency, © 2014 Language Weaver, Inc., © 2014 University of Colorado, © 2014 
+  University of Southern California, © 2004, 2007, 2013, 2014 Trustees of the 
+  University of Pennsylvania</p>   
+        <hr>
+
+	<p class="footer">
+    
+    Contact: <a href="mailto:ldc@ldc.upenn.edu">
+
+    <b>ldc@ldc.upenn.edu</b></a><br> &copy; 2014 <A
+    HREF="http://www.ldc.upenn.edu">
+
+    <b>Linguistic Data Consortium</b></a>,
+    <a href="http://www.upenn.edu">
+
+    <b>Trustees of the University of Pennsylvania</b></a>. All Rights Reserved.
+    </p>
+
+</body>
+</html>

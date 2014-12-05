@@ -1,0 +1,2107 @@
+# AMR release; corpus: xinhua; section: dev; number of AMRs: 99 (generated on Mon Jan 27, 2014 at 20:44:15)
+
+# ::id nw.chtb_0283.1 ::date 2012-11-08T20:46:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Shanghai , August 31st , by reporter Jierong Zhou
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0283_1.txt
+(b / byline-91
+      :ARG0 (p2 / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (p / person :name (n2 / name :op1 "Jierong" :op2 "Zhou")
+            :ARG0-of (r / report-01))
+      :location (c2 / city :name (n3 / name :op1 "Shanghai"))
+      :time (d / date-entity :month 8 :day 31))
+
+# ::id nw.chtb_0283.2 ::date 2012-11-08T20:46:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt Malaysian vice-prime minister Anwar ended a visit to China this afternoon , and left Shanghai for Tokyo .
+# ::save-date Mon Jan 27, 2014 ::file nw_chtb_0283_2.txt
+(a2 / and
+      :op1 (e2 / end-01
+            :ARG0 (p / person :name (n / name :op1 "Anwar")
+                  :ARG0-of (h / have-org-role-91
+                        :ARG1 (c7 / country :name (n3 / name :op1 "Malaysia"))
+                        :ARG2 (m / minister
+                              :mod (p2 / prime)
+                              :mod (v / vice))))
+            :ARG1 (v2 / visit-01
+                  :ARG0 p
+                  :ARG1 (c6 / country :name (n2 / name :op1 "China")))
+            :time (d / date-entity
+                  :dayperiod (a3 / afternoon)
+                  :mod (t2 / this)))
+      :op2 (l / leave-04
+            :ARG0 p
+            :ARG1 (c8 / city :name (n4 / name :op1 "Shanghai"))
+            :ARG2 (c9 / city :name (n5 / name :op1 "Tokyo"))))
+
+# ::id nw.chtb_0283.3 ::date 2012-11-09T18:35:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt Anwar arrived in Shanghai from Nanjing yesterday afternoon .
+# ::save-date Mon Jan 27, 2014 ::file nw_chtb_0283_3.txt
+(a2 / arrive-01
+      :ARG1 (p2 / person :name (n2 / name :op1 "Anwar"))
+      :ARG3 (c3 / city :name (n3 / name :op1 "Nanjing"))
+      :ARG4 (c4 / city :name (n4 / name :op1 "Shanghai"))
+      :time (d / date-entity
+            :dayperiod (a3 / afternoon)
+            :mod (y / yesterday)))
+
+# ::id nw.chtb_0283.4 ::date 2012-11-09T18:42:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt Last night , the vice-mayor of Shanghai , Qizheng Zhao represented mayor Ju Huang by meeting and inviting Anwar and his delegation to a banquet .
+# ::save-date Mon Jan 27, 2014 ::file nw_chtb_0283_4.txt
+(r / represent-01
+      :ARG0 (p / person :name (n / name :op1 "Qizheng" :op2 "Zhao")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (c / city :name (n5 / name :op1 "Shanghai"))
+                  :ARG2 (m / mayor
+                        :mod (v2 / vice))))
+      :ARG1 (p2 / person :name (n2 / name :op1 "Ju" :op2 "Huang")
+            :ARG0-of (h2 / have-org-role-91
+                  :ARG1 c
+                  :ARG2 (m2 / mayor)))
+      :manner (a2 / and
+            :op1 (m3 / meet-03
+                  :ARG0 p
+                  :ARG1 (a3 / and
+                        :op1 (p4 / person :name (n4 / name :op1 "Anwar"))
+                        :op2 (d / delegation
+                              :poss p4)))
+            :op2 (i / invite-01
+                  :ARG0 p
+                  :ARG1 a3
+                  :ARG2 (b / banquet)))
+      :time (d2 / date-entity
+            :dayperiod (n3 / night)
+            :mod (l / last)))
+
+# ::id nw.chtb_0283.5 ::date 2012-11-13T16:10:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt This morning , Anwar attended the foundation laying ceremony of the Minhang China - Malaysia joint - venture enterprise , and after that toured Pudong 's Jingqiao export processing district .
+# ::save-date Mon Jan 27, 2014 ::file nw_chtb_0283_5.txt
+(a2 / and
+      :op1 (a3 / attend-01
+            :ARG0 (p3 / person :name (n / name :op1 "Anwar"))
+            :ARG1 (c5 / ceremony
+                  :topic (l2 / lay-01
+                        :ARG1 (f / foundation
+                              :poss (e / enterprise
+                                    :mod (v / venture
+                                          :mod (j2 / joint))
+                                    :poss (a4 / and
+                                          :op1 (d / district :name (n2 / name :op1 "Minhang")
+                                                :location (c6 / country :name (n3 / name :op1 "China")))
+                                          :op2 (c7 / country :name (n4 / name :op1 "Malaysia"))))))))
+      :op2 (t2 / tour-01
+            :ARG0 p3
+            :ARG1 (d2 / district :name (n5 / name :op1 "Jingqiao")
+                  :location-of (p4 / process-01
+                        :ARG1 (e2 / export-01))
+                  :location (c / city-district :name (n6 / name :op1 "Pudong")))
+            :time (a5 / after
+                  :op1 a3))
+      :time (d3 / date-entity
+            :dayperiod (m / morning)
+            :mod (t / this)))
+
+# ::id nw.chtb_0283.6 ::date 2012-11-13T16:33:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Tue Nov 13, 2012 ::file nw_chtb_0283_6.txt
+(e / end-01)
+
+# ::id nw.chtb_0284.1 ::date 2012-11-13T16:37:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Beijing , September 1st
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0284_1.txt
+(b / byline-91
+      :ARG0 (p / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :location (c2 / city :name (n2 / name :op1 "Beijing"))
+      :time (d / date-entity :month 9 :day 1))
+
+# ::id nw.chtb_0284.2 ::date 2012-11-13T16:39:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt When meeting with the Governor of Macao Viera here today , Premier of the State Council Peng Li said the policy of the Chinese government towards Macao is consistent , firm and unchanging , and that the Chinese government would , in accordance to the policy of " one country , two systems " and strictly according to the regulations in the joint declaration between China and Portugal and the Basic Laws of Macao , maintain the stability and development of Macao .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0284_2.txt
+(s2 / say-01
+      :ARG0 (p5 / person :name (n / name :op1 "Peng" :op2 "Li")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (g / government-organization :name (n2 / name :op1 "State" :op2 "Council"))
+                  :ARG2 (p / premier)))
+      :ARG1 (a / and
+            :op1 (a2 / and
+                  :op1 (c6 / consistent
+                        :domain (p6 / policy
+                              :poss (g2 / government-organization
+                                    :ARG0-of (g4 / govern-01
+                                          :ARG1 (c5 / country :name (n3 / name :op1 "China"))))
+                              :prep-toward (c / city :name (n4 / name :op1 "Macao"))))
+                  :op2 (f / firm
+                        :domain p6)
+                  :op3 (c7 / change-01 :polarity -
+                        :ARG1 p6))
+            :op2 (m2 / maintain-01
+                  :ARG0 g2
+                  :ARG1 (a3 / and
+                        :op1 (s / stability
+                              :poss c)
+                        :op2 (d / develop-02
+                              :ARG1 c))
+                  :ARG1-of (c2 / conform-01
+                        :ARG2 (p7 / policy
+                              :topic (a4 / and
+                                    :op1 (c8 / country :quant 1)
+                                    :op2 (s4 / system :quant 2))))
+                  :ARG1-of (c3 / conform-01
+                        :ARG2 (a5 / and
+                              :op1 (r / regulate-01
+                                    :ARG1-of (d3 / declare-02
+                                          :ARG0 (a6 / and
+                                                :op1 c5
+                                                :op2 (c9 / country :name (n5 / name :op1 "Portugal")))
+                                          :mod (j / joint)))
+                              :op2 (l / law :name (n6 / name :op1 "Basic" :op2 "Laws" :op3 "of" :op4 "Macao")))
+                        :manner (s3 / strict))))
+      :time (m3 / meet-03
+            :ARG0 p5
+            :ARG1 (p2 / person :name (n7 / name :op1 "Viera")
+                  :ARG0-of (h3 / have-org-role-91
+                        :ARG1 c
+                        :ARG2 (g3 / governor)))
+            :location (h2 / here)
+            :time (t2 / today)))
+
+# ::id nw.chtb_0284.3 ::date 2012-11-13T17:27:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li expressed welcome at the periodic visit of Viera .
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0284_3.txt
+(w / welcome-01
+      :ARG0 (p4 / person :name (n / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (v2 / visit-01
+            :ARG0 (p5 / person :name (n2 / name :op1 "Viera"))
+            :frequency (p / periodic)))
+
+# ::id nw.chtb_0284.4 ::date 2012-11-13T18:47:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said : " In recent years , the friendly co-operative relationships between the two countries namely China and Portugal in various arenas have been developing continuously , mutual visits by top level leaders of both countries have also increased .
+# ::save-date Mon Jan 13, 2014 ::file nw_chtb_0284_4.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (a / and
+            :op1 (d / develop-02
+                  :ARG2 (r / relationship
+                        :ARG1-of (f / friendly-41)
+                        :mod (c6 / cooperate-01
+                              :ARG2 (a3 / arena
+                                    :mod (v / various)))
+                        :mod (b / between
+                              :op1 (c2 / country :quant 2
+                                    :ARG0-of (m2 / mean-01
+                                          :ARG1 (a5 / and
+                                                :op1 (c4 / country :name (n / name :op1 "China"))
+                                                :op2 (c5 / country :name (n2 / name :op1 "Portugal")))))))
+                  :time (y / year
+                        :mod (r2 / recent))
+                  :ARG1-of (c / continue-01))
+            :op2 (i / increase-01
+                  :ARG1 (v2 / visit-01
+                        :ARG0 (a2 / and
+                              :op1 (p2 / person
+                                    :ARG0-of (l / lead-02
+                                          :ARG1 c4)
+                                    :mod (l2 / level
+                                          :mod (t / top)))
+                              :op2 (p / person
+                                    :ARG0-of (l3 / lead-02
+                                          :ARG1 c5)
+                                    :mod l2))
+                        :mod (m / mutual))
+                  :mod (a4 / also))))
+
+# ::id nw.chtb_0284.5 ::date 2012-11-13T19:26:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt President Zemin Jiang , Vice President Yiren Rong and myself have all visited Portugal , and Prime Minister Shewar visited China in April of this year . "
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0284_5.txt
+(a / and
+      :op1 (v / visit-01
+            :ARG0 (a2 / and
+                  :op1 (p / person :name (n / name :op1 "Zemin" :op2 "Jiang")
+                        :ARG0-of (h / have-org-role-91
+                              :ARG2 (p2 / president)))
+                  :op2 (p3 / person :name (n2 / name :op1 "Yiren" :op2 "Rong")
+                        :ARG0-of (h2 / have-org-role-91
+                              :ARG2 (p4 / president
+                                    :mod (v2 / vice))))
+                  :op3 (i / i)
+                  :quant (a3 / all))
+            :ARG1 (c4 / country :name (n3 / name :op1 "Portugal")))
+      :op2 (v3 / visit-01
+            :ARG0 (p5 / person :name (n4 / name :op1 "Shewar")
+                  :ARG0-of (h3 / have-org-role-91
+                        :ARG2 (m / minister
+                              :mod (p7 / prime))))
+            :ARG1 (c5 / country :name (n5 / name :op1 "China"))
+            :time (d / date-entity :month 4
+                  :part-of (y2 / year
+                        :mod (t / this)))))
+
+# ::id nw.chtb_0284.6 ::date 2012-11-13T19:36:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said , the smooth development of the bilateral relationship between China and Portugal established the foundation for co-operation on the Macao issue .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0284_6.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (e / establish-01
+            :ARG0 (d / develop-02
+                  :ARG1 (r / relationship
+                        :mod (b2 / between
+                              :op1 (c5 / country :name (n / name :op1 "China"))
+                              :op2 (c6 / country :name (n2 / name :op1 "Portugal")))
+                        :mod (b / bilateral))
+                  :manner (s2 / smooth))
+            :ARG1 (f / foundation)
+            :ARG3 (c7 / cooperate-01
+                  :ARG0 c5
+                  :ARG1 c6
+                  :ARG2 (i / issue
+                        :topic (c / city :name (n3 / name :op1 "Macao"))))))
+
+# ::id nw.chtb_0284.7 ::date 2012-11-13T19:54:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li pointed out , the Macao issue was an important component of the relationship between China and Portugal .
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0284_7.txt
+(p4 / point-02
+      :ARG0 (p5 / person :name (n / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (c5 / component
+            :part-of (r / relationship
+                  :mod (b / between
+                        :op1 (c6 / country :name (n3 / name :op1 "China"))
+                        :op2 (c7 / country :name (n4 / name :op1 "Portugal"))))
+            :mod (i2 / important)
+            :domain (i / issue
+                  :topic (c / city :name (n2 / name :op1 "Macao")))))
+
+# ::id nw.chtb_0284.8 ::date 2012-11-13T20:02:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt Maintaining good relationships between the two countries of China and Portugal , as well as the inland and Macao , is beneficial for the social stability and economic development .
+# ::save-date Sun Dec 15, 2013 ::file nw_chtb_0284_8.txt
+(b / benefit-01
+      :ARG0 (m2 / maintain-01
+            :ARG1 (a / and
+                  :op1 (r / relationship
+                        :mod (g / good)
+                        :mod (b2 / between
+                              :op1 (c5 / country :name (n / name :op1 "China"))
+                              :op2 (c6 / country :name (n2 / name :op1 "Portugal"))))
+                  :op2 (r2 / relationship
+                        :op1 (b3 / between
+                              :op1 (i / inland)
+                              :op2 (c / city :name (n3 / name :op1 "Macao")))
+                        :mod g)))
+      :ARG1 (a2 / and
+            :op1 (s / stability
+                  :mod (s2 / society))
+            :op1 (d2 / develop-02
+                  :ARG1 (e / economy))))
+
+# ::id nw.chtb_0284.9 ::date 2012-11-13T20:08:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li said since the joint declaration between China and Portugal came into effect , both sides had done quite a lot of work in the thorough implementation of the joint declaration , and that co-operation has been effective .
+# ::save-date Wed Dec 18, 2013 ::file nw_chtb_0284_9.txt
+(s / say-01
+      :ARG0 (p4 / person :name (n / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (a / and
+            :op1 (w / work-01
+                  :ARG0 a2
+                  :ARG1 (i / implement-01
+                        :ARG1 (d / declare-02
+                              :ARG0 (a2 / and
+                                    :op1 (c5 / country :name (n2 / name :op1 "China"))
+                                    :op2 (c6 / country :name (n3 / name :op1 "Portugal")))
+                              :manner (j / joint))
+                        :manner (t / thorough))
+                  :quant (l / lot
+                        :degree (q / quite)))
+            :op2 (e / effective
+                  :domain (c4 / cooperate-01))
+            :time (s2 / since
+                  :op1 (c / come-04
+                        :ARG1 d
+                        :ARG2 (e2 / effect)))))
+
+# ::id nw.chtb_0284.10 ::date 2012-11-13T20:21:35 ::annotator SDL-AMR-09 ::preferred
+# ::snt In recent years , under the joint effort of both sides , many issues of mutual concern to both sides had been resolved , various degrees of progress have been achieved in the three major issues , namely languages , civil servants , and laws in the transition period of Macao .
+# ::save-date Wed Dec 18, 2013 ::file nw_chtb_0284_10.txt
+(a / and
+      :op1 (r / resolve-01
+            :ARG1 (i / issue
+                  :ARG0-of (c2 / concern-01
+                        :ARG1 (s / side
+                              :mod (b / both))
+                        :mod (m2 / mutual))
+                  :quant (m3 / many)))
+      :op2 (a2 / achieve-01
+            :ARG1 (d / degree
+                  :degree-of (p / progress-01
+                        :ARG1 (i2 / issue :quant 3
+                              :mod (m4 / major)
+                              :ARG0-of (m / mean-01
+                                    :ARG1 (a3 / and
+                                          :op1 (l / language)
+                                          :op2 (p3 / person
+                                                :ARG0-of (s3 / serve-01)
+                                                :mod (c3 / civil))
+                                          :op3 (l2 / law
+                                                :time (p2 / period
+                                                      :duration-of (t / transition-01
+                                                            :ARG1 (c / city :name (n / name :op1 "Macao")))))))))
+                  :mod (v / various)))
+      :time (y / year
+            :mod (r2 / recent))
+      :ARG1-of (c4 / cause-01
+            :ARG0 (e / effort
+                  :mod (j / joint)
+                  :poss s)))
+
+# ::id nw.chtb_0284.11 ::date 2012-11-13T20:42:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said : " We hope that the Macao government will continue to give their attention to these three problems , in order to achieve final proper resolution . "
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0284_11.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (h2 / hope-01
+            :ARG0 (w / we)
+            :ARG1 (c2 / continue-01
+                  :ARG0 g2
+                  :ARG1 (g / give-01
+                        :ARG0 (g2 / government-organization
+                              :mod (c / city :name (n / name :op1 "Macao")))
+                        :ARG1 (a / attention
+                              :poss g2)
+                        :ARG2 (p / problem :quant 3
+                              :mod (t / this)))
+                  :purpose (a2 / achieve-01
+                        :ARG0 g
+                        :ARG1 (r / resolve-01
+                              :mod (f / final)
+                              :mod (p2 / proper))))))
+
+# ::id nw.chtb_0284.12 ::date 2012-11-13T20:48:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li said , " Governor Viera has done a lot of beneficial work in the smooth resolution of the Macao issue , for this we express our appreciation . "
+# ::save-date Wed Dec 18, 2013 ::file nw_chtb_0284_12.txt
+(s / say-01
+      :ARG0 (p4 / person :name (n / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (w / work-01
+            :ARG0 (p / person :name (n3 / name :op1 "Viera")
+                  :ARG0-of (h / have-org-role-91
+                        :ARG2 (g / governor)))
+            :ARG1 (r / resolve-01
+                  :ARG1 (i / issue
+                        :topic (c / city :name (n2 / name :op1 "Macao")))
+                  :manner (s2 / smooth))
+            :ARG0-of (b / benefit-01)
+            :quant (l / lot)
+            :ARG1-of (a / appreciate-02
+                  :ARG0 (w2 / we)
+                  :ARG1-of (e / express-01
+                        :ARG0 w2))))
+
+# ::id nw.chtb_0284.13 ::date 2012-11-13T20:56:37 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li also emphasized , with the approach of 1999 , that there is still a lot of work to be done by both the Chinese and Portuguese sides on the Macao issue , and that the mission is very important .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0284_13.txt
+(e / emphasize-01
+      :ARG0 (p4 / person :name (n / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (a2 / and
+            :op1 (w / work-01
+                  :ARG0 (a3 / and
+                        :op1 (s2 / side
+                              :mod (c5 / country :name (n2 / name :op1 "China")))
+                        :op2 (s3 / side
+                              :mod (c6 / country :name (n3 / name :op1 "Portugal"))))
+                  :ARG1 (i / issue
+                        :topic (c / city :name (n4 / name :op1 "Macao")))
+                  :quant (l / lot)
+                  :mod (s / still))
+            :op2 (i2 / important
+                  :degree (v / very)
+                  :domain (m2 / mission)))
+      :mod (a / also)
+      :time (a4 / approach-01
+            :ARG1 (d3 / date-entity :year 1999)))
+
+# ::id nw.chtb_0284.14 ::date 2012-11-13T21:00:41 ::annotator SDL-AMR-09 ::preferred
+# ::snt Both sides should resolve the outstanding issues in the spirit of friendly consultations .
+# ::save-date Fri Dec 20, 2013 ::file nw_chtb_0284_14.txt
+(r / recommend-01
+      :ARG1 (r2 / resolve-01
+            :ARG0 (s / side
+                  :mod (b / both))
+            :ARG1 (i / issue
+                  :ARG1-of (s3 / stand-00))
+            :manner (s2 / spirit
+                  :mod (c2 / consult-01
+                        :ARG1-of (f / friendly-41)))))
+
+# ::id nw.chtb_0284.15 ::date 2012-11-13T21:04:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt He hoped that the Macao government would further strengthen the consultations and co-operation with the Chinese side on the major issues regarding the stable transition of Macao and the smooth handing over of political power , in a way that would be beneficial to the stability and development of Macao .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0284_15.txt
+(h / hope-01
+      :ARG0 (h2 / he)
+      :ARG1 (s / strengthen-01
+            :ARG0 (g / government-organization
+                  :ARG0-of (g2 / govern-01
+                        :ARG1 (c / city :name (n / name :op1 "Macao"))))
+            :ARG1 (a / and
+                  :op1 (c4 / consult-01
+                        :ARG0 g
+                        :ARG1 (s2 / side
+                              :mod (c5 / country :name (n2 / name :op1 "China")))
+                        :ARG2 (i / issue
+                              :mod (m2 / major)
+                              :topic (a3 / and
+                                    :op1 (t / transition-01
+                                          :ARG1 c
+                                          :mod (s3 / stable))
+                                    :op2 (h4 / hand-02
+                                          :ARG1 (p / power
+                                                :mod (p2 / politics))
+                                          :manner (s5 / smooth)))))
+                  :op2 (c6 / cooperate-01
+                        :ARG0 g
+                        :ARG1 s2
+                        :ARG2 i))
+            :degree (f / further)
+            :manner (b / benefit-01
+                  :ARG1 (a2 / and
+                        :op1 (s4 / stability
+                              :poss c)
+                        :op2 (d / develop-02
+                              :ARG1 c)))))
+
+# ::id nw.chtb_0284.16 ::date 2012-11-13T21:13:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li said : " We believe , through the friendly co-operation and joint effort of both the Chinese and Portuguese sides , the stable transition and smooth handing over of the political power would definitely be realized .
+# ::save-date Wed Dec 18, 2013 ::file nw_chtb_0284_16.txt
+(s / say-01
+      :ARG0 (p4 / person :name (n / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (b / believe-01
+            :ARG0 (w / we)
+            :ARG1 (r / realize-02
+                  :ARG1 (a / and
+                        :op1 (t / transition-01
+                              :mod (s2 / stable))
+                        :op2 (h / hand-02
+                              :ARG1 (p5 / power
+                                    :mod (p6 / politics))
+                              :manner (s3 / smooth)))
+                  :mod (d / definite)
+                  :instrument (a2 / and
+                        :op1 (c4 / cooperate-01
+                              :ARG0 s4
+                              :ARG1 s5
+                              :ARG1-of (f / friendly-41))
+                        :op2 (e / effort
+                              :mod (j / joint)
+                              :poss (a3 / and
+                                    :op1 (s4 / side
+                                          :mod (c5 / country :name (n2 / name :op1 "China")))
+                                    :op2 (s5 / side
+                                          :mod (c6 / country :name (n3 / name :op1 "Portugal")))))))))
+
+# ::id nw.chtb_0284.17 ::date 2012-11-13T21:17:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt Viera happily recalled the two meetings he had with Premier Peng Li in 1991 and 1992 , and highly assessed the important contributions made by the Chinese government and Premier Peng Li himself in the development of the relationship between Portugal and China and the resolution of the Macao issue .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0284_17.txt
+(a / and
+      :op1 (r / recall-02
+            :ARG0 (p / person :name (n / name :op1 "Viera"))
+            :ARG1 (a2 / and
+                  :op1 (m2 / meet-03
+                        :ARG0 p
+                        :ARG1 (p2 / person :name (n2 / name :op1 "Peng" :op2 "Li")
+                              :ARG0-of (h3 / have-org-role-91
+                                    :ARG2 (p3 / premier)))
+                        :time (d3 / date-entity :year 1991))
+                  :op2 (m / meet-02
+                        :ARG0 p
+                        :ARG1 p2
+                        :time (d4 / date-entity :year 1992)))
+            :manner (h / happy))
+      :op2 (a3 / assess-01
+            :ARG0 p
+            :ARG1 (c5 / contribute-01
+                  :ARG0 (a4 / and
+                        :op1 (g / government-organization
+                              :ARG0-of (g2 / govern-01
+                                    :ARG1 (c6 / country :name (n3 / name :op1 "China"))))
+                        :op2 p2)
+                  :ARG2 (a5 / and
+                        :op1 (d / develop-02
+                              :ARG1 (r2 / relationship
+                                    :mod (b / between
+                                          :op1 c6
+                                          :op2 (c7 / country :name (n4 / name :op1 "Portugal")))))
+                        :op2 (r3 / resolve-01
+                              :ARG1 (i2 / issue
+                                    :topic (c / city :name (n5 / name :op1 "Macao")))))
+                  :mod (i / important))
+            :manner (h2 / high)))
+
+# ::id nw.chtb_0284.18 ::date 2012-11-13T21:28:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt Viera said , he was glad to see that China had achieved great progress in the areas of economic and social life , and expressed complete understanding that the modernization build - up needed to be carried out under stable situations .
+# ::save-date Wed Dec 18, 2013 ::file nw_chtb_0284_18.txt
+(a / and
+      :op1 (s / say-01
+            :ARG0 (p / person :name (n / name :op1 "Viera"))
+            :ARG1 (g / glad
+                  :ARG1-of (c / cause-01
+                        :ARG0 (s5 / see-01
+                              :ARG0 p
+                              :ARG1 (p2 / progress-01
+                                    :ARG1 (c3 / country :name (n2 / name :op1 "China"))
+                                    :mod (g3 / great)
+                                    :topic (a2 / and
+                                          :op1 (a3 / area
+                                                :mod (l / life
+                                                      :mod (e / economy)))
+                                          :op2 (a5 / area
+                                                :mod (l2 / life
+                                                      :mod (s2 / society)))))))
+                  :domain p))
+      :op2 (e2 / express-01
+            :ARG0 p
+            :ARG1 (u / understand-01
+                  :ARG0 p
+                  :ARG1 (n3 / need-01
+                        :ARG1 (b / build-05
+                              :ARG1 (m / modernize-01)
+                              :manner (s3 / situation
+                                    :mod (s4 / stable))))
+                  :degree (c4 / complete))))
+
+# ::id nw.chtb_0284.19 ::date 2012-11-13T22:18:35 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said , the stability and development of China was beneficial to world peace and development , and that the prosperity and stability of China was the basic guarantee for the prosperity and stability of Macao .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0284_19.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (a / and
+            :op1 (b / benefit-01
+                  :ARG0 (a2 / and
+                        :op1 (s2 / stability
+                              :poss (c4 / country :name (n / name :op1 "China")))
+                        :op2 (d / develop-02
+                              :ARG1 c4))
+                  :ARG1 (a3 / and
+                        :op1 (p / peace
+                              :mod (w / world))
+                        :op2 (d2 / develop-02
+                              :ARG1 w)))
+            :op2 (g / guarantee-01
+                  :ARG0 (a4 / and
+                        :op1 s2
+                        :op2 (p2 / prosper-01
+                              :ARG0 c4))
+                  :ARG1 (a5 / and
+                        :op1 (s3 / stability
+                              :poss (c / city :name (n2 / name :op1 "Macao")))
+                        :op2 (p3 / prosper-01
+                              :ARG0 c))
+                  :mod (b2 / basic))))
+
+# ::id nw.chtb_0284.20 ::date 2012-11-13T22:22:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt He and the Portuguese government would continue to put forth effort towards the continuous development and smooth resolution of the Macao issue .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0284_20.txt
+(c3 / continue-01
+      :ARG0 (a / and
+            :op1 (h / he)
+            :op2 (g / government-organization
+                  :ARG0-of (g2 / govern-01
+                        :ARG1 (c4 / country :name (n / name :op1 "Portugal")))))
+      :ARG1 (p / put-01
+            :ARG0 a
+            :ARG1 (e / effort)
+            :ARG2 (f / forth)
+            :purpose (a2 / and
+                  :op1 (d / develop-02
+                        :ARG1 (i / issue
+                              :topic (c / city :name (n2 / name :op1 "Macao")))
+                        :ARG1-of (c5 / continue-01))
+                  :op2 (r / resolve-01
+                        :ARG1 i
+                        :manner (s / smooth)))))
+
+# ::id nw.chtb_0284.21 ::date 2012-11-14T19:09:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Wed Nov 14, 2012 ::file nw_chtb_0284_21.txt
+(e / end-01)
+
+# ::id nw.chtb_0285.1 ::date 2012-11-14T19:11:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Bonn , April 23rd
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0285_1.txt
+(b / byline-91
+      :ARG0 (p / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :location (c2 / city :name (n2 / name :op1 "Bonn"))
+      :time (d / date-entity :month 4 :day 23))
+
+# ::id nw.chtb_0285.2 ::date 2012-11-14T19:13:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt Germany 's Foreign Minister , Kinkerl said that , he welcomed the NATO ultimatum to the Serbian people of Bosnia - Herzegovina .
+# ::save-date Wed Dec 18, 2013 ::file nw_chtb_0285_2.txt
+(s2 / say-01
+      :ARG0 (p / person :name (n2 / name :op1 "Kinkerl")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (c3 / country :name (n3 / name :op1 "Germany"))
+                  :ARG2 (m / minister
+                        :mod (f / foreign))))
+      :ARG1 (w / welcome-01
+            :ARG0 p
+            :ARG1 (u / ultimatum
+                  :source (m2 / military :name (n4 / name :op1 "NATO"))
+                  :beneficiary (p2 / person
+                        :mod (c4 / country :name (n5 / name :op1 "Serbia"))
+                        :location (c5 / country :name (n6 / name :op1 "Bosnia-Herzegovina"))))))
+
+# ::id nw.chtb_0285.3 ::date 2012-11-14T19:22:29 ::annotator SDL-AMR-09 ::preferred
+# ::snt At the same time , he also demanded that new talks be held to end the civil war in Bosnia - Herzegovina .
+# ::save-date Wed Nov 14, 2012 ::file nw_chtb_0285_3.txt
+(d / demand-01
+      :ARG0 (h / he)
+      :ARG1 (h2 / hold-04
+            :ARG1 (t / talk-01
+                  :mod (n / new)
+                  :purpose (e / end-01
+                        :ARG1 (w / war
+                              :mod (c / civil)
+                              :location (c2 / country
+                                    :name (n2 / name
+                                          :op1 "Bosnia-Herzegovina"))))))
+      :mod (a / also)
+      :time (t2 / time
+            :ARG1-of (s / same-41)))
+
+# ::id nw.chtb_0285.4 ::date 2012-11-14T19:28:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt Kinkerl said that NATO 's decision was " correct and necessary " .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0285_4.txt
+(s / say-01
+      :ARG0 (p / person :name (n2 / name :op1 "Kinkerl"))
+      :ARG1 (a / and
+            :op1 (c / correct
+                  :domain (t / thing
+                        :ARG1-of (d / decide-01
+                              :ARG0 (m / military :name (n3 / name :op1 "NATO")))))
+            :op2 (n4 / need-01
+                  :ARG1 t)))
+
+# ::id nw.chtb_0285.5 ::date 2012-11-14T19:31:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt But , as an auxiliary method of military measures , restarting a dialogue is also necessary .
+# ::save-date Wed Dec 18, 2013 ::file nw_chtb_0285_5.txt
+(c / contrast-01
+      :ARG2 (n / need-01
+            :ARG1 (r / restart-01
+                  :ARG1 (d / dialogue))
+            :mod (a2 / also)
+            :prep-as (m / method
+                  :mod (a3 / auxiliary)
+                  :instrument-of (m2 / measure
+                        :mod (m3 / military)))))
+
+# ::id nw.chtb_0285.6 ::date 2012-11-14T23:23:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt He requested the United Nations , the European Union , the US and Russia to put forward a new joint proposal to force both warring parties of the Bosnia - Herzegovina to return to the negotiating table .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0285_6.txt
+(r2 / request-01
+      :ARG0 (h / he)
+      :ARG1 (p / propose-01
+            :ARG0 (a / and
+                  :op1 (o3 / organization :name (n / name :op1 "United" :op2 "Nations"))
+                  :op2 (o4 / organization :name (n2 / name :op1 "European" :op2 "Union"))
+                  :op3 (c3 / country :name (n3 / name :op1 "US"))
+                  :op4 (c4 / country :name (n4 / name :op1 "Russia")))
+            :purpose (f / force-01
+                  :ARG0 a
+                  :ARG1 (p2 / party
+                        :mod (b2 / both)
+                        :ARG0-of (w / war-01)
+                        :mod (c5 / country :name (n6 / name :op1 "Bosnia-Herzegovina")))
+                  :ARG2 (r3 / return-01
+                        :ARG1 p2
+                        :ARG4 (t / table
+                              :location-of (n7 / negotiate-01))))
+            :mod (j / joint)
+            :mod (n5 / new)))
+
+# ::id nw.chtb_0285.7 ::date 2012-11-14T23:28:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt On the 22nd , the sixteen NATO countries asked the armed forces of the Serbian people of Bosnia - Herzegovina to withdraw to a place 3 kilometers away from Gerlaridy city before 0:00 on April 24th ( Greenwich Mean Time ) , and to guarantee that United Nations humanitarian aid would go unblocked and unhindered , otherwise NATO would begin air strikes against the Serbian army .
+# ::save-date Wed Dec 18, 2013 ::file nw_chtb_0285_7.txt
+(a / ask-02
+      :ARG0 (c2 / country :quant 16
+            :ARG0-of (h4 / have-org-role-91
+                  :ARG1 (m / military :name (n2 / name :op1 "NATO"))))
+      :ARG1 (a2 / and
+            :op1 (w / withdraw-01
+                  :ARG0 f
+                  :ARG1 f
+                  :destination (p2 / place
+                        :location (r / relative-position
+                              :op1 (c5 / city :name (n5 / name :op1 "Gerlaridy"))
+                              :quant (d3 / distance-quantity :quant 3
+                                    :unit (k2 / kilometer))))
+                  :time (b2 / before
+                        :op1 (d4 / date-entity :month 4 :day 24 :time "0:00" :timezone "GMT")))
+            :op2 (g4 / guarantee-01
+                  :ARG0 f
+                  :ARG1 (a5 / and
+                        :op1 (b3 / block-01 :polarity -
+                              :ARG1 (a6 / aid-01
+                                    :ARG0 (o4 / organization :name (n6 / name :op1 "United" :op2 "Nations"))
+                                    :mod (h2 / humanitarian)))
+                        :op2 (h / hinder-01 :polarity -
+                              :ARG1 a6)))
+            :ARG2-of (h3 / have-condition-91
+                  :ARG1 (b4 / begin-01 :polarity -
+                        :ARG0 m
+                        :ARG1 (s2 / strike-01
+                              :ARG0 m
+                              :ARG1 (a4 / army
+                                    :mod c3)
+                              :mod (a7 / air)))))
+      :ARG2 (f / force
+            :ARG1-of (a3 / arm-01)
+            :mod (p / person
+                  :mod (c3 / country :name (n3 / name :op1 "Serbia"))
+                  :location (c4 / country :name (n4 / name :op1 "Bosnia-Herzegovina"))))
+      :time (d5 / date-entity :day 22))
+
+# ::id nw.chtb_0285.8 ::date 2012-11-14T23:40:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Wed Nov 14, 2012 ::file nw_chtb_0285_8.txt
+(e / end-01)
+
+# ::id nw.chtb_0286.1 ::date 2012-11-14T23:41:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Beijing , August 31st , by reporter Jie Sun
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0286_1.txt
+(b / byline-91
+      :ARG0 (p2 / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (p / person :name (n2 / name :op1 "Jie" :op2 "Sun")
+            :ARG0-of (r / report-01))
+      :location (c2 / city :name (n3 / name :op1 "Beijing"))
+      :time (d / date-entity :month 8 :day 31))
+
+# ::id nw.chtb_0286.2 ::date 2012-11-14T23:42:25 ::annotator SDL-AMR-09 ::preferred
+# ::snt China 's chemical industry is accelerating the pace of opening up to the outside world , and striding into the world .
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0286_2.txt
+(a / and
+      :op1 (a2 / accelerate-01
+            :ARG0 (i / industry
+                  :mod (c3 / chemical)
+                  :poss (c4 / country :name (n / name :op1 "China")))
+            :ARG1 (p / pace-01
+                  :ARG0 i
+                  :ARG1 (o / open-03
+                        :ARG0 i
+                        :ARG1 i
+                        :ARG3 (w / world
+                              :location (o2 / outside)))))
+      :op2 (s / stride-01
+            :ARG0 i
+            :direction (w2 / world)))
+
+# ::id nw.chtb_0286.3 ::date 2012-11-14T23:49:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt According to Ministry of Chemical Industry presentations , total chemical imports and exports in China were less than 300 million US dollars in 1978 , reached 7.5 billion US dollars last year , and there are already 30 chemical enterprises who exported foreign exchange surpassing 10 million US dollars .
+# ::save-date Wed Dec 18, 2013 ::file nw_chtb_0286_3.txt
+(s / say-01
+      :ARG0 (t2 / thing
+            :ARG1-of (p / present-01
+                  :ARG0 (g / government-organization :name (n4 / name :op1 "Ministry" :op2 "of" :op3 "Chemical" :op4 "Industry"))))
+      :ARG1 (a / and
+            :op1 (t / total-01
+                  :ARG1 (a2 / and
+                        :op1 (i2 / import-01
+                              :ARG0 (c7 / country :name (n5 / name :op1 "China"))
+                              :ARG1 (c6 / chemical))
+                        :op2 (e / export-01
+                              :ARG0 c7
+                              :ARG1 c6))
+                  :ARG2 (l2 / less-than
+                        :op1 (m5 / monetary-quantity :quant 300000000
+                              :unit (d5 / dollar
+                                    :mod (c8 / country :name (n6 / name :op1 "US"))))
+                        :time (d6 / date-entity :year 1978)))
+            :op2 (r / reach-01
+                  :ARG0 a2
+                  :ARG1 (m6 / monetary-quantity :quant 7500000000
+                        :unit (d / dollar
+                              :mod c8))
+                  :time (y / year
+                        :mod (l3 / last)))
+            :op3 (e2 / enterprise :quant 30
+                  :mod (c9 / chemical)
+                  :time (a3 / already)
+                  :ARG0-of (e3 / export-01
+                        :ARG1 (e4 / exchange
+                              :mod (f / foreign)
+                              :ARG0-of (s2 / surpass-01
+                                    :ARG1 (m7 / monetary-quantity :quant 10000000
+                                          :unit (d2 / dollar
+                                                :mod c8))))))))
+
+# ::id nw.chtb_0286.4 ::date 2012-11-14T23:57:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt Complete equipment set exports of China 's chemical industry made a fractional breakthrough , while double equipment set installations , with an annual production of 40,000 tons of ion film caustic soda , were successively exported to Indonesia and complete equipment sets , with an annual production of 200,000 tons of sodium carbonate , were exported to Iran .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0286_4.txt
+(c / contrast-01
+      :ARG1 (b / breakthrough-01
+            :ARG0 (e / export-01
+                  :ARG0 (i3 / industry
+                        :poss (c5 / country :name (n / name :op1 "China"))
+                        :mod (c6 / chemical))
+                  :ARG1 (s / set
+                        :consist-of (e2 / equipment)
+                        :mod (c7 / complete)))
+            :degree (f / fractional))
+      :ARG2 (a2 / and
+            :op1 (e3 / export-01
+                  :ARG0 i3
+                  :ARG1 (t4 / thing
+                        :ARG1-of (i4 / install-01)
+                        :mod (s2 / set
+                              :consist-of (e4 / equipment)
+                              :mod (d / double))
+                        :ARG0-of (p / produce-01
+                              :ARG1 (s3 / soda
+                                    :mod (c9 / caustic)
+                                    :mod (f2 / film
+                                          :mod (i5 / ion))
+                                    :quant (m / mass-quantity :quant 40000
+                                          :unit (t3 / ton)))
+                              :frequency (r / rate-entity-91
+                                    :ARG2 (t / temporal-quantity :quant 1
+                                          :unit (y / year)))))
+                  :ARG2 (c8 / country :name (n2 / name :op1 "Indonesia"))
+                  :manner (s4 / succeed-03))
+            :op2 (e5 / export-01
+                  :ARG1 (s6 / set
+                        :mod c7
+                        :consist-of e2
+                        :ARG0-of (p2 / produce-01
+                              :ARG1 (c11 / carbonate
+                                    :mod (s5 / sodium)
+                                    :quant (m2 / mass-quantity :quant 200000
+                                          :unit (t2 / ton)))
+                              :frequency r))
+                  :ARG2 (c10 / country :name (n3 / name :op1 "Iran")))))
+
+# ::id nw.chtb_0286.5 ::date 2012-11-15T00:11:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt Technology exports also made new progress .
+# ::save-date Thu Nov 15, 2012 ::file nw_chtb_0286_5.txt
+(p / progress-01
+      :ARG1 (e / export-01
+            :ARG1 (t / technology))
+      :mod (a / also)
+      :mod (n / new))
+
+# ::id nw.chtb_0286.6 ::date 2012-11-15T00:11:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt Currently , technology exports that China can provide reach 52 .
+# ::save-date Sun Dec 15, 2013 ::file nw_chtb_0286_6.txt
+(r / reach-01
+      :ARG0 (e / export-01
+            :ARG1 (t / technology)
+            :ARG1-of (p / provide-01
+                  :ARG0 (c3 / country :name (n / name :op1 "China"))
+                  :mod (p2 / possible)))
+      :ARG1 52
+      :time (c4 / current))
+
+# ::id nw.chtb_0286.7 ::date 2012-11-15T00:13:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt According to incomplete statistics , in the past 3 years , China exported more than 20 technologies , such as anthraquinone hydrogen peroxide solution , variable voltage absorption , etc .
+# ::save-date Fri Dec 20, 2013 ::file nw_chtb_0286_7.txt
+(s / say-01
+      :ARG0 (s2 / statistic
+            :mod (c3 / complete :polarity -))
+      :ARG1 (e / export-01
+            :ARG0 (c4 / country :name (n / name :op1 "China"))
+            :ARG1 (t / technology
+                  :quant (m / more-than :op1 20)
+                  :example (a3 / and
+                        :op1 (s3 / solution
+                              :mod (p / peroxide
+                                    :mod (h / hydrogen)
+                                    :mod (a / anthraquinone)))
+                        :op2 (a2 / absorb-01
+                              :ARG1 (v / voltage
+                                    :ARG1-of (v2 / vary-01)))
+                        :op3 (e2 / et-cetera)))
+            :time (b / before
+                  :op1 (n2 / now)
+                  :duration (t2 / temporal-quantity :quant 3
+                        :unit (y / year)))))
+
+# ::id nw.chtb_0286.8 ::date 2012-11-15T20:34:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt Up to the first half of this year , China 's Ministry of Chemical Industry signed co-operation agreements with 15 large international chemical corporations .
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0286_8.txt
+(s / sign-02
+      :ARG0 (g / government-organization :name (n / name :op1 "Ministry" :op2 "of" :op3 "Chemical" :op4 "Industry")
+            :poss (c6 / country :name (n2 / name :op1 "China")))
+      :ARG1 (a / agreement
+            :topic (c3 / cooperate-01
+                  :ARG0 g
+                  :ARG1 c4))
+      :ARG2 (c4 / corporation :quant 15
+            :mod (l / large)
+            :mod (i / international)
+            :mod (c5 / chemical))
+      :time (u / up-to
+            :op1 (h / half
+                  :ord (o / ordinal-entity :value 1)
+                  :part-of (y / year
+                        :mod (t / this)))))
+
+# ::id nw.chtb_0286.9 ::date 2012-11-15T20:45:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt In the past ten years , foreign capital that China 's chemical industry accumulatively absorbed reached 8.5 billion US dollars , and is being used for the construction and technology transformation of chemical fertilizer and petroleum .
+# ::save-date Fri Dec 20, 2013 ::file nw_chtb_0286_9.txt
+(a / and
+      :op1 (r / reach-01
+            :ARG0 (c4 / capital
+                  :mod (f / foreign)
+                  :ARG1-of (a2 / absorb-01
+                        :ARG0 (i / industry
+                              :mod (c5 / chemical)
+                              :poss (c6 / country :name (n2 / name :op1 "China")))
+                        :manner (a3 / accumulate-01)))
+            :ARG1 (m2 / monetary-quantity :quant 8500000000
+                  :unit (d2 / dollar
+                        :mod (c7 / country :name (n3 / name :op1 "US"))))
+            :time (b / before
+                  :op1 (n / now)
+                  :duration (t4 / temporal-quantity :quant 10
+                        :unit (y / year))))
+      :op2 (u / use-01
+            :ARG1 c4
+            :ARG2 (t / transform-01
+                  :ARG1 (a4 / and
+                        :op1 (t2 / thing
+                              :ARG0-of (f2 / fertilize-01)
+                              :consist-of (c8 / chemical))
+                        :op2 (p / petroleum))
+                  :mod (t3 / technology)
+                  :mod (c9 / construct-01))))
+
+# ::id nw.chtb_0286.10 ::date 2012-11-15T20:59:46 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Thu Nov 15, 2012 ::file nw_chtb_0286_10.txt
+(e / end-01)
+
+# ::id nw.chtb_0287.1 ::date 2012-11-15T21:02:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Nanjing , April 23rd , by reporter Futian Yang
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0287_1.txt
+(b / byline-91
+      :ARG0 (p2 / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (p / person :name (n2 / name :op1 "Futian" :op2 "Yang")
+            :ARG0-of (r / report-01))
+      :location (c2 / city :name (n3 / name :op1 "Nanjing"))
+      :time (d / date-entity :month 4 :day 23))
+
+# ::id nw.chtb_0287.2 ::date 2012-11-15T21:04:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt Zijin Mountain Observatory of the China Academy Of Sciences announced today that a nation - wide observation network for the collision of Shoemaker - Levy 9 Comet with Jupiter had been built in China and a large - scale astronomical observation plan had been formulated as well .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0287_2.txt
+(a / announce-01
+      :ARG0 (f2 / facility :name (n / name :op1 "Zijin" :op2 "Mountain" :op3 "Observatory")
+            :part-of (o2 / organization :name (n2 / name :op1 "China" :op2 "Academy" :op3 "of" :op4 "Sciences")))
+      :ARG1 (a2 / and
+            :op1 (b / build-01
+                  :ARG1 (n3 / network
+                        :purpose (o3 / observe-01
+                              :ARG1 (c5 / collide-01
+                                    :ARG0 (c / comet :name (n6 / name :op1 "Shoemaker-Levy" :op2 "9"))
+                                    :ARG1 (p / planet :name (n7 / name :op1 "Jupiter"))))
+                        :mod (n8 / nation))
+                  :location (c4 / country :name (n4 / name :op1 "China")))
+            :op2 (f3 / formulate-01
+                  :ARG1 (p2 / plan
+                        :purpose o3
+                        :mod (a4 / astronomy)
+                        :mod (s2 / scale
+                              :mod (l3 / large)))
+                  :mod (a3 / as-well)))
+      :time (t / today))
+
+# ::id nw.chtb_0287.3 ::date 2012-11-15T21:13:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt According to experts , Jupiter , which orbits the Sun like the Earth , is the largest planet in the solar system .
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0287_3.txt
+(s2 / say-01
+      :ARG0 (p / person
+            :ARG1-of (e2 / expert-41))
+      :ARG1 (p4 / planet
+            :mod (l4 / large
+                  :degree (m / most)
+                  :compared-to (s5 / system
+                        :mod s3))
+            :domain (p2 / planet :name (n / name :op1 "Jupiter")
+                  :ARG0-of (o / orbit-01
+                        :ARG1 (s3 / star :name (n2 / name :op1 "Sun"))
+                        :ARG1-of (r / resemble-01
+                              :ARG2 (p3 / planet :name (n3 / name :op1 "Earth")))))))
+
+# ::id nw.chtb_0287.4 ::date 2012-11-15T21:17:25 ::annotator SDL-AMR-09 ::preferred
+# ::snt This incident of observing of the comet colliding with Jupiter possesses extremely important significance in researching and forecasting comets colliding with Earth .
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0287_4.txt
+(p / possess-01
+      :ARG0 (i / incident
+            :mod (t / this)
+            :topic (o / observe-01
+                  :ARG1 (c / collide-01
+                        :ARG0 (c2 / comet)
+                        :ARG1 (p2 / planet :name (n / name :op1 "Jupiter")))))
+      :ARG1 (s / significance
+            :mod (i2 / important
+                  :degree (e2 / extreme))
+            :beneficiary (a / and
+                  :op1 (r / research-01
+                        :ARG1 (c3 / collide-01
+                              :ARG0 (c4 / comet)
+                              :ARG1 (p3 / planet :name (n2 / name :op1 "Earth"))))
+                  :op2 (f / forecast-01
+                        :ARG1 c3))))
+
+# ::id nw.chtb_0287.5 ::date 2012-11-15T22:20:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt The Chinese astronomy arena also places great importance on this phenomenon of the comet colliding with Jupiter and will closely focus attention on its development and changes .
+# ::save-date Fri Dec 20, 2013 ::file nw_chtb_0287_5.txt
+(a / and
+      :op1 (p / place-01
+            :ARG0 (a2 / arena
+                  :mod (a3 / astronomy
+                        :mod (c3 / country :name (n / name :op1 "China"))))
+            :ARG1 (i / importance
+                  :mod (g / great))
+            :ARG2 (p2 / phenomenon
+                  :mod (c4 / collide-01
+                        :ARG0 (c5 / comet)
+                        :ARG1 (p3 / planet :name (n2 / name :op1 "Jupiter")))
+                  :mod (t / this))
+            :mod (a4 / also))
+      :op2 (f / focus-01
+            :ARG0 a2
+            :ARG1 (a5 / attention)
+            :ARG2 (a6 / and
+                  :op1 (d / develop-01
+                        :ARG2 p2)
+                  :op2 (c7 / change-01
+                        :ARG1 p2))
+            :manner (c6 / close)))
+
+# ::id nw.chtb_0287.6 ::date 2012-11-15T22:37:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt In the past few days , under the support of the Chinese Academy of Sciences and the National Natural Science Foundation , a seminar on the plan to monitor comet Shoemaker - Levy 9 colliding with Jupiter convened in Nanjing and more than forty astronomers from all over the country attended .
+# ::save-date Fri Dec 20, 2013 ::file nw_chtb_0287_6.txt
+(a5 / and
+      :op1 (c3 / convene-01
+            :ARG1 (s2 / seminar
+                  :topic (p / plan-01
+                        :ARG1 (m / monitor-01
+                              :ARG1 (c4 / collide-01
+                                    :ARG0 (c5 / comet :name (n3 / name :op1 "Shoemaker-Levy" :op2 "9"))
+                                    :ARG1 (p2 / planet :name (n4 / name :op1 "Jupiter"))))))
+            :location (c6 / city :name (n5 / name :op1 "Nanjing"))
+            :ARG1-of (s3 / support-01
+                  :ARG0 (a / and
+                        :op1 (o / organization :name (n6 / name :op1 "Chinese" :op2 "Academy" :op3 "of" :op4 "Sciences"))
+                        :op2 (o4 / organization :name (n7 / name :op1 "National" :op2 "Natural" :op3 "Science" :op4 "Foundation"))))
+            :time (b / before
+                  :op1 (n / now)
+                  :duration (f / few
+                        :op1 (t / temporal-quantity :quant 1
+                              :unit (d / day)))))
+      :op2 (a2 / attend-01
+            :ARG0 (a3 / astronomer
+                  :quant (m2 / more-than :op1 40)
+                  :source (a4 / all-over
+                        :op1 (c / country)))
+            :ARG1 s2))
+
+# ::id nw.chtb_0287.7 ::date 2012-11-15T22:44:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt Experts think that this rare and important astronomical phenomenon requires continuous global observation , and that China is located at an important longitudinal position between Japan and Europe , so , China 's observational material from is an indispensable and irreplaceable component in the international joint observation .
+# ::save-date Fri Dec 20, 2013 ::file nw_chtb_0287_7.txt
+(t / think-01
+      :ARG0 (p / person
+            :ARG1-of (e2 / expert-41))
+      :ARG1 (a / and
+            :op1 (r / require-01
+                  :ARG0 (p2 / phenomenon
+                        :mod (a2 / astronomy)
+                        :mod (r2 / rare)
+                        :mod (i / important)
+                        :mod (t2 / this))
+                  :ARG1 (o / observe-01
+                        :ARG1 p2
+                        :mod (g / globe)
+                        :ARG1-of (c4 / continue-01)))
+            :op2 (l2 / locate-01
+                  :ARG1 (c5 / country :name (n / name :op1 "China"))
+                  :location (p3 / position
+                        :mod i
+                        :mod (l3 / longitude)
+                        :location (b / between
+                              :op1 (c6 / country :name (n2 / name :op1 "Japan"))
+                              :op2 (c7 / continent :name (n3 / name :op1 "Europe")))))
+            :ARG0-of (c8 / cause-01
+                  :ARG1 (c9 / component
+                        :ARG1-of (d / dispense-01
+                              :mod (p4 / possible :polarity -))
+                        :ARG1-of (r3 / replace-01
+                              :mod p4)
+                        :beneficiary (o3 / observe-01
+                              :mod (i2 / international)
+                              :mod (j2 / joint))
+                        :domain (m / material
+                              :ARG1-of (o2 / observe-01
+                                    :ARG0 c5))))))
+
+# ::id nw.chtb_0287.8 ::date 2012-11-15T23:00:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt At that time , China will put all advanced astronomical equipment to use to carry out observation , including 2.16 - meter reflecting telescopes , 1.26 - meter infrared telescopes and radio telescopes .
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0287_8.txt
+(u / use-01
+      :ARG0 (c3 / country :name (n / name :op1 "China"))
+      :ARG1 (e / equipment
+            :mod (a / astronomy)
+            :ARG1-of (a2 / advance-01)
+            :quant (a3 / all)
+            :ARG2-of (i / include-91
+                  :ARG1 (a4 / and
+                        :op1 (t3 / telescope
+                              :ARG2-of (r / reflect-01)
+                              :mod (d3 / distance-quantity :quant 2.16
+                                    :unit (m3 / meter)))
+                        :op2 (t4 / telescope
+                              :mod (i2 / infrared)
+                              :mod (d4 / distance-quantity :quant 1.26
+                                    :unit m3))
+                        :op3 (t5 / telescope
+                              :mod (r2 / radio)))))
+      :ARG2 (o / observe-01
+            :ARG0 c3)
+      :time (t / time
+            :mod (t2 / that)))
+
+# ::id nw.chtb_0287.9 ::date 2012-11-15T23:11:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt 25 - meter telescopes in the decimeter and centimeter wave bands , 10 - meter wave band telescopes and advanced optical telescope terminal equipment will also be used .
+# ::save-date Fri Dec 20, 2013 ::file nw_chtb_0287_9.txt
+(u / use-01
+      :ARG1 (a / and
+            :op1 (t / telescope
+                  :mod (d3 / distance-quantity :quant 25
+                        :unit (m3 / meter)
+                        :quant-of (a2 / and
+                              :op1 (b / band
+                                    :mod (w / wave)
+                                    :mod (d5 / decimeter))
+                              :op2 (b3 / band
+                                    :mod (w3 / wave)
+                                    :mod (c / centimeter)))))
+            :op2 (t2 / telescope
+                  :mod (d6 / distance-quantity :quant 10
+                        :unit m3
+                        :quant-of (b2 / band
+                              :mod (w2 / wave))))
+            :op3 (e / equipment
+                  :mod (t3 / terminal
+                        :mod (t4 / telescope
+                              :mod (o / optics)))
+                  :ARG1-of (a3 / advance-01)))
+      :mod (a4 / also))
+
+# ::id nw.chtb_0287.10 ::date 2012-11-17T21:28:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt Nanjing Zijin Mountain Observatory has more than forty years of experience in the observation and research of comets and asteroids , and its planet research office is the only scientific research organization in China conducting long term research on comets and asteroids , and since 1988 also started researching the issues of the solar system 's celestial bodies colliding .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0287_10.txt
+(a / and
+      :op1 (e / experience-01
+            :ARG0 (r2 / research-institute :name (n2 / name :op1 "Nanjing" :op2 "Zijin" :op3 "Mountain" :op4 "Observatory"))
+            :ARG1 (a5 / and
+                  :op1 (o / observe-01
+                        :ARG0 r2
+                        :ARG1 (a2 / and
+                              :op1 (c3 / comet)
+                              :op2 (a3 / asteroid)))
+                  :op2 (r / research-01
+                        :ARG0 r2
+                        :ARG1 a2))
+            :duration (t2 / temporal-quantity
+                  :unit (y2 / year)
+                  :quant (m2 / more-than :op1 40)))
+      :op2 (o3 / organization
+            :mod (r5 / research-01
+                  :ARG1 (s / science))
+            :mod (o4 / only)
+            :location (c5 / country :name (n3 / name :op1 "China"))
+            :ARG0-of (c4 / conduct-01
+                  :ARG1 (r3 / research-01
+                        :ARG1 a2
+                        :duration (l / long)))
+            :domain (o2 / office
+                  :ARG0-of (r4 / research-01
+                        :ARG1 (p / planet))
+                  :poss r2))
+      :op3 (s2 / start-01
+            :ARG0 o2
+            :ARG1 (r6 / research-01
+                  :ARG0 o2
+                  :ARG1 (i / issue
+                        :topic (c6 / collide-01
+                              :ARG0 (b / body
+                                    :mod (c7 / celestial)
+                                    :poss (s3 / system
+                                          :mod (s4 / star :name (n4 / name :op1 "Sun")))))))
+            :time (s5 / since
+                  :op1 (d / date-entity :year 1988))
+            :mod (a4 / also)))
+
+# ::id nw.chtb_0287.11 ::date 2012-11-17T22:28:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt This station 's planet experts also attended many international scientific seminars on the dangers of comets and asteroids colliding with Earth .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0287_11.txt
+(a / attend-01
+      :ARG0 (p / person
+            :ARG1-of (e2 / expert-41
+                  :ARG2 (p3 / planet))
+            :poss (s / station
+                  :mod (t / this)))
+      :ARG1 (s2 / seminar
+            :mod (s3 / science)
+            :mod (i / international)
+            :topic (d / danger
+                  :mod (c / collide-01
+                        :ARG0 (a3 / and
+                              :op1 (c2 / comet)
+                              :op2 (a4 / asteroid))
+                        :ARG1 (p2 / planet :name (n / name :op1 "Earth"))))
+            :quant (m / many))
+      :mod (a2 / also))
+
+# ::id nw.chtb_0287.12 ::date 2012-11-17T23:30:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Sat Nov 17, 2012 ::file nw_chtb_0287_12.txt
+(e / end-01)
+
+# ::id nw.chtb_0288.1 ::date 2012-11-17T23:30:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Beijing , April 23rd
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0288_1.txt
+(b / byline-91
+      :ARG0 (p / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :location (c2 / city :name (n2 / name :op1 "Beijing"))
+      :time (d / date-entity :month 4 :day 23))
+
+# ::id nw.chtb_0288.2 ::date 2012-11-17T23:31:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt A Foreign Ministry spokesperson said today that , at the invitation of China 's Red Cross , Gedinage , the head of the Red Cross 's International Committee and his delegation of four people , visited China from April 18th to the 23rd .
+# ::save-date Mon Jan 27, 2014 ::file nw_chtb_0288_2.txt
+(s / say-01
+      :ARG0 (p / person
+            :ARG0-of (h2 / have-org-role-91
+                  :ARG1 (g / government-organization :name (n / name :op1 "Foreign" :op2 "Ministry"))
+                  :ARG2 (s2 / spokesperson)))
+      :ARG1 (v / visit-01
+            :ARG0 (a / and
+                  :op1 (p2 / person :name (n5 / name :op1 "Gedinage")
+                        :ARG0-of (h / head-01
+                              :ARG1 (o4 / organization :name (n2 / name :op1 "International" :op2 "Committee" :op3 "of" :op4 "the" :op5 "Red" :op6 "Cross"))))
+                  :op2 (d / delegation
+                        :accompanier-of p2
+                        :consist-of (p3 / person :quant 4)))
+            :ARG1 (c3 / country :name (n4 / name :op1 "China"))
+            :duration (d3 / date-interval
+                  :op1 (d4 / date-entity :month 4 :day 18)
+                  :op2 (d5 / date-entity :month 4 :day 23))
+            :ARG2-of (i2 / invite-01
+                  :ARG0 (o2 / organization :name (n6 / name :op1 "Red" :op2 "Cross")
+                        :poss c3)))
+      :time (t / today))
+
+# ::id nw.chtb_0288.3 ::date 2012-11-17T23:40:25 ::annotator SDL-AMR-09 ::preferred
+# ::snt The spokesperson said that , both sides held a friendly , honest and down - to - earth , specialist - level working discussion on questions of further developing communication and cooperation .
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0288_3.txt
+(s / say-01
+      :ARG0 (s2 / spokesperson)
+      :ARG1 (d / discuss-01
+            :ARG0 (s3 / side
+                  :mod (b / both))
+            :ARG1 (q / question
+                  :topic (d3 / develop-01
+                        :ARG1 (a / and
+                              :op1 (c / communicate-01)
+                              :op2 (c2 / cooperate-01))
+                        :degree (f2 / further)))
+            :mod (w / work-01)
+            :mod (l / level
+                  :mod (s4 / specialize-01))
+            :ARG1-of (f / friendly-41)
+            :mod (d2 / down-to-earth)
+            :mod (h2 / honest)))
+
+# ::id nw.chtb_0288.4 ::date 2012-11-17T23:44:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt The negotiations carried out thorough discussions on some principle and detailed issues and some understanding was reached .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0288_4.txt
+(a / and
+      :op1 (d / discuss-01
+            :ARG0 (n / negotiate-01)
+            :ARG1 (a2 / and
+                  :op1 (p / principle)
+                  :op2 (i / issue
+                        :ARG1-of (d2 / detail-01))
+                  :quant (s / some))
+            :manner (t / thorough))
+      :op2 (r / reach-01
+            :ARG1 (u / understand-01
+                  :quant (s2 / some))))
+
+# ::id nw.chtb_0288.5 ::date 2012-11-18T00:21:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt Both sides unanimously believed that the talk had positive results .
+# ::save-date Sun Nov 18, 2012 ::file nw_chtb_0288_5.txt
+(b / believe-01
+      :ARG0 (s / side
+            :mod (b2 / both))
+      :ARG1 (r / result-01
+            :ARG1 (t / talk)
+            :ARG2 (p / positive))
+      :manner (u / unanimous))
+
+# ::id nw.chtb_0288.6 ::date 2012-11-18T00:26:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt The two sides will continue to strive together and strengthen cooperation in a pragmatic spirit .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0288_6.txt
+(c / continue-01
+      :ARG0 (s / side :quant 2)
+      :ARG1 (a / and
+            :op1 (s2 / strive-01
+                  :ARG0 s
+                  :manner (t / together))
+            :op2 (s3 / strengthen-01
+                  :ARG0 s
+                  :ARG1 (c2 / cooperate-01))
+            :manner (p2 / pragmatic)))
+
+# ::id nw.chtb_0288.7 ::date 2012-11-18T00:31:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Sun Nov 18, 2012 ::file nw_chtb_0288_7.txt
+(e / end-01)
+
+# ::id nw.chtb_0294.1 ::date 2012-11-18T00:33:44 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Biskech , April 23rd , by reporters Shuchun Zhou and Mengjun Ju
+# ::save-date Sat Dec 14, 2013 ::file nw_chtb_0294_1.txt
+(b / byline-91
+      :ARG0 (p3 / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (a / and
+            :op1 (p / person :name (n2 / name :op1 "Shuchun" :op2 "Zhou")
+                  :ARG0-of (r / report-01))
+            :op2 (p2 / person :name (n3 / name :op1 "Mengjun" :op2 "Ju")
+                  :ARG0-of r))
+      :location (c2 / city :name (n4 / name :op1 "Biskech"))
+      :time (d / date-entity :month 4 :day 23))
+
+# ::id nw.chtb_0294.2 ::date 2012-11-18T00:36:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt This afternoon , premier Peng Li and Zumegloph , premier of the Kirghizia government held a comprehensive and in - depth talk concerning developing bilateral economic and trade relations .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0294_2.txt
+(h / hold-04
+      :ARG0 (a / and
+            :op1 (p / person :name (n2 / name :op1 "Peng" :op2 "Li")
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG2 (p2 / premier)))
+            :op2 (p3 / person :name (n3 / name :op1 "Zumegloph")
+                  :ARG0-of (h3 / have-org-role-91
+                        :ARG1 (g / government-organization
+                              :ARG0-of (g2 / govern-01
+                                    :ARG1 (c / country :name (n4 / name :op1 "Kirghizia"))))
+                        :ARG2 (p4 / premier))))
+      :ARG1 (t / talk-01
+            :ARG0 a
+            :ARG1 (a2 / and
+                  :op1 (r / relation
+                        :mod (e / economy)
+                        :mod (b / bilateral)
+                        :ARG1-of (d / develop-02))
+                  :op2 (r2 / relation
+                        :mod (t2 / trade)
+                        :mod b
+                        :ARG1-of d))
+            :mod (i / in-depth)
+            :mod (c2 / comprehensive))
+      :time (a3 / afternoon
+            :mod (t3 / this)))
+
+# ::id nw.chtb_0294.3 ::date 2012-11-18T00:43:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt The talk was held in a practical and friendly atmosphere .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0294_3.txt
+(h / hold-04
+      :ARG1 (t / talk-01)
+      :location (a / atmosphere
+            :mod (p / practical)
+            :ARG1-of (f / friendly-41)))
+
+# ::id nw.chtb_0294.4 ::date 2012-11-18T00:44:35 ::annotator SDL-AMR-09 ::preferred
+# ::snt Zumegloph said that the two countries of China and Kirghizia had a traditional friendly relationship and this relationship was increasingly strengthened and continuously developing .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0294_4.txt
+(s / say-01
+      :ARG0 (p2 / person :name (n / name :op1 "Zumegloph"))
+      :ARG1 (a2 / and
+            :op1 (h / have-03
+                  :ARG0 (a / and
+                        :op1 (c3 / country :name (n2 / name :op1 "China"))
+                        :op2 (c4 / country :name (n3 / name :op1 "Kirghizia")))
+                  :ARG1 (r / relationship
+                        :ARG1-of (f / friendly-41)
+                        :mod (t / tradition)))
+            :op2 (a3 / and
+                  :op1 (s2 / strengthen-01
+                        :ARG1 r
+                        :ARG1-of (i / increase-01))
+                  :op2 (d / develop-02
+                        :ARG1 r
+                        :ARG1-of (c5 / continue-01)))))
+
+# ::id nw.chtb_0294.5 ::date 2012-11-18T00:50:34 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said that , now Kirghizia was at the phase of economic reform and paid much attention to strengthening economic connections with China and using the experiences of China for reference , including the experiences of China 's agricultural reform .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0294_5.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (a / and
+            :op1 (b / be-temporally-at-91
+                  :ARG1 (c3 / country :name (n / name :op1 "Kirghizia"))
+                  :ARG2 (p / phase
+                        :mod (r2 / reform-01
+                              :ARG1 (e / economy))))
+            :op2 (p2 / pay-01
+                  :ARG0 c3
+                  :ARG1 (a2 / attention
+                        :quant (m / much))
+                  :ARG2 (a3 / and
+                        :op1 (s2 / strengthen-01
+                              :ARG0 c3
+                              :ARG1 (c4 / connect-01
+                                    :ARG0 c3
+                                    :ARG1 (c5 / country :name (n2 / name :op1 "China"))
+                                    :mod e))
+                        :op2 (u / use-01
+                              :ARG0 c3
+                              :ARG1 (e2 / experience
+                                    :poss c5
+                                    :ARG2-of (i / include-91
+                                          :ARG1 (e3 / experience
+                                                :mod (r4 / reform-01
+                                                      :ARG1 (a4 / agriculture
+                                                            :poss c5)))))
+                              :ARG2 (r3 / reference-01))))
+            :time (n3 / now)))
+
+# ::id nw.chtb_0294.6 ::date 2012-11-20T21:35:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said that Xinjiang and some other regions of China had already established more than 70 joint venture enterprises , including food , fur , etc. , in Kirghizia and the operation condition was good , and the specialists of both parties were demonstrating on cooperative projects of paper making , sanitation , medicine , etc .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0294_6.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (a / and
+            :op1 (e / establish-01
+                  :ARG0 (a2 / and
+                        :op1 (c3 / country-region :name (n / name :op1 "Xinjiang"))
+                        :op2 (r / region
+                              :mod (o / other)
+                              :quant (s2 / some)
+                              :part-of (c4 / country :name (n2 / name :op1 "China"))))
+                  :ARG1 (e2 / enterprise
+                        :mod (v / venture
+                              :mod (j / joint))
+                        :quant (m / more-than :op1 70)
+                        :ARG2-of (i / include-91
+                              :ARG1 (a4 / and
+                                    :op1 (f / food)
+                                    :op2 (f2 / fur)
+                                    :op3 (e3 / et-cetera))))
+                  :time (a3 / already)
+                  :location (c5 / country :name (n3 / name :op1 "Kirghizia")))
+            :op2 (g3 / good
+                  :domain (c6 / condition
+                        :mod (o2 / operate-01)))
+            :op3 (d / demonstrate-01
+                  :ARG0 (p / person
+                        :ARG0-of (s3 / specialize-01)
+                        :poss (p2 / party
+                              :mod (b / both)))
+                  :ARG1 (a5 / and
+                        :op1 (p3 / project
+                              :topic (m2 / make-01
+                                    :ARG1 (p4 / paper)))
+                        :op2 (p5 / project
+                              :topic (s4 / sanitize-01))
+                        :op3 (p6 / project
+                              :topic (m3 / medicine))
+                        :op4 (e4 / et-cetera)
+                        :ARG2-of (c7 / cooperate-01)))))
+
+# ::id nw.chtb_0294.7 ::date 2012-11-20T21:54:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt Zumegloph also made a presentation to Peng Li about Kirghizia 's economic situation .
+# ::save-date Sun Dec 15, 2013 ::file nw_chtb_0294_7.txt
+(p4 / present-01
+      :ARG0 (p5 / person :name (n / name :op1 "Zumegloph"))
+      :ARG1 (s / situation
+            :mod (e / economy)
+            :poss (c / country :name (n3 / name :op1 "Kirghizia")))
+      :ARG2 (p6 / person :name (n2 / name :op1 "Peng" :op2 "Li"))
+      :mod (a / also))
+
+# ::id nw.chtb_0294.8 ::date 2012-11-20T21:56:05 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li said that the economic difficulties Kirghizia faced with during the reform were temporary , and that only after through diligence could it be completely overcome .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0294_8.txt
+(s / say-01
+      :ARG0 (p3 / person :name (n / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (a / and
+            :op1 (t / temporary
+                  :domain (d / difficulty
+                        :mod (e / economy)
+                        :ARG1-of (f / face-01
+                              :ARG0 (c / country :name (n2 / name :op1 "Kirghizia"))
+                              :time (r / reform-01))))
+            :op2 (p4 / possible
+                  :domain (o / overcome-01
+                        :ARG1 d
+                        :degree (c2 / complete))
+                  :time (a2 / after
+                        :op1 (d3 / diligence
+                              :mod (t2 / thorough))
+                        :mod (o2 / only)))))
+
+# ::id nw.chtb_0294.9 ::date 2012-11-20T22:07:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li said that in the past two years or more , economic trade and cooperation between the two countries has begun smoothly and has made considerable progress .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0294_9.txt
+(s / say-01
+      :ARG0 (p3 / person :name (n / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (a / and
+            :op1 (b / begin-01
+                  :ARG1 (a2 / and
+                        :op1 (t / trade-01
+                              :ARG0 c2
+                              :mod (e / economy))
+                        :op2 (c / cooperate-01
+                              :ARG0 (c2 / country :quant 2)))
+                  :manner (s2 / smooth))
+            :op2 (p4 / progress-01
+                  :ARG1 a2
+                  :degree (c3 / considerable))
+            :time (b2 / before
+                  :op1 (n2 / now)
+                  :quant (o / or
+                        :op1 (t2 / temporal-quantity :quant 2
+                              :unit (y / year))
+                        :op2 (m / more-than
+                              :op1 t2)))))
+
+# ::id nw.chtb_0294.10 ::date 2012-11-20T22:11:38 ::annotator SDL-AMR-09 ::preferred
+# ::snt Bilateral trade has developed very rapidly but still had potential .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0294_10.txt
+(d / develop-01
+      :ARG2 (t / trade-01
+            :mod (b / bilateral))
+      :manner (r / rapid
+            :degree (v / very))
+      :concession-of (h / have-03
+            :ARG0 t
+            :ARG1 (p / potential)
+            :mod (s / still)))
+
+# ::id nw.chtb_0294.11 ::date 2012-11-20T22:12:54 ::annotator SDL-AMR-09 ::preferred
+# ::snt The Chinese government , especially the Xinjiang Uigur Autonomous Region , would endeavor to develop cooperation with Kirghizia in various fields such as economy and trade , etc .
+# ::save-date Sun Dec 15, 2013 ::file nw_chtb_0294_11.txt
+(e / endeavor-01
+      :ARG0 (g / government-organization
+            :ARG0-of (g4 / govern-01
+                  :ARG1 (c3 / country :name (n / name :op1 "China")))
+            :ARG2-of (i / include-91
+                  :ARG1 (c4 / country-region :name (n2 / name :op1 "Xinjiang" :op2 "Uigur" :op3 "Autonomous" :op4 "Region"))
+                  :mod (e2 / especially)))
+      :ARG1 (d / develop-02
+            :ARG0 g
+            :ARG1 (c5 / cooperate-01
+                  :ARG0 g
+                  :ARG1 (c6 / country :name (n3 / name :op1 "Kirghizia"))
+                  :ARG2 (f / field
+                        :mod (v2 / various)
+                        :example (a / and
+                              :op1 (e3 / economy)
+                              :op2 (t / trade-01)
+                              :op3 (e4 / et-cetera))))))
+
+# ::id nw.chtb_0294.12 ::date 2012-11-20T22:21:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt From now on , the two countries would explore and utilize the advantageous conditions of the two countries more fully , act according to rules of economy , guarantee that bilateral benefits , continuously enrich the shape of cooperation and improve the level and class of the trade of the two countries .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0294_12.txt
+(a / and
+      :op1 (a2 / and
+            :op1 (e / explore-01
+                  :ARG0 (c / country :quant 2)
+                  :ARG1 (c2 / condition
+                        :mod (a3 / advantage)
+                        :poss c))
+            :op2 (u / utilize-01
+                  :ARG0 c
+                  :ARG1 c2)
+            :manner (f / full
+                  :degree (m / more)))
+      :op2 (a4 / act-01
+            :ARG0 c
+            :manner (c6 / conform-01
+                  :ARG2 (r / rule
+                        :mod (e2 / economy))))
+      :op3 (g / guarantee-01
+            :ARG0 c
+            :ARG1 (a5 / and
+                  :op1 (e3 / enrich-01
+                        :ARG0 (b / benefit
+                              :mod (b2 / bilateral)
+                              :mod (t2 / that))
+                        :ARG1 (s / shape
+                              :poss (c3 / cooperate-01))
+                        :ARG1-of (c5 / continue-01))
+                  :op2 (i / improve-01
+                        :ARG0 b
+                        :ARG1 (a6 / and
+                              :op1 (l / level)
+                              :op2 (c4 / class)
+                              :poss (t / trade-01
+                                    :ARG0 c))
+                        :ARG1-of c5)))
+      :time (f2 / from
+            :op1 (n / now)))
+
+# ::id nw.chtb_0294.13 ::date 2012-11-27T22:18:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt Because of this , both parties should endeavor to create conditions , including solving problems of traffic and transportation that hinder the development of economic and trade cooperation .
+# ::save-date Sun Dec 15, 2013 ::file nw_chtb_0294_13.txt
+(c4 / cause-01
+      :ARG0 (t4 / this)
+      :ARG1 (r / recommend-01
+            :ARG1 (e / endeavor-01
+                  :ARG0 (p / party
+                        :mod (b / both))
+                  :ARG1 (c / create-01
+                        :ARG0 p
+                        :ARG1 (c2 / condition)
+                        :ARG2-of (i / include-91
+                              :ARG1 (s / solve-01
+                                    :ARG1 (p2 / problem
+                                          :topic (a2 / and
+                                                :op1 (t / traffic)
+                                                :op2 (t2 / transport-01))
+                                          :ARG0-of (h / hinder-01
+                                                :ARG1 (d / develop-02
+                                                      :ARG1 (c3 / cooperate-01
+                                                            :ARG2 (a / and
+                                                                  :op1 (e2 / economy)
+                                                                  :op2 (t3 / trade-01))))))))))))
+
+# ::id nw.chtb_0294.14 ::date 2012-11-27T22:24:37 ::annotator SDL-AMR-09 ::preferred
+# ::snt Peng Li also said , " This time there are a number of entrepreneurs who have come with me to visit , and both sides can enhance contact .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0294_14.txt
+(s / say-01
+      :ARG0 (p3 / person :name (n / name :op1 "Peng" :op2 "Li"))
+      :ARG1 (a / and
+            :op1 (e / entrepreneur
+                  :ARG1-of (c / come-01
+                        :accompanier p3
+                        :purpose (v / visit-01
+                              :ARG0 e)
+                        :time (t2 / this))
+                  :quant (n2 / number))
+            :op2 (p4 / possible
+                  :domain (e2 / enhance-01
+                        :ARG0 (s2 / side
+                              :mod (b / both))
+                        :ARG1 (c2 / contact-01))))
+      :mod (a2 / also))
+
+# ::id nw.chtb_0294.15 ::date 2012-11-27T22:27:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt The Chinese government encourages and supports China 's enterprise circles in participating in Kirghizia 's economic construction on the basis of equality and mutual benefit . "
+# ::save-date Mon Jan 13, 2014 ::file nw_chtb_0294_15.txt
+(a / and
+      :op1 (e / encourage-01
+            :ARG0 (g / government-organization
+                  :ARG0-of (g3 / govern-01
+                        :ARG1 (c3 / country :name (n / name :op1 "China"))))
+            :ARG1 (c4 / circle
+                  :mod (e2 / enterprise)
+                  :poss c3)
+            :ARG2 (p / participate-01
+                  :ARG0 g
+                  :ARG1 (c5 / construct-01
+                        :ARG0 (c6 / country :name (n2 / name :op1 "Kirghizia"))
+                        :ARG1 (e3 / economy))))
+      :op2 (s / support-01
+            :ARG0 g
+            :ARG1 p)
+      :ARG1-of (b3 / base-02
+            :ARG2 (a2 / and
+                  :op1 (e4 / equal-01)
+                  :op2 (b2 / benefit
+                        :mod (m / mutual)))))
+
+# ::id nw.chtb_0294.16 ::date 2012-11-27T22:37:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt Premier Peng Li invited premier Zumegloph to visit China at his convenience .
+# ::save-date Sun Dec 15, 2013 ::file nw_chtb_0294_16.txt
+(i / invite-01
+      :ARG0 (p / person :name (n / name :op1 "Peng" :op2 "Li")
+            :ARG0-of (h / have-org-role-91
+                  :ARG2 (p2 / premier)))
+      :ARG1 (p3 / person :name (n2 / name :op1 "Zumegloph")
+            :ARG0-of (h2 / have-org-role-91
+                  :ARG2 (p4 / premier)))
+      :ARG2 (v / visit-01
+            :ARG0 p3
+            :ARG1 (c3 / country :name (n3 / name :op1 "China"))
+            :time (c4 / convenience
+                  :poss p3)))
+
+# ::id nw.chtb_0294.17 ::date 2012-11-27T22:45:33 ::annotator SDL-AMR-09 ::preferred
+# ::snt Zumegloph expressed his thanks for this and accepted the invitation happily .
+# ::save-date Sun Dec 15, 2013 ::file nw_chtb_0294_17.txt
+(a / and
+      :op1 (t / thank-01
+            :ARG0 (p / person :name (n / name :op1 "Zumegloph"))
+            :ARG2 (t2 / this))
+      :op2 (a2 / accept-01
+            :ARG0 p
+            :ARG1 (i / invite-01)
+            :manner (h / happy)))
+
+# ::id nw.chtb_0294.18 ::date 2012-11-27T22:48:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Tue Nov 27, 2012 ::file nw_chtb_0294_18.txt
+(e / end-01)
+
+# ::id nw.chtb_0295.1 ::date 2012-11-27T22:49:03 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Teheran , August 31st , by reporter Ming Chen
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0295_1.txt
+(b / byline-91
+      :ARG0 (p2 / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (p / person :name (n2 / name :op1 "Ming" :op2 "Chen")
+            :ARG0-of (r / report-01))
+      :location (c2 / city :name (n3 / name :op1 "Tehran"))
+      :time (d / date-entity :month 8 :day 31))
+
+# ::id nw.chtb_0295.2 ::date 2012-11-27T22:50:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt Hasang Hapipy , Iran 's first vice president said today when arriving back in Teheran that he expressed satisfaction over the result of visiting China after ending a 3 - day friendly visit to China .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0295_2.txt
+(s / say-01
+      :ARG0 (p / person :name (n2 / name :op1 "Hasang" :op2 "Hapipy")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (c4 / country :name (n / name :op1 "Iran"))
+                  :ARG2 (p2 / president
+                        :mod (v / vice))
+                  :ord (o / ordinal-entity :value 1)))
+      :ARG1 (e / express-01
+            :ARG0 p
+            :ARG1 (s2 / satisfy-01
+                  :ARG0 (t2 / thing
+                        :ARG2-of (r / result-01
+                              :ARG1 (v2 / visit-01
+                                    :ARG0 p
+                                    :ARG1 (c5 / country :name (n3 / name :op1 "China")))))
+                  :ARG1 p
+                  :time (a / after
+                        :op1 (e2 / end-01
+                              :ARG0 p
+                              :ARG1 (v3 / visit-01
+                                    :ARG0 p
+                                    :ARG1 c5
+                                    :duration (t / temporal-quantity :quant 3
+                                          :unit (d2 / day))
+                                    :ARG1-of (f2 / friendly-41))))))
+      :time (t4 / today
+            :time-of (a2 / arrive-01
+                  :ARG1 p
+                  :ARG4 (c6 / city :name (n4 / name :op1 "Tehran"))
+                  :direction (b / back))))
+
+# ::id nw.chtb_0295.3 ::date 2012-11-27T22:57:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt Hapipy said to reporters at the airport that during his visit he exchanged ideas with Chinese leaders concerning bilateral relationship , international and regional problems .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0295_3.txt
+(s / say-01
+      :ARG0 (p / person :name (n / name :op1 "Hapipy"))
+      :ARG1 (e / exchange-01
+            :ARG0 p
+            :ARG1 (i / idea
+                  :ARG0-of (c4 / concern-02
+                        :ARG1 (a2 / and
+                              :op1 (p5 / problem
+                                    :topic (r2 / relationship
+                                          :mod (b / bilateral)))
+                              :op2 (p2 / problem
+                                    :mod (i2 / international))
+                              :op3 (p6 / problem
+                                    :mod (r3 / region)))))
+            :ARG2 (p4 / person
+                  :ARG0-of (l / lead-02
+                        :ARG1 (c3 / country :name (n2 / name :op1 "China"))))
+            :time (d / during
+                  :op1 (v2 / visit-01
+                        :ARG0 p)))
+      :ARG2 (p3 / person
+            :ARG0-of (r / report-01)
+            :location (a / airport)))
+
+# ::id nw.chtb_0295.4 ::date 2012-11-27T23:02:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt He said that , the projects of economic cooperation between the two countries of Iran and China were being implemented , and the two countries would jointly invest in Central Asian areas to implement economic cooperation .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0295_4.txt
+(s / say-01
+      :ARG0 (h / he)
+      :ARG1 (a / and
+            :op1 (i2 / implement-01
+                  :ARG1 (p / project
+                        :topic (c5 / cooperate-01
+                              :ARG0 (c6 / country :name (n2 / name :op1 "Iran"))
+                              :ARG1 (c7 / country :name (n3 / name :op1 "China"))
+                              :ARG2 (e / economy))))
+            :op2 (i3 / invest-01
+                  :ARG0 (a2 / and
+                        :op1 c6
+                        :op2 c7)
+                  :ARG2 (a3 / area
+                        :part-of (w / world-region :name (n4 / name :op1 "Central" :op2 "Asia")))
+                  :manner (j / joint)
+                  :purpose (i4 / implement-01
+                        :ARG0 a2
+                        :ARG1 (c8 / cooperate-01
+                              :ARG2 e)))))
+
+# ::id nw.chtb_0295.5 ::date 2012-11-27T23:16:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt China , Iran and a third country would also jointly invest in reconstructing China 's oil refinery equipment to expand the capability of extracting Iran 's petroleum .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0295_5.txt
+(i2 / invest-01
+      :ARG0 (a / and
+            :op1 (c4 / country :name (n / name :op1 "China"))
+            :op2 (c5 / country :name (n2 / name :op1 "Iran"))
+            :op3 (c6 / country
+                  :ord (o2 / ordinal-entity :value 3)))
+      :ARG2 (r / reconstruct-01
+            :ARG0 a
+            :ARG1 (e / equipment
+                  :instrument-of (r2 / refine-01
+                        :ARG1 (o / oil))
+                  :poss c4)
+            :purpose (e2 / expand-01
+                  :ARG1 (c7 / capable-41
+                        :ARG2 (e3 / extract-01
+                              :ARG1 (p / petroleum
+                                    :poss c5)))))
+      :mod (a2 / also)
+      :manner (j / joint))
+
+# ::id nw.chtb_0295.6 ::date 2012-11-27T23:23:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Tue Nov 27, 2012 ::file nw_chtb_0295_6.txt
+(e / end-01)
+
+# ::id nw.chtb_0298.1 ::date 2012-11-27T23:24:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinhua News Agency , Moscow , August 31 , by reporter Rong Xie
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0298_1.txt
+(b / byline-91
+      :ARG0 (p2 / publication :name (n / name :op1 "Xinhua" :op2 "News" :op3 "Agency"))
+      :ARG1 (p / person :name (n2 / name :op1 "Rong" :op2 "Xie")
+            :ARG0-of (r / report-01))
+      :location (c2 / city :name (n3 / name :op1 "Moscow"))
+      :time (d / date-entity :month 8 :day 31))
+
+# ::id nw.chtb_0298.2 ::date 2012-11-27T23:25:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt Russia 's last group of personnel that should withdraw of the Northwest military troop stationed in the three countries of the Baltic Sea completely withdrew from Latvia on the 31st .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0298_2.txt
+(w / withdraw-01
+      :ARG0 (g / group
+            :poss (c3 / country :name (n2 / name :op1 "Russia"))
+            :mod (l3 / last)
+            :consist-of (p / person
+                  :ARG0-of (h / have-org-role-91
+                        :ARG1 (t / troop
+                              :mod (m / military)
+                              :ARG1-of (s / station-01
+                                    :ARG2 (c4 / country :quant 3
+                                          :location (s2 / sea :name (n4 / name :op1 "Baltic" :op2 "Sea"))))
+                              :mod (n / northwest))
+                        :ARG2 (p2 / personnel)))
+            :ARG0-of (w2 / withdraw-01
+                  :ARG1-of (r2 / recommend-01)))
+      :ARG2 (c6 / country :name (n5 / name :op1 "Latvia"))
+      :degree (c5 / complete)
+      :time (d2 / date-entity :day 31))
+
+# ::id nw.chtb_0298.3 ::date 2012-11-27T23:31:21 ::annotator SDL-AMR-09 ::preferred
+# ::snt Until now , Russia has completed the troop withdrawal work from the three countries of Baltic Sea .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0298_3.txt
+(c2 / complete-01
+      :ARG0 (c3 / country :name (n / name :op1 "Russia"))
+      :ARG1 (w / work-01
+            :ARG1 (w2 / withdraw-01
+                  :ARG1 (t / troop)
+                  :ARG2 (c4 / country :quant 3
+                        :location (s / sea :name (n2 / name :op1 "Baltic" :op2 "Sea")))))
+      :time (u / until
+            :op1 (n3 / now)))
+
+# ::id nw.chtb_0298.4 ::date 2012-11-27T23:32:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt It is reported by news media here that on the 31st , the personnel of the Russian Northwest troop headquarters turned over military installations to the local government , submitted a report to Latvian president Ulmanis regarding the completion of troop withdrawal , and then withdrew from Riga to Moscow by plane .
+# ::save-date Mon Jan 13, 2014 ::file nw_chtb_0298_4.txt
+(r3 / report-01
+      :ARG0 (m2 / media
+            :mod (n2 / news)
+            :location (h / here))
+      :ARG1 (a / and
+            :op1 (t / turn-12
+                  :ARG0 (p5 / person
+                        :ARG0-of (h4 / have-org-role-91
+                              :ARG1 (h2 / headquarters
+                                    :part-of (t2 / troop
+                                          :mod (c4 / country :name (n3 / name :op1 "Russia"))
+                                          :mod (n / northwest)))
+                              :ARG2 (p2 / personnel)))
+                  :ARG1 (t4 / thing
+                        :ARG1-of (i / install-01
+                              :ARG0 (m3 / military)))
+                  :ARG2 (g2 / government-organization
+                        :ARG0-of (g3 / govern-01
+                              :mod (l2 / local))))
+            :op2 (s / submit-01
+                  :ARG0 p5
+                  :ARG1 (r4 / report-01
+                        :ARG0 p5
+                        :ARG1 (c6 / complete-01
+                              :ARG1 (w / withdraw-01
+                                    :ARG1 (t3 / troop))))
+                  :ARG2 (p / person :name (n4 / name :op1 "Ulmanis")
+                        :ARG0-of (h3 / have-org-role-91
+                              :ARG1 (c5 / country :name (n5 / name :op1 "Latvia"))
+                              :ARG2 (p3 / president))))
+            :op3 (w2 / withdraw-01
+                  :ARG0 p5
+                  :ARG1 p5
+                  :ARG2 (c7 / city :name (n6 / name :op1 "Riga"))
+                  :direction (c8 / city :name (n7 / name :op1 "Moscow"))
+                  :instrument (p4 / plane)
+                  :time (t5 / then))
+            :time (d / date-entity :day 31)))
+
+# ::id nw.chtb_0298.5 ::date 2012-11-27T23:40:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt Russian troops stationed in Lithuania already withdrew back home before August 31st of 1993 , and troops stationed in Estonia completed troop withdrawal work on the 29th of this month .
+# ::save-date Mon Dec 16, 2013 ::file nw_chtb_0298_5.txt
+(a / and
+      :op1 (w / withdraw-01
+            :ARG0 (t / troop
+                  :mod (c4 / country :name (n / name :op1 "Russia"))
+                  :ARG1-of (s / station-01
+                        :ARG2 (c5 / country :name (n2 / name :op1 "Lithuania"))))
+            :time (a2 / already)
+            :time (b2 / before
+                  :op1 (d / date-entity :month 8 :day 31 :year 1993))
+            :destination (h / home)
+            :direction (b / back))
+      :op2 (c6 / complete-01
+            :ARG0 (t2 / troop
+                  :ARG1-of (s2 / station-01
+                        :ARG2 (c7 / country :name (n3 / name :op1 "Estonia"))))
+            :ARG1 (w2 / work-01
+                  :ARG0 t2
+                  :ARG1 (w3 / withdraw-01
+                        :ARG1 (t3 / troop)))
+            :time (d2 / date-entity :day 29
+                  :part-of (m / month
+                        :mod (t4 / this)))))
+
+# ::id nw.chtb_0298.6 ::date 2012-11-27T23:44:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt According to agreements reached by Russia with the governments of Latvia and Estonia , currently there are still a few hundred Russian military experts remaining in the early warning radar stations of the Latvian and Russian naval education centers in Estonia .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0298_6.txt
+(s / say-01
+      :ARG0 (t / thing
+            :ARG1-of (a / agree-01
+                  :ARG0 (c4 / country :name (n / name :op1 "Russia"))
+                  :ARG2 (a2 / and
+                        :op1 (g / government-organization
+                              :ARG0-of (g2 / govern-01
+                                    :ARG1 (c5 / country :name (n2 / name :op1 "Latvia"))))
+                        :op2 (g3 / government-organization
+                              :ARG0-of (g4 / govern-01
+                                    :ARG1 (c6 / country :name (n3 / name :op1 "Estonia")))))
+                  :ARG1-of (r2 / reach-01
+                        :ARG0 (a4 / and
+                              :op1 c4
+                              :op2 a2))))
+      :ARG1 (r3 / remain-01
+            :ARG1 (p / person
+                  :ARG1-of (e2 / expert-41
+                        :ARG2 (m / military
+                              :mod c4))
+                  :quant (f / few :op1 100))
+            :mod (s2 / still)
+            :time (c7 / current)
+            :location (a3 / and
+                  :op1 (s3 / station
+                        :mod (r4 / radar
+                              :ARG0-of (w / warn-01
+                                    :time (e3 / early)))
+                        :poss (c8 / center
+                              :mod (e4 / educate-01
+                                    :ARG2 (n4 / navy))
+                              :poss c5
+                              :location c6))
+                  :op2 (s4 / station
+                        :mod r4
+                        :poss (c9 / center
+                              :mod e4
+                              :poss c4
+                              :location c6)))))
+
+# ::id nw.chtb_0298.7 ::date 2012-11-27T23:54:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt The Russian Northwest troop clusters are former Soviet troops stationed in the above three countries , with headquarters set in the Latvian Republic .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0298_7.txt
+(t3 / troop
+      :mod (c4 / country :name (n4 / name :op1 "Soviet" :op2 "Union"))
+      :time (f / former)
+      :ARG1-of (s2 / station-01
+            :ARG2 (c5 / country :quant 3
+                  :location (a / above)))
+      :ARG1-of (h / headquarter-01
+            :location (c6 / country :name (n5 / name :op1 "Latvian" :op2 "Republic")))
+      :domain (c / cluster
+            :consist-of (t / troop
+                  :mod (c3 / country :name (n3 / name :op1 "Russia"))
+                  :mod (n / northwest))))
+
+# ::id nw.chtb_0298.8 ::date 2012-11-27T23:59:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt The total original military strength was more than 116,000 people , within which most , more than 50,000 people , were stationed in Latvia ; more than 35,000 people in Lithuania , and more than 30,000 people in Estonia .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0298_8.txt
+(t / total-01
+      :ARG1 (s / strength
+            :poss (m / military)
+            :mod (o / original))
+      :ARG2 (p / person
+            :quant (m2 / more-than :op1 116000)
+            :ARG2-of (i / include-91
+                  :ARG1 (a / and
+                        :op1 (p5 / person
+                              :quant (m6 / most
+                                    :ARG0-of (m7 / mean-01
+                                          :ARG1 (m3 / more-than :op1 50000)))
+                              :ARG1-of (s2 / station-01
+                                    :ARG2 (c4 / country :name (n / name :op1 "Latvia"))))
+                        :op2 (p3 / person
+                              :quant (m4 / more-than :op1 35000)
+                              :ARG1-of (s3 / station-01
+                                    :ARG2 (c5 / country :name (n2 / name :op1 "Lithuania"))))
+                        :op3 (p4 / person
+                              :quant (m5 / more-than :op1 30000)
+                              :ARG1-of (s4 / station-01
+                                    :ARG2 (c6 / country :name (n3 / name :op1 "Estonia"))))))))
+
+# ::id nw.chtb_0298.9 ::date 2012-11-28T20:43:43 ::annotator SDL-AMR-09 ::preferred
+# ::snt After the disintegration of the former Soviet Union , these troop clusters were transferred to Russian ownership .
+# ::save-date Sun Dec 22, 2013 ::file nw_chtb_0298_9.txt
+(t / transfer-01
+      :ARG1 (c / cluster
+            :consist-of (t2 / troop)
+            :mod (t3 / this))
+      :ARG2 (o / own-01
+            :ARG0 (c4 / country :name (n / name :op1 "Russia")))
+      :time (a / after
+            :op1 (d / disintegrate-01
+                  :ARG1 (c5 / country :name (n2 / name :op1 "Soviet" :op2 "Union")
+                        :time (f / former)))))
+
+# ::id nw.chtb_0298.10 ::date 2012-11-28T20:45:44 ::annotator SDL-AMR-09 ::preferred
+# ::snt It is reported that the Russian troops that withdrew from the three Baltic Sea countries will be stationed respectively in the Russian state of Jalininggele , the state of Simolingsike and Yelinia city which is 300 kilometers away from Moscow .
+# ::save-date Fri Jan 3, 2014 ::file nw_chtb_0298_10.txt
+(r2 / report-01
+      :ARG1 (s2 / station-01
+            :ARG1 (t / troop
+                  :mod (c3 / country :name (n / name :op1 "Russia"))
+                  :ARG0-of (w / withdraw-01
+                        :ARG2 (c4 / country :quant 3
+                              :location (s3 / sea :name (n2 / name :op1 "Baltic" :op2 "Sea")))))
+            :ARG2 (a / and
+                  :op1 (s4 / state :name (n3 / name :op1 "Jalininggele")
+                        :location c3)
+                  :op2 (s5 / state :name (n4 / name :op1 "Simolingsike"))
+                  :op3 (c5 / city :name (n5 / name :op1 "Yelinia")
+                        :location (r / relative-position
+                              :op1 (c6 / city :name (n6 / name :op1 "Moscow"))
+                              :quant (d / distance-quantity :quant 300
+                                    :unit (k / kilometer)))))
+            :mod (r3 / respective)))
+
+# ::id nw.chtb_0298.11 ::date 2012-11-28T20:51:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt ( End )
+# ::save-date Wed Nov 28, 2012 ::file nw_chtb_0298_11.txt
+(e / end-01)
+
