@@ -26,12 +26,16 @@ class Relation:
         self.parent_idx = parent_idx
         self.child_idx = child_idx
         self.dep_rel = dep_rel
+        #self.par_par =
+        #self.child_child =
 
 
 nodes = {}
 edgeLabels = {}
 edgeLabelsList = []
-prop_bank = {}
+#prop_bank = {}
+seen_in_test_p = {}
+seen_in_test_c = {}
 
 def evaluate_output(gold, pred):
     correct = 0
@@ -46,7 +50,6 @@ def createExample(l, null=False):
     out = ['and', 'or', 'name', 'multi-sentence']
     if not null:
         for each in l:
-            print each[5]
             x = Relation(each[0][0], each[0][1], each[0][2], each[1], each[2], each[3], each[4], each[5])
             if each[0][0] in out:
                 post_proc.append(x)
@@ -89,47 +92,59 @@ def updateSeenNodes(l):
             nodes[node2] = len(nodes) + 1
 
 
-def getKbestEdges(parent_node, nodes_relation_dict=None):
+def updateSeenInTrain(l):
+
+    global seen_in_test_p
+    global seen_in_test_c
+
+
+    for each in l:
+
+        node1 = each[0][0]
+        node2 = each[0][1]
+
+        seen_in_test_p[node1] = 1
+        seen_in_test_c[node2] = 1
+
+
+def getKbestEdges(parent_node, child_node, nodes_relation_dict_out=None, nodes_relation_dict_in=None):
     #Get the top k concepts aligned with span.words
     K = 5
     #if nodes_relation_dict is None:
     #    nodes_relation_dict = pickle.load(open("nodes_relation_dict.p", "rb"))
-    if nodes_relation_dict.has_key(parent_node):
-        return [relation for (relation, count) in nodes_relation_dict[parent_node]][:K]
-    return ["NULL"]
+    if parent_node in nodes_relation_dict_out:
+        t1 = [relation for (relation, count) in nodes_relation_dict_out[parent_node]][:K]
+    else:
+        t1 = []
+    if child_node in nodes_relation_dict_in:
+        t2 = [relation for (relation, count) in nodes_relation_dict_in[child_node]][:K]
+    else:
+        t2 = []
+
+    #t2 = []
+    ret = list(set(t1 + t2))
+
+    if len(ret) == 0:
+        return ["NULL"]
+
+    return ret
 
 
-def get_shared_features(relations):
-
-    d = {}
-    for each in relations:
-        if each.parent not in d:
-            d[each.parent] = 0
-        d[each.parent] += 1
-
-    shared = ["num_concepts="+str(len(d))]
-
-    return d,shared
 
 
 class RelationLearning(pyvw.SearchTask):
+
     def __init__(self, vw, sch, num_actions):
         pyvw.SearchTask.__init__(self, vw, sch, num_actions)
         sch.set_options(sch.AUTO_HAMMING_LOSS | sch.IS_LDF | sch.AUTO_CONDITION_FEATURES)
         self.nodes_relation_dict = pickle.load(open("nodes_relation_dict.p", "rb"))
+        self.nodes_relation_dict_out = self.nodes_relation_dict[0]
+        self.nodes_relation_dict_in = self.nodes_relation_dict[1]
 
-    def make_relation_example(self, relations, i, edge_label, shared_t):
-
-        global prop_bank
-
-        d, shared = shared_t
-
-        dayperiod_terms = ['morning', 'night']
+    def get_shared_features(self, relations, i):
 
         concept1 = relations[i].parent
         concept2 = relations[i].child
-
-        edge_label_cleaned = edge_label.split('-')
 
         concept1_cleaned = ((concept1.replace('_', ' ')).replace('-', ' ')).split()
         concept2_cleaned = ((concept2.replace('_', ' ')).replace('-', ' ')).split()
@@ -147,40 +162,66 @@ class RelationLearning(pyvw.SearchTask):
             dir_edge = 'r' if idx1 < idx2 else 'l'
             dis = str(abs(idx1 - idx2))
 
-        prop_bank_feat = []
-
-        if concept1 in prop_bank:
-            roles = prop_bank[concept1]
-            for each_role in roles:
-                s = roles[each_role]
-                curr_role = '_'.join(s)
-                prop_bank_feat.append(curr_role)
-
-
-        f = {'a': #shared +
-                  ['c1=' + concept1] +
-                  ['c2=' + concept2] +
-                  ["pos1=" + pos1] +
-                  ["pos2=" + pos2] +
-                  ["dir=" + dir_edge] +
-                  ["dis=" + dis] +
-                  ["c1c=" + x for x in concept1_cleaned if x.isalnum()] +
-                  ["c2c=" + x for x in concept2_cleaned if x.isalnum()] +
-                  ["polarity=" + ("T" if concept2 is '-' else "F")] +
-                  ["num2=" + (str(len(concept2)) if concept2.isdigit() else "0")] +
-                  ["num1=" + (str(len(concept1)) if concept1.isdigit() else "0")] +
-                  ["theta0=" + (prop_bank_feat[0] if len(prop_bank_feat) > 0 else "")] +
+        f = lambda : {'a': ['c1=' + concept1] + ['c2=' + concept2] +
+                           ["pos1=" + pos1] + ["pos2=" + pos2] +
+                           ["dir=" + dir_edge] +
+                           ["dis=" + dis] +
+                           ["c1c=" + x for x in concept1_cleaned if x.isalnum()] +
+                           ["c2c=" + x for x in concept2_cleaned if x.isalnum()] +
+                           ["polarity=" + ("T" if concept2 is '-' else "F")] +
+                           ["num2=" + (str(len(concept2)) if concept2.isdigit() else "0")] +
+                           ["num1=" + (str(len(concept1)) if concept1.isdigit() else "0")] +
+                           ["deprel=" + relations[i].dep_rel] }
+                  #["theta0=" + (prop_bank_feat[0] if len(prop_bank_feat) > 0 else "")],
                   #["isdayperiod=" + ("T" if concept2 in dayperiod_terms else "F")] +
-                  ["deprel=" + relations[i].dep_rel],
+
                   #["theta1=" + (prop_bank_feat[1] if len(prop_bank_feat) > 1 else "")] +
                   #["theta2=" + (prop_bank_feat[2] if len(prop_bank_feat) > 2 else "")],
                   #["num_others=" + (str(d[concept1]) if pos1[0] == "V" else "0")],  #Testing this
                   #["optype=" + ("T" if concept1 in op_list else "F" )],
 
-             'l': ["l=" + edge_label] + ["lc=" + x for x in edge_label_cleaned if x.isalpha()]}
+        ex = self.example(f, labelType=self.vw.lCostSensitive)
+        ex.set_label_string("shared")
+        return ex
+
+
+    def make_relation_example(self, relations, i, edge_label):
+
+        edge_label_cleaned = edge_label.split('-')
+
+        concept1 = relations[i].parent
+        concept2 = relations[i].child
+
+        concept1_cleaned = ((concept1.replace('_', ' ')).replace('-', ' ')).split()
+        concept2_cleaned = ((concept2.replace('_', ' ')).replace('-', ' ')).split()
+
+        pos1 = relations[i].parent_pos
+        pos2 = relations[i].child_pos
+
+        idx1 = relations[i].parent_idx
+        idx2 = relations[i].child_idx
+
+        if idx1 == -1 or idx2 == -1:
+            dir_edge = 'x'
+            dis = "0"
+        else:
+            dir_edge = 'r' if idx1 < idx2 else 'l'
+            dis = str(abs(idx1 - idx2))
+
+        f = lambda : {'a': ['c1=' + concept1] + ['c2=' + concept2] +
+                           ["pos1=" + pos1] + ["pos2=" + pos2] +
+                           ["dir=" + dir_edge] +
+                           ["dis=" + dis] +
+                           ["c1c=" + x for x in concept1_cleaned if x.isalnum()] +
+                           ["c2c=" + x for x in concept2_cleaned if x.isalnum()] +
+                           ["polarity=" + ("T" if concept2 is '-' else "F")] +
+                           ["num2=" + (str(len(concept2)) if concept2.isdigit() else "0")] +
+                           ["num1=" + (str(len(concept1)) if concept1.isdigit() else "0")] +
+                           ["deprel=" + relations[i].dep_rel],
+
+                      'l': ["l=" + edge_label] + ["lc=" + x for x in edge_label_cleaned if x.isalpha()]}
 
         ex = self.vw.example(f, labelType=self.vw.lCostSensitive)
-        #print edge_label
         label = edgeLabels[edge_label]
         ex.set_label_string(str(label)+":0")
         return ex
@@ -188,14 +229,22 @@ class RelationLearning(pyvw.SearchTask):
     def _run(self, relations):
         output = []
         #shared = get_shared_features(relations)
-        shared = ([],[])
         for i in range(len(relations)):
             curr_relation = relations[i]
-            k_best = getKbestEdges(curr_relation.parent, self.nodes_relation_dict)
+            k_best = getKbestEdges(curr_relation.parent, curr_relation.child,
+                                   self.nodes_relation_dict_out, self.nodes_relation_dict_in)
             if k_best[0] == "NULL":
                 k_best = edgeLabelsList
+            if "ARG0" in k_best or "ARG1" in k_best or "ARG2" in k_best:
+                if "ARG0" not in k_best:
+                    k_best.append("ARG0")
+                if "ARG1" not in k_best:
+                    k_best.append("ARG1")
+                if "ARG2" not in k_best:
+                    k_best.append("ARG2")
+            #shared = self.get_shared_features(relations, i)
             #print k_best
-            examples = [self.make_relation_example(relations, i, edge_label, shared) for edge_label in k_best]
+            examples = [self.make_relation_example(relations, i, edge_label) for edge_label in k_best]
             # oracle = concept2label[span.concept]
             oracle = [v for v, _label in enumerate(k_best) if _label == curr_relation.label]
             # print oracle
@@ -208,6 +257,7 @@ class RelationLearning(pyvw.SearchTask):
             #    print curr_relation.parent, curr_relation.child, curr_relation.label
             #print pred
             #print k_best
+
             output.append(edgeLabels[k_best[pred]])
         #print output
         return output
@@ -216,7 +266,9 @@ class RelationLearning(pyvw.SearchTask):
 def main(argv):
 
     global edgeLabels
-    global prop_bank
+    #global prop_bank
+    global seen_in_test_c
+    global seen_in_test_p
 
     #Load and prepare all the daya
     training_data_p = argv[0]
@@ -229,7 +281,7 @@ def main(argv):
     test_data_p = argv[1]
     test_data = pickle.load(open(test_data_p, 'rb'))
 
-    prop_bank = pickle.load(open('prop_bank.p', 'rb'))
+    #prop_bank = pickle.load(open('prop_bank.p', 'rb'))
 
     test_examples = []
     test_examples_clean = []
@@ -248,6 +300,8 @@ def main(argv):
         updateSeenLabels(unprocessed_example)
         updateSeenNodes(unprocessed_example)
 
+        updateSeenInTrain(unprocessed_example)
+
 
     test_data_ids = []
     for each_id in test_data:
@@ -264,24 +318,14 @@ def main(argv):
         updateSeenLabels(unprocessed_example)
         updateSeenNodes(unprocessed_example)
 
-    #Load the dep_parse info
-    #dep_parse_train = pickle.load(open(argv[2], 'rb'))
-    #dep_parse_test = pickle.load(open(argv[3], 'rb'))
 
-
-    print len(training_examples)
-    print len(test_examples)
-    print len(test_examples_clean)
     #VW Stuff
     start = time.clock()
     print "train time"
-    vw = pyvw.vw("--search 0 -b 25 --csoaa_ldf m --search_task hook --ring_size 8192 --search_no_caching -q al")
+    vw = pyvw.vw("--search 0 -b 25 --quiet --csoaa_ldf m --search_task hook --ring_size 8192 --search_no_caching -q al")
     task = vw.init_search_task(RelationLearning)
 
     #Train
-    #N = len(training_examples)
-    #print N
-    #N = 2
     for p in range(1):
         print "round"
         task.learn(training_examples)
@@ -290,12 +334,17 @@ def main(argv):
 
     print "Time taken to train (in s) : " + str(finish)
 
+    #Test
     ferror = open("Error.txt", 'w')
     error_dict = {}
-    #Test
     print 'test time'
     correct = 0
     total = 0
+
+    confusion_matrix = {}
+    par_confusion_matrix = [[0,0], [0,0]]
+    child_confusion_matrix = [[0,0], [0,0]]
+
     for i in range(len(test_examples)):
         pred = task.predict(test_examples_clean[i])
         pred_out = [edgeLabelsList[x-1] for x in pred]
@@ -306,41 +355,68 @@ def main(argv):
             l = each.label
             gold.append(edgeLabels[l])
             gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
-                             l))
+                             each.dep_rel, l))
 
 
         #Add the post_processing stuff
         to_do = test_examples_pp[i]
         multi_sent = [x for x in to_do if x.parent == "multi-sentence"]
-        child_ids = sorted([(x.child_idx, x.label) for x in multi_sent])
+        child_ids = sorted(multi_sent, key = lambda x : x.child_idx)
 
         count = 1
         for each in child_ids:
-            label = each[1]
+            label = each.label
             gold.append(label)
-            gold_out.append((each[0], each[1]))
+            gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
+                             each.dep_rel, label))
             pred.append("snt" + str(count))
-            pred_out.append((each[0], each[1]))
+            pred_out.append("snt" + str(count))
 
             count += 1
 
+        #Same deal with and
         and_op = [x for x in to_do if x.parent == "and"]
-        child_ids = sorted([(x.child_idx, x.label) for x in and_op])
+        child_ids = sorted(and_op, key = lambda x : x.child_idx)
 
         count = 1
         for each in child_ids:
-            label = each[1]
+            label = each.label
             gold.append(label)
-            gold_out.append((each[0], each[1]))
+            gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
+                             each.dep_rel, label))
             pred.append("op" + str(count))
             pred_out.append("op" + str(count))
 
             count += 1
 
-        #Same deal with and
+        or_op = [x for x in to_do if x.parent == "or"]
+        child_ids = sorted(or_op, key = lambda x : x.child_idx)
 
-        print gold
-        print pred
+        count = 1
+        for each in child_ids:
+            label = each.label
+            gold.append(label)
+            gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
+                             each.dep_rel, label))
+            pred.append("op" + str(count))
+            pred_out.append("op" + str(count))
+
+            count += 1
+
+        name_op = [x for x in to_do if x.parent == "name"]
+        child_ids = sorted(name_op, key = lambda x : x.child_idx)
+
+        count = 1
+        for each in child_ids:
+            label = each.label
+            gold.append(label)
+            gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
+                             each.dep_rel, label))
+            pred.append("op" + str(count))
+            pred_out.append("op" + str(count))
+
+            count += 1
+
 
         ferror.write(str(test_data_ids[i]))
         ferror.write('\n')
@@ -350,20 +426,49 @@ def main(argv):
         ferror.write('\n')
         ferror.write('###################################\n\n')
 
+        ###EValuation
+
+
         for j in range(len(gold_out)):
+            total += 1
+            if gold_out[j][-1] not in confusion_matrix:
+                    confusion_matrix[gold_out[j][-1]] = {}
+            if pred_out[j] not in confusion_matrix[gold_out[j][-1]]:
+                confusion_matrix[gold_out[j][-1]][pred_out[j]] = 0
+            confusion_matrix[gold_out[j][-1]][pred_out[j]] += 1
+
+            #Build parent and child confusion matrix
+            if gold_out[j][0] in seen_in_test_p:
+                p = 0
+            else:
+                p = 1
+
+            if gold_out[j][1] in seen_in_test_c:
+                c = 0
+            else:
+                c = 1
+
+
+
             if gold_out[j][-1] != pred_out[j]:
                 t = (gold_out[j][-1], pred_out[j])
                 if t not in error_dict:
                     error_dict[t] = 0
                 error_dict[t] += 1
+                n = 1
+            else:
+                correct += 1
+                n = 0
 
-        correct += evaluate_output(gold, pred)
-        total += len(gold)
+            par_confusion_matrix[p][n] += 1
+            child_confusion_matrix[c][n] += 1
+
+        #correct += evaluate_output(gold, pred)
+        #total += len(gold)
 
     ferror.close()
-
     accuracy = float(correct)/float(total)
-    print "Accuracy = " + str(accuracy)
+
 
     list_d = sorted([(error_dict[key], key) for key in error_dict], reverse=True)
 
@@ -376,6 +481,25 @@ def main(argv):
         ferror.write('\n')
 
     ferror.close()
+
+    print "Total Relations predicted = " + str(total)
+    print "Total Relations predicted correctly = " + str(correct)
+    print "Accuracy = " + str(accuracy)
+
+
+
+    ferror = open("Statistics.txt", 'w')
+
+    ferror.write(str(par_confusion_matrix))
+    ferror.write('\n')
+    ferror.write(str(child_confusion_matrix))
+    ferror.write('\n')
+    ferror.write(str(confusion_matrix))
+
+    ferror.close()
+
+
+
 
 
 
