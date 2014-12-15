@@ -51,14 +51,14 @@ def createExample(l, null=False):
     if not null:
         for each in l:
             x = Relation(each[0][0], each[0][1], each[0][2], each[1], each[2], each[3], each[4], each[5])
-            if each[0][0] in out:
+            if each[0][0].split('@')[0] in out:
                 post_proc.append(x)
             else:
                 example.append(x)
     else:
         for each in l:
             x = Relation(each[0][0], each[0][1], "NULL", each[1], each[2], each[3], each[4], each[5])
-            if each[0][0] in out:
+            if each[0][0].split('@')[0] in out:
                 post_proc.append(x)
             else:
                 example.append(x)
@@ -107,9 +107,11 @@ def updateSeenInTrain(l):
         seen_in_test_c[node2] = 1
 
 
-def getKbestEdges(parent_node, child_node, nodes_relation_dict_out=None, nodes_relation_dict_in=None):
+def getKbestEdges(_parent_node, _child_node, nodes_relation_dict_out=None, nodes_relation_dict_in=None):
     #Get the top k concepts aligned with span.words
     K = 5
+    parent_node = _parent_node.split('@')[0]
+    child_node = _child_node.split('@')[0]
     #if nodes_relation_dict is None:
     #    nodes_relation_dict = pickle.load(open("nodes_relation_dict.p", "rb"))
     if parent_node in nodes_relation_dict_out:
@@ -141,6 +143,7 @@ class RelationLearning(pyvw.SearchTask):
         self.nodes_relation_dict_out = self.nodes_relation_dict[0]
         self.nodes_relation_dict_in = self.nodes_relation_dict[1]
 
+    """
     def get_shared_features(self, relations, i):
 
         concept1 = relations[i].parent
@@ -170,8 +173,8 @@ class RelationLearning(pyvw.SearchTask):
                            ["c2c=" + x for x in concept2_cleaned if x.isalnum()] +
                            ["polarity=" + ("T" if concept2 is '-' else "F")] +
                            ["num2=" + (str(len(concept2)) if concept2.isdigit() else "0")] +
-                           ["num1=" + (str(len(concept1)) if concept1.isdigit() else "0")] +
-                           ["deprel=" + relations[i].dep_rel] }
+                           ["num1=" + (str(len(concept1)) if concept1.isdigit() else "0")]}
+                           #["deprel=" + relations[i].dep_rel] }
                   #["theta0=" + (prop_bank_feat[0] if len(prop_bank_feat) > 0 else "")],
                   #["isdayperiod=" + ("T" if concept2 in dayperiod_terms else "F")] +
 
@@ -183,14 +186,15 @@ class RelationLearning(pyvw.SearchTask):
         ex = self.example(f, labelType=self.vw.lCostSensitive)
         ex.set_label_string("shared")
         return ex
+        """
 
 
     def make_relation_example(self, relations, i, edge_label):
 
         edge_label_cleaned = edge_label.split('-')
 
-        concept1 = relations[i].parent
-        concept2 = relations[i].child
+        concept1 = (relations[i].parent).split('@')[0]
+        concept2 = (relations[i].child).split('@')[0]
 
         concept1_cleaned = ((concept1.replace('_', ' ')).replace('-', ' ')).split()
         concept2_cleaned = ((concept2.replace('_', ' ')).replace('-', ' ')).split()
@@ -360,6 +364,93 @@ def main(argv):
 
         #Add the post_processing stuff
         to_do = test_examples_pp[i]
+        multi_sent_nodes = {}
+        and_nodes = {}
+        or_nodes = {}
+        name_nodes = {}
+        for each in to_do:
+            plain_par = each.parent
+            par_node = plain_par.split('@')[0]
+
+            if par_node == 'and':
+                if plain_par not in and_nodes:
+                    and_nodes[plain_par] = []
+                and_nodes[plain_par].append(each)
+
+            if par_node == 'or':
+                if plain_par not in or_nodes:
+                    or_nodes[plain_par] = []
+                or_nodes[plain_par].append(each)
+
+            if par_node == 'multi-sentence':
+                if plain_par not in multi_sent_nodes:
+                    multi_sent_nodes[plain_par] = []
+                multi_sent_nodes[plain_par].append(each)
+
+            if par_node == 'name':
+                if plain_par not in name_nodes:
+                    name_nodes[plain_par] = []
+                name_nodes[plain_par].append(each)
+
+
+        for every in and_nodes:
+            children = sorted(and_nodes[every], key=lambda chi: chi.child_idx)
+            count = 1
+            for each in children:
+                out_label = "op" + str(count)
+                count += 1
+
+                gold.append(each.label)
+                gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
+                             each.dep_rel, each.label))
+
+                pred.append(out_label)
+                pred_out.append(out_label)
+
+
+        for every in or_nodes:
+            children = sorted(or_nodes[every], key=lambda chi: chi.child_idx)
+            count = 1
+            for each in children:
+                out_label = "op" + str(count)
+                count += 1
+
+                gold.append(each.label)
+                gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
+                             each.dep_rel, each.label))
+
+                pred.append(out_label)
+                pred_out.append(out_label)
+
+        for every in multi_sent_nodes:
+            children = sorted(multi_sent_nodes[every], key=lambda chi: chi.child_idx)
+            count = 1
+            for each in children:
+                out_label = "snt" + str(count)
+                count += 1
+
+                gold.append(each.label)
+                gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
+                             each.dep_rel, each.label))
+
+                pred.append(out_label)
+                pred_out.append(out_label)
+
+        for every in name_nodes:
+            children = sorted(name_nodes[every], key=lambda chi: chi.child_idx)
+            count = 1
+            for each in children:
+                out_label = "op" + str(count)
+                count += 1
+
+                gold.append(each.label)
+                gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
+                             each.dep_rel, each.label))
+
+                pred.append(out_label)
+                pred_out.append(out_label)
+
+        """
         multi_sent = [x for x in to_do if x.parent == "multi-sentence"]
         child_ids = sorted(multi_sent, key = lambda x : x.child_idx)
 
@@ -416,7 +507,7 @@ def main(argv):
             pred_out.append("op" + str(count))
 
             count += 1
-
+        """
 
         ferror.write(str(test_data_ids[i]))
         ferror.write('\n')
