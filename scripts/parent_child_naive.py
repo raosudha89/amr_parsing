@@ -46,24 +46,75 @@ def evaluate_output(gold, pred):
 
 def createExample(l, null=False):
     example = []
-    post_proc = []
-    out = []#'and', 'or', 'name', 'multi-sentence']
+    seen_nodes = []
+    total_seen = 0
+    par_dict = {}
+    dep_rel_out= {}
+    dep_rel_in = {}
+    _seen_nodes = []
     if not null:
         for each in l:
-            x = Relation(each[0][0], each[0][1], each[0][2], each[1], each[2], each[3], each[4], each[5])
-            if each[0][0] in out:
-                post_proc.append(x)
+            if each[0][0] not in _seen_nodes:
+                seen_nodes.append((each[0][0], each[1], each[3]))
+                _seen_nodes.append(each[0][0])
+                total_seen += 1
+                if each[0][0] not in dep_rel_out:
+                    dep_rel_out[each[0][0]] = {}
+                dep_rel_out[each[0][0]][each[0][1]] = each[5]
+
+            if each[0][1] not in _seen_nodes:
+                _seen_nodes.append(each[0][1])
+                seen_nodes.append((each[0][1], each[2], each[4]))
+                total_seen += 1
+                par_dict[each[0][1]] = each[0][0]
+                if each[0][1] not in dep_rel_in:
+                    dep_rel_in[each[0][1]] = {}
+                dep_rel_in[each[0][1]][each[0][0]] = each[5]
+
+        x = []
+        for each in seen_nodes:
+            if each[0] in par_dict:
+                par = _seen_nodes.index(par_dict[each[0]]) + 1
             else:
-                example.append(x)
+                par = -1
+            param1 = dep_rel_out[each[0]] if each[0] in dep_rel_out else {}
+            param2 = dep_rel_in[each[0]] if each[0] in dep_rel_in else {}
+            x.append(((each[0], each[1], each[2], param1, param2), par))
+
+        return x
+
+
     else:
         for each in l:
-            x = Relation(each[0][0], each[0][1], "NULL", each[1], each[2], each[3], each[4], each[5])
-            if each[0][0] in out:
-                post_proc.append(x)
-            else:
-                example.append(x)
+            if each[0][0] not in _seen_nodes:
+                _seen_nodes.append(each[0][0])
+                seen_nodes.append((each[0][0], each[1], each[3]))
 
-    return example, post_proc
+                total_seen += 1
+                if each[0][0] not in dep_rel_out:
+                    dep_rel_out[each[0][0]] = {}
+                dep_rel_out[each[0][0]][each[0][1]] = each[5]
+
+            if each[0][1] not in _seen_nodes:
+                _seen_nodes.append(each[0][1])
+                seen_nodes.append((each[0][1], each[2], each[4]))
+                total_seen += 1
+                par_dict[each[0][1]] = each[0][0]
+                if each[0][1] not in dep_rel_in:
+                    dep_rel_in[each[0][1]] = {}
+                dep_rel_in[each[0][1]][each[0][0]] = each[5]
+
+        x = []
+        #print seen_nodes
+        #print par_dict
+        for each in seen_nodes:
+            par = -1
+            param1 = dep_rel_out[each[0]] if each[0] in dep_rel_out else {}
+            param2 = dep_rel_in[each[0]] if each[0] in dep_rel_in else {}
+            x.append(((each[0], each[1], each[2], param1, param2), par))
+            #print x
+
+        return x
 
 
 def updateSeenLabels(l):
@@ -185,21 +236,23 @@ class RelationLearning(pyvw.SearchTask):
         return ex
 
 
-    def make_relation_example(self, relations, i, edge_label):
+    def makeExample(self, sentence, n,m):
 
-        edge_label_cleaned = edge_label.split('-')
 
-        concept1 = relations[i].parent
-        concept2 = relations[i].child
+
+        #edge_label_cleaned = edge_label.split('-')
+
+        concept1 = sentence[n][0][0]
+        concept2 = sentence[m][0][0]
 
         concept1_cleaned = ((concept1.replace('_', ' ')).replace('-', ' ')).split()
         concept2_cleaned = ((concept2.replace('_', ' ')).replace('-', ' ')).split()
 
-        pos1 = relations[i].parent_pos
-        pos2 = relations[i].child_pos
+        pos1 = sentence[n][0][1]
+        pos2 = sentence[m][0][0]
 
-        idx1 = relations[i].parent_idx
-        idx2 = relations[i].child_idx
+        idx1 = sentence[n][0][2]
+        idx2 = sentence[m][0][2]
 
         if idx1 == -1 or idx2 == -1:
             dir_edge = 'x'
@@ -213,19 +266,44 @@ class RelationLearning(pyvw.SearchTask):
                            ["dir=" + dir_edge] +
                            ["dis=" + dis] +
                            ["c1c=" + x for x in concept1_cleaned if x.isalnum()] +
-                           ["c2c=" + x for x in concept2_cleaned if x.isalnum()] +
+                           ["c2c=" + x for x in concept2_cleaned if x.isalnum()] }
                            #["polarity=" + ("T" if concept2 is '-' else "F")] +
                            #["num2=" + (str(len(concept2)) if concept2.isdigit() else "0")] +
                            #["num1=" + (str(len(concept1)) if concept1.isdigit() else "0")] +
-                           ["deprel=" + relations[i].dep_rel],
+                           #["deprel=" + relations[i].dep_rel],
 
-                      'l': ["l=" + edge_label]}# + ["lc=" + x for x in edge_label_cleaned if x.isalpha()]}
+                      #'l': ["l=" + edge_label]}# + ["lc=" + x for x in edge_label_cleaned if x.isalpha()]}
 
         ex = self.vw.example(f, labelType=self.vw.lCostSensitive)
-        label = edgeLabels[edge_label]
-        ex.set_label_string(str(label)+":0")
+        #label = edgeLabels[edge_label]
+        ex.set_label_string(str(m+2)+":0")
         return ex
 
+    def _run(self,sentence):
+        N = len(sentence)
+        # initialize our output so everything is a root
+        output = [-1 for i in range(N)]
+        for n in range(N):
+            # make LDF examples
+            examples = [ self.makeExample(sentence,n,m) for m in range(-1,N) if n != m ]
+
+            # truth
+            parN = sentence[n][1]
+            oracle = parN+1 if parN < n else parN   # have to -1 because we excluded n==m from list
+
+            # make a prediction
+            pred = self.sch.predict(examples  = examples,
+                                    my_tag    = n+1,
+                                    oracle    = oracle,
+                                    condition = [ (n, 'p'), (n-1, 'q') ] )
+
+            output[n] = pred-1 if pred < n else pred # have to +1 because n==m excluded
+
+            for ex in examples: ex.finish()  # clean up
+
+        return output
+
+    """
     def _run(self, relations):
         output = []
         #shared = get_shared_features(relations)
@@ -262,6 +340,7 @@ class RelationLearning(pyvw.SearchTask):
             output.append(edgeLabels[k_best[pred]])
         #print output
         return output
+    """
 
 
 def main(argv):
@@ -291,12 +370,12 @@ def main(argv):
     for each_id in training_data:
         unprocessed_example = training_data[each_id]
 
-        te, pp = createExample(unprocessed_example, False)
-        te_clean, pp_clean = createExample(unprocessed_example, True)
+        te= createExample(unprocessed_example, False)
+        te_clean = createExample(unprocessed_example, True)
+
 
         training_examples.append(te)
         training_examples_clean.append(te_clean)
-        training_examples_pp.append(pp)
 
         updateSeenLabels(unprocessed_example)
         updateSeenNodes(unprocessed_example)
@@ -304,20 +383,17 @@ def main(argv):
         updateSeenInTrain(unprocessed_example)
 
 
+
     test_data_ids = []
     for each_id in test_data:
-        test_data_ids.append(each_id)
+        test_data_ids.append(test_data)
         unprocessed_example = test_data[each_id]
 
-        te, pp = createExample(unprocessed_example, False)
-        te_clean, pp_clean = createExample(unprocessed_example, True)
+        te= createExample(unprocessed_example, False)
+        te_clean = createExample(unprocessed_example, True)
 
         test_examples.append(te)
         test_examples_clean.append(te_clean)
-        test_examples_pp.append(pp)
-
-        updateSeenLabels(unprocessed_example)
-        updateSeenNodes(unprocessed_example)
 
 
     #VW Stuff
@@ -329,7 +405,7 @@ def main(argv):
     #Train
     for p in range(1):
         print "round"
-        task.learn(training_examples)
+        task.learn(training_examples[:1])
 
     finish = time.clock() - start
 
@@ -346,8 +422,26 @@ def main(argv):
     par_confusion_matrix = [[0,0], [0,0]]
     child_confusion_matrix = [[0,0], [0,0]]
 
-    for i in range(len(test_examples)):
+    total = 0
+    correct = 0
+    for i in range(len(test_examples[:1])):
         pred = task.predict(test_examples_clean[i])
+        expected = [x[1] for x in test_examples[i]]
+        print pred
+        print expected
+        print
+
+        total += len(pred)
+        corr_arr = [j for j in range(len(pred)) if pred[j] == expected[j]]
+        #print corr_arr
+        correct += len(corr_arr)
+
+    print total
+    print correct
+    print float(correct)/total
+
+
+    """
         pred_out = [edgeLabelsList[x-1] for x in pred]
 
         gold = []
@@ -358,38 +452,7 @@ def main(argv):
             gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
                              each.dep_rel, l))
 
-        """
-        #Add the post_processing stuff
-        to_do = test_examples_pp[i]
-        multi_sent = [x for x in to_do if x.parent == "multi-sentence"]
-        child_ids = sorted(multi_sent, key = lambda x : x.child_idx)
 
-        count = 1
-        for each in child_ids:
-            label = each.label
-            gold.append(label)
-            gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
-                             each.dep_rel, label))
-            pred.append("snt" + str(count))
-            pred_out.append(label)
-
-            count += 1
-
-        #Same deal with and
-        and_op = [x for x in to_do if x.parent == "and"]
-        child_ids = sorted(and_op, key = lambda x : x.child_idx)
-
-        count = 1
-        for each in child_ids:
-            label = each.label
-            gold.append(label)
-            gold_out.append((each.parent, each.child, each.parent_pos, each.child_pos, each.parent_idx, each.child_idx,
-                             each.dep_rel, label))
-            pred.append("op" + str(count))
-            pred_out.append(label)
-
-            count += 1
-        """
 
         ferror.write(str(test_data_ids[i]))
         ferror.write('\n')
@@ -452,6 +515,7 @@ def main(argv):
     ferror.write(str(confusion_matrix))
 
     ferror.close()
+    """
 
 
 
